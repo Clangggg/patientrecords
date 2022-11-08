@@ -4,18 +4,24 @@
 <div class="container-fluid">
 
    <div class="row">             
-   	 <div class="col-sm-6">
+   	 <div class="col-sm-5">
      
        <div style="margin-bottom:2px;">
                 <div class="row no-gutters">
                  <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Examination Details</div>   
                 </div>
         <div class="h5 mb-1 font-weight-bold text-gray-800">
-          <input class="form-control  <?= (form_error('a_history') == "" ? '':'is-invalid') ?>" type="text" name="a_history"  placeholder="Findings/Intervention">           
-       
-        </div>
+        <select name="a_history" class="form-control">
+              <option value="">Select Details</option>
+                <?php if(count($get_details)): ?>
+                   <?php foreach($get_details as $details): ?>
+                   <option value=<?php echo $details->de_name; ?><?php echo set_select('a_history', $details->de_name); ?>><?php echo $details->de_name; ?></option>
+                        <?php endforeach; ?>
+                        <?php endif; ?>
+                </select> 
         <div class="text-danger text-center"><?php echo form_error('a_history'); ?></div>
                </div><br>
+                   </div>
     
       <div style="margin-bottom:1px;">
                 <div class="row no-gutters">

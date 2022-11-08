@@ -222,22 +222,8 @@ public function add_multiple_admission(){
 
 $this->form_validation->set_rules('a_caseno','Patient Case Number', 'required');
 $this->form_validation->set_rules('a_date','Date', 'required');
-$this->form_validation->set_rules('a_wards', 'Wards', 'trim|required',array('required'=>'Please select ward'));
-$this->form_validation->set_rules('a_physician', 'Attending Physician', 'trim|required',array('required'=>'Please select physician'));
-$this->form_validation->set_rules('a_admitted', 'Admitted by','trim|required');
-$this->form_validation->set_rules('a_dischargedate', 'Discharge Date');
-$this->form_validation->set_rules('a_father', 'For Minor: Name of Parents');
-$this->form_validation->set_rules('a_mother', 'For Minor: Name of Parents');
 $this->form_validation->set_rules('a_chargeaccount', 'Charge Account to');
 $this->form_validation->set_rules('a_relationtopatient', 'Relation to Patient');
-$this->form_validation->set_rules('a_address', 'Address');
-$this->form_validation->set_rules('a_number', 'Number','min_length[11]|max_length[11]');
-$this->form_validation->set_rules('a_totalpayment', 'Total Payment Made');
-$this->form_validation->set_rules('a_complain', 'Chief Complaint');
-$this->form_validation->set_rules('a_completediagnosis', 'Complete Diagnosis');
-$this->form_validation->set_rules('a_medication', 'Medication/Treatment');
-$this->form_validation->set_rules('a_conditiondischarge', 'Condition on Discharge');
-$this->form_validation->set_rules('a_remarks', 'Remarks');
 
 
 if($this->form_validation->run() == FALSE){
@@ -259,22 +245,9 @@ if($this->form_validation->run() == FALSE){
    $data = array(
    'pr_admission_id' => $this->input->post('a_caseno'),
    'ad_date' => $this->input->post('a_date'),
-   'ad_admittedby' => $this->input->post('a_admitted'),
-   'ad_wardname' => $this->input->post('a_wards'),
-   'ad_dischargedate' => $this->input->post('a_dischargedate'),
-   'ad_physician' => $this->input->post('a_physician'),
-   'ad_father' => $this->input->post('a_father'),
-   'ad_mother' => $this->input->post('a_mother'),
    'ad_chargetoaccount' => $this->input->post('a_chargeaccount'),
    'ad_relationtopatient' => $this->input->post('a_relationtopatient'),
-   'ad_totalpayment' => $this->input->post('a_totalpayment'),
-   'ad_address' => $this->input->post('a_address'),
-   'ad_number' => $this->input->post('a_number'),
-   'ad_complaint' => $this->input->post('a_complain'),
-   'ad_completediagnosis' => $this->input->post('a_completediagnosis'),
-   'ad_medication' => $this->input->post('a_medication'),
-   'ad_conditiontodischarge' => $this->input->post('a_conditiondischarge'),
-   'ad_remarks' => $this->input->post('a_remarks')
+
    );
 
    

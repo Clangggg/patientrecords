@@ -368,11 +368,12 @@ if($this->form_validation->run() == FALSE){
  
  $patient_id = $this->Record_model->get_patient_data($pr_id);
  $data['get_data'] = $this->Record_model->get_patient_data($pr_id);
+ $data['get_details'] = $this->Record_model->get_details($pr_id);
  $data['fieldsphysician'] = $this->Record_model->fetch_medical_field();
  $data['add_physician'] = $this->Record_model->get_physician();
  $data['get_remarks'] = $this->Record_model->get_remarks();
  $data['get_cr'] = $this->Record_model->get_cr();
- $data['title'] = "Add Physical Exam";
+ $data['title'] = "Add Health Examination";
  $data['topbar'] = 'navbar-default';
 $data['get_admission_data'] = $this->Record_model->get_patient_admission_id($pr_id);
 $data['get_findings_data'] = $this->Record_model->get_patient_findings_id($pr_id);
@@ -411,7 +412,8 @@ $data['get_findings_data'] = $this->Record_model->get_patient_findings_id($pr_id
       $data['add_physician'] = $this->Record_model->get_physician();
       $data['get_remarks'] = $this->Record_model->get_remarks();
       $data['get_cr'] = $this->Record_model->get_cr();
-      $data['title'] = "Add Physical Exam";
+      $data['get_details'] = $this->Record_model->get_details();
+      $data['title'] = "Add Health Examination";
       $data['topbar'] = 'navbar-default';
       $data['get_admission_data'] = $this->Record_model->get_patient_admission_id($pr_id);
       $data['get_findings_data'] = $this->Record_model->get_patient_findings_id($pr_id);
@@ -471,12 +473,13 @@ if($this->form_validation->run() == FALSE){
  $data['get_findings_view'] = $this->Record_model->get_data_findings($findings_id);
 
  
- $data['title'] = "Edit Physical Examination";
+ $data['title'] = "Edit Health Examination";
  $data['topbar'] = 'navbar-default';
  $data['add_physician'] = $this->Record_model->get_physician();
  $data['get_remarks'] = $this->Record_model->get_remarks();
  $data['get_status'] = $this->Record_model->get_status();
  $data['get_cr'] = $this->Record_model->get_cr();
+ $data['get_details'] = $this->Record_model->get_details();
  $data['edit_findings'] = "admission/editfindingsform";
  $data['main_view'] = 'admission/editfindings_view';
 
@@ -528,11 +531,12 @@ if($this->form_validation->run() == FALSE){
     
       $data['get_findings_view'] = $this->Record_model->get_data_findings($findings_id);
 
-      $data['title'] = "Physical Examination";
+      $data['title'] = "Health Examination";
       $data['topbar'] = 'navbar-default';
       $data['add_physician'] = $this->Record_model->get_physician();
       $data['get_remarks'] = $this->Record_model->get_remarks();
       $data['get_cr'] = $this->Record_model->get_cr();
+      $data['get_details'] = $this->Record_model->get_details();
       $data['get_status'] = $this->Record_model->get_status();
       $data['edit_findings'] = "admission/editfindingsform";
       $data['main_view'] = 'admission/editfindings_view';
@@ -558,7 +562,7 @@ public function findingsview($findings_id){
       $data['get_findings_view'] = $this->Record_model->get_data_findings($findings_id);
 
 
-      $data['title'] = "Physical Examination";
+      $data['title'] = "Health Examination";
       $data['topbar'] = 'navbar-default';
       $data['main_view'] = 'admission/findingsdataview';
   
@@ -579,15 +583,8 @@ public function admit_form($pr_id){
 
  
 $this->form_validation->set_rules('a_wards', 'Wards', 'trim|required',array('required'=>'Please select ward'));
-$this->form_validation->set_rules('a_physician', 'Attending Physician', 'trim|required',array('required'=>'Please select physician'));
-$this->form_validation->set_rules('a_father', 'For Minor: Name of Parents');
-$this->form_validation->set_rules('a_mother', 'For Minor: Name of Parents');
 $this->form_validation->set_rules('a_chargeaccount', 'Charge Account to');
 $this->form_validation->set_rules('a_relationtopatient', 'Relation to Patient');
-$this->form_validation->set_rules('a_address', 'Address');
-$this->form_validation->set_rules('a_number', 'Number');
-$this->form_validation->set_rules('a_totalpayment', 'Total Payment Made');
-$this->form_validation->set_rules('a_admitted', 'Admitted By', 'trim|required');
 
 
 
@@ -596,10 +593,9 @@ if($this->form_validation->run() == FALSE){
  $patient_id = $this->Record_model->get_patient_data($pr_id);
   $data['get_findings_data'] = $this->Record_model->get_patient_findings_id($pr_id);
  $data['get_data'] = $this->Record_model->get_patient_data($pr_id);
- $data['add_physician'] = $this->Record_model->get_physician();
  $data['get_remarks'] = $this->Record_model->get_remarks();
  $data['get_ward'] = $this->Record_model->get_ward();
- $data['title'] = "Admit Patient";
+ $data['title'] = "Add Clinical Visit";
  $data['topbar'] = 'navbar-default';
  $data['admitting_view'] = "admission/admitting_form";
  $data['main_view'] = 'admission/admitting_view';
@@ -617,15 +613,9 @@ if($this->form_validation->run() == FALSE){
    $data = array(
    'pr_admission_id' => $pr_id,
    'ad_wardname' => $this->input->post('a_wards'),
-   'ad_physician' => $this->input->post('a_physician'),
+
    'ad_date' => $admissiondate,
-   'ad_father' => $this->input->post('a_father'),
-   'ad_mother' => $this->input->post('a_mother'),
-   'ad_chargetoaccount' => $this->input->post('a_chargeaccount'),
    'ad_relationtopatient' => $this->input->post('a_relationtopatient'),
-   'ad_address' => $this->input->post('a_address'),
-   'ad_number' => $this->input->post('a_number'),
-   'ad_totalpayment' => $this->input->post('a_totalpayment')
    );
 
    
@@ -634,15 +624,12 @@ if($this->form_validation->run() == FALSE){
       $patient_id = $this->Record_model->get_patient_data($pr_id);
        $data['get_findings_data'] = $this->Record_model->get_patient_findings_id($pr_id);
       $data['get_data'] = $this->Record_model->get_patient_data($pr_id);
-      $data['add_physician'] = $this->Record_model->get_physician();
-      $data['get_remarks'] = $this->Record_model->get_remarks();
-      $data['get_cr'] = $this->Record_model->get_cr();
       $data['title'] = "Admit Patient";
       $data['topbar'] = 'navbar-default';
       $data['admitting_view'] = "admission/admitting_form";
       $data['main_view'] = 'admission/admitting_view';
   
-      $this->session->set_flashdata('add_admit_success', 'Admission Added');
+      $this->session->set_flashdata('add_admit_success', 'Record Added');
       redirect('admissioncontrol/patientdataview/'.$pr_id.'#admission', $data);
 
 
@@ -650,32 +637,21 @@ if($this->form_validation->run() == FALSE){
 
 }
 
-
-
-
 }
+
+
+
 
 
 
 
 public function edit_admission($admission_id){
 
-$this->form_validation->set_rules('e_wardname', 'Wards', 'trim|required',array('required'=>'Please select ward'));
-$this->form_validation->set_rules('e_physician', 'Attending Physician', 'trim|required',array('required'=>'Please select physician'));
-$this->form_validation->set_rules('e_admittedby', 'Admitted by','trim|required');
-$this->form_validation->set_rules('e_discharge', 'Discharge Date');
-$this->form_validation->set_rules('e_father', 'For Minor: Name of Parents');
-$this->form_validation->set_rules('e_mother', 'For Minor: Name of Parents');
+$this->form_validation->set_rules('e_wardname', 'Wards');
+
 $this->form_validation->set_rules('e_chargeofaccount', 'Charge Account to');
 $this->form_validation->set_rules('e_relationtopatient', 'Relation to Patient');
-$this->form_validation->set_rules('e_address', 'Address');
-$this->form_validation->set_rules('e_number', 'Number','min_length[11]|max_length[11]');
-$this->form_validation->set_rules('e_totalpayment', 'Total Payment Made');
-$this->form_validation->set_rules('e_chief_complaint', 'Chief Complaint');
-$this->form_validation->set_rules('e_completediagnosis', 'Complete Diagnosis');
-$this->form_validation->set_rules('e_medication', 'Medication/Treatment');
-$this->form_validation->set_rules('e_conditiondischarge', 'Condition on Discharge');
-$this->form_validation->set_rules('e_remarks', 'Remarks');
+
 
 
 if($this->form_validation->run() == FALSE){
@@ -700,22 +676,10 @@ $data['get_data_admission'] = $this->Record_model->get_data_admission($admission
 
    $data = array(
    'pr_admission_id' => $admission_update_id,   
-   'ad_admittedby' => $this->input->post('e_admittedby'),
+
    'ad_wardname' => $this->input->post('e_wardname'),
-   'ad_dischargedate' => $this->input->post('e_discharge'),
-   'ad_physician' => $this->input->post('e_physician'),
-   'ad_father' => $this->input->post('e_father'),
-   'ad_mother' => $this->input->post('e_mother'),
-   'ad_chargetoaccount' => $this->input->post('e_chargeofaccount'),
    'ad_relationtopatient' => $this->input->post('e_relationtopatient'),
-   'ad_totalpayment' => $this->input->post('e_totalpayment'),
-   'ad_address' => $this->input->post('e_address'),
-   'ad_number' => $this->input->post('e_number'),
-   'ad_complaint' => $this->input->post('e_chief_complaint'),
-   'ad_completediagnosis' => $this->input->post('e_completediagnosis'),
-   'ad_medication' => $this->input->post('e_medication'),
-   'ad_conditiontodischarge' => $this->input->post('e_conditiondischarge'),
-   'ad_remarks' => $this->input->post('e_remarks')
+
    
    );
 
@@ -743,22 +707,23 @@ $data['get_data_admission'] = $this->Record_model->get_data_admission($admission
 }
 
 
-public function admissionview($admission_id){
+// public function admissionview($admission_id){
 
 
     
-      $data['get_admission_view'] = $this->Record_model->get_data_admission($admission_id);
+//       $data['get_admission_view'] = $this->Record_model->get_data_admission($admission_id);
 
-
-      $data['title'] = "Admission Records";
-      $data['topbar'] = 'navbar-default';
-      $data['main_view'] = 'admission/admissiondataview';
+//       $data['get_remarks'] = $this->Record_model->get_remarks();
+//       $data['get_ward'] = $this->Record_model->get_ward();
+//       $data['title'] = "Admission Records";
+//       $data['topbar'] = 'navbar-default';
+//       $data['main_view'] = 'admission/admissiondataview';
   
-     $this->load->view('layouts/central_template', $data);
+//      $this->load->view('layouts/central_template', $data);
   
 
 
-}
+// }
 
 
 
@@ -769,8 +734,9 @@ $doctor = 'Doctor';
 $data['get_user'] = $this->Record_model->get_users_account($doctor);
 $data['get_findings_view'] = $this->Record_model->get_data_findings($findings_id);
 $data['get_cr'] = $this->Record_model->get_cr();
+$data['get_details'] = $this->Record_model->get_details();
 $data['get_status'] = $this->Record_model->get_status();
-$data['title'] = 'Add to Doctor';
+$data['title'] = 'Add to Teacher';
 $data['topbar'] = 'navbar-default';
 $data['form'] = 'admission/addfindingsdataform';
 $data['main_view'] = "admission/addfindingsdata";
@@ -788,8 +754,9 @@ $doctor = 'Doctor';
 $data['get_user'] = $this->Record_model->get_users_account($doctor);
 $data['get_admission_view'] = $this->Record_model->get_data_admission($admission_id);
 $data['get_cr'] = $this->Record_model->get_cr();
+$data['get_details'] = $this->Record_model->get_details();
 $data['get_status'] = $this->Record_model->get_status();
-$data['title'] = 'Add to Doctor';
+$data['title'] = 'Add to Teacher';
 $data['topbar'] = 'navbar-default';
 $data['form'] = 'admission/addadmissiondataform';
 $data['main_view'] = "admission/addadmissiondata";

@@ -395,16 +395,34 @@ $this->form_validation->set_rules('e_patientmname','Middlename', 'required|trim'
 $this->form_validation->set_rules('e_patientlname','Lastname', 'required|trim|alpha');
 $this->form_validation->set_rules('e_gender','Gender', 'required|trim');
 $this->form_validation->set_rules('e_age','Age', 'required|trim');
-$this->form_validation->set_rules('e_chief_complaint','Chief Complaint','alpha');
-$this->form_validation->set_rules('e_historyillness','History of Illness', 'required|trim');
+$this->form_validation->set_rules('e_chief_complaint','Chief Complaint');
+$this->form_validation->set_rules('e_historyillness','History of Illness', 'required');
 $this->form_validation->set_rules('e_bp','Blood Pressure');
 $this->form_validation->set_rules('e_rr','Respiratory Rate');
+$this->form_validation->set_rules('e_pulse','Pulserate');
+$this->form_validation->set_rules('e_physicalexam','Physical Examination');
+$this->form_validation->set_rules('e_mouth','Mouth');
+$this->form_validation->set_rules('e_lungs','Lungs');
+$this->form_validation->set_rules('e_abdo','Abdomen');
+$this->form_validation->set_rules('e_spine','Spine');
+$this->form_validation->set_rules('e_remarks','Remarks');
+$this->form_validation->set_rules('e_others','Others');
 $this->form_validation->set_rules('e_cr','Capillary Refill');
 $this->form_validation->set_rules('e_temp','Temperature');
 $this->form_validation->set_rules('e_wt','Weight');
 $this->form_validation->set_rules('e_pr','Pulse Rate');
 $this->form_validation->set_rules('e_diagnosis','Diagnosis');
-$this->form_validation->set_rules('e_medication','Medication / Treatment');
+$this->form_validation->set_rules('e_medical_treatment','Medication / Treatment');
+$this->form_validation->set_rules('e_allergy','Allergy');
+$this->form_validation->set_rules('e_asthma','Asthma');
+$this->form_validation->set_rules('e_anemia','Anemia');
+$this->form_validation->set_rules('e_bleeding','Bleeding Problem');
+$this->form_validation->set_rules('e_hailment','Heart Ailment');
+$this->form_validation->set_rules('e_diabetes','Diabetes');
+$this->form_validation->set_rules('e_epilepsy','Epilepsy');
+$this->form_validation->set_rules('e_kidney','Kidney disease');
+$this->form_validation->set_rules('e_convulsion','Convulsion');
+$this->form_validation->set_rules('e_fainting','Fainting');
 $this->form_validation->set_rules('e_physician','Username','required', array('required' => 'Please select the username of the doctor!'));
 
 if($this->form_validation->run() == FALSE){
@@ -413,7 +431,10 @@ $doctor = 'Doctor';
 
 $data['get_user'] = $this->Record_model->get_users_account($doctor);
 $data['get_findings_view'] = $this->Record_model->get_data_findings($findings_id);
-$data['title'] = 'Add to Doctor';
+$data['get_cr'] = $this->Record_model->get_cr();
+$data['get_remarks'] = $this->Record_model->get_remarks();
+$data['get_details'] = $this->Record_model->get_details();
+$data['title'] = 'Add to Teacher';
 $data['topbar'] = 'navbar-default';
 $data['form'] = 'admission/addfindingsdataform';
 $data['main_view'] = "admission/addfindingsdata";
@@ -442,6 +463,14 @@ $this->load->view('layouts/central_template', $data);
    'a_historypresentillness' => $this->input->post('e_historyillness'),
    'a_bp' => $this->input->post('e_bp'),
    'a_rr' => $this->input->post('e_rr'),
+   'a_pulse' => $this->input->post('e_pulse'),
+   'a_physicalexam' => $this->input->post('e_physicalexam'),
+   'a_mouth' => $this->input->post('e_mouth'),
+   'a_lungs' => $this->input->post('e_lung'),
+   'a_abdo' => $this->input->post('e_abdo'),
+   'a_spine' => $this->input->post('e_spine'),
+   'a_remarks' => $this->input->post('e_remarks'),
+   'a_others' => $this->input->post('e_others'),
    'a_cr' => $this->input->post('e_cr'),
    'a_temp' => $this->input->post('e_temp'),
    'a_wt' => $this->input->post('e_wt'),
@@ -459,12 +488,15 @@ $doctor = 'Doctor';
 
 $data['get_user'] = $this->Record_model->get_users_account($doctor);
      $data['get_findings_view'] = $this->Record_model->get_data_findings($findings_id);
-      $data['title'] = "Add to Doctor";
+     $data['get_cr'] = $this->Record_model->get_cr();
+$data['get_remarks'] = $this->Record_model->get_remarks();
+$data['get_details'] = $this->Record_model->get_details();
+      $data['title'] = "Add to Teacher";
       $data['topbar'] = 'navbar-default';
       $data['form'] = 'admission/addfindingsdataform';
       $data['main_view'] = 'admission/addfindingsdata';
   
-      $this->session->set_flashdata('add_to_doctor_success', "Patient Findings is Added to Doctor's Account");
+      $this->session->set_flashdata('add_to_doctor_success', "Student Record is Added to Teacher's Account");
       redirect('admissioncontrol/findingsview/'.$findings_id.'#findings', $data);
 
 
@@ -495,11 +527,19 @@ $data['get_user'] = $this->Record_model->get_users_account($doctor);
    'of_historypresentillness' => $this->input->post('e_historyillness'),
    'of_bp' => $this->input->post('e_bp'),
    'of_rr' => $this->input->post('e_rr'),
+   'of_pulse' => $this->input->post('e_pulse'),
+   'of_mouth' => $this->input->post('e_mouth'),
+   'of_lungs' => $this->input->post('e_lungs'),
+   'of_abdo' => $this->input->post('e_abdo'),
+   'of_physicalexam' => $this->input->post('e_physicalexam'),
+   'of_spine' => $this->input->post('e_spine'),
+   'of_remarks' => $this->input->post('e_remarks'),
+   'of_others' => $this->input->post('e_others'),
    'of_cr' => $this->input->post('e_cr'),
    'of_temp' => $this->input->post('e_temp'),
    'of_wt' => $this->input->post('e_wt'),
    'of_diagnosis' => $this->input->post('e_diagnosis'),
-   'of_medication' => $this->input->post('e_medication'),
+   'of_medication' => $this->input->post('e_medical_treatment'),
    'of_pr' => $this->input->post('e_pr'),
    'of_physician_id' => $this->input->post('e_physician'),
    'of_date' => $date 
@@ -513,12 +553,15 @@ $doctor = 'Doctor';
 
 $data['get_user'] = $this->Record_model->get_users_account($doctor);
      $data['get_findings_view'] = $this->Record_model->get_data_findings($findings_id);
-      $data['title'] = "Add to Doctor";
+     $data['get_cr'] = $this->Record_model->get_cr();
+$data['get_remarks'] = $this->Record_model->get_remarks();
+$data['get_details'] = $this->Record_model->get_details();
+      $data['title'] = "Add to Teacher";
       $data['topbar'] = 'navbar-default';
       $data['form'] = 'admission/addfindingsdataform';
       $data['main_view'] = 'admission/addfindingsdata';
   
-      $this->session->set_flashdata('add_to_doctor_success', "Patient Findings is Added to Doctor's Account");
+      $this->session->set_flashdata('add_to_doctor_success', "Student Record is Added to Teacher's Account");
       redirect('admissioncontrol/findingsview/'.$findings_id.'#findings', $data);
 
 
@@ -557,7 +600,10 @@ $doctor = 'Doctor';
 
 $data['get_user'] = $this->Record_model->get_users_account($doctor);
 $data['get_admission_view'] = $this->Record_model->get_data_admission($admission_id);
-$data['title'] = 'Add to Doctor';
+$data['title'] = 'Add to Teacher';
+$data['get_cr'] = $this->Record_model->get_cr();
+$data['get_remarks'] = $this->Record_model->get_remarks();
+$data['get_details'] = $this->Record_model->get_details();
 $data['topbar'] = 'navbar-default';
 $data['form'] = 'admission/addadmissiondataform';
 $data['main_view'] = "admission/addadmissiondata";
@@ -600,7 +646,10 @@ $doctor = 'Doctor';
 
 $data['get_user'] = $this->Record_model->get_users_account($doctor);
 $data['get_admission_view'] = $this->Record_model->get_data_admission($admission_id);
-$data['title'] = 'Add to Doctor';
+$data['title'] = 'Add toTeacher';
+$data['get_cr'] = $this->Record_model->get_cr();
+$data['get_remarks'] = $this->Record_model->get_remarks();
+$data['get_details'] = $this->Record_model->get_details();
 $data['topbar'] = 'navbar-default';
 $data['form'] = 'admission/addadmissiondataform';
 $data['main_view'] = "admission/addadmissiondata";
@@ -646,12 +695,15 @@ $doctor = 'Doctor';
 
 $data['get_user'] = $this->Record_model->get_users_account($doctor);
 $data['get_admission_view'] = $this->Record_model->get_data_admission($admission_id);
-$data['title'] = 'Add to Doctor';
+$data['title'] = 'Add to Teacher';
+$data['get_cr'] = $this->Record_model->get_cr();
+$data['get_remarks'] = $this->Record_model->get_remarks();
+$data['get_details'] = $this->Record_model->get_details();
 $data['topbar'] = 'navbar-default';
 $data['form'] = 'admission/addadmissiondataform';
 $data['main_view'] = "admission/addadmissiondata";
   
-      $this->session->set_flashdata('add_to_doctor_success', "Patient Admission is Added to Doctor's Account");
+      $this->session->set_flashdata('add_to_doctor_success', "Student Record is Added to Teacher's Account");
       redirect('admissioncontrol/admissionview/'.$admission_id.'#admission', $data);
 
 

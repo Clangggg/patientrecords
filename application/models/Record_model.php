@@ -95,6 +95,17 @@ public function get_cr(){
       }
     }
 
+    public function get_details(){
+
+      $query = $this->db->get('details');
+      
+      if($query->num_rows() > 0){
+       
+       return $query->result();
+      
+        }
+      }
+
 public function get_divi(){
 
   $query = $this->db->get('divi');
@@ -393,8 +404,8 @@ public function get_patient_admission_id($pr_id) { // Join tables
      admission_record.ad_wardname,
      admission_record.ad_id as admission_id,
      admission_record.ad_date,
-     admission_record.ad_physician,
-     admission_record.ad_dischargedate,
+     admission_record.ad_chargetoaccount,
+     admission_record.ad_relationtopatient,
      patient_record.pr_date,
      patient_record.pr_lname,
      patient_record.pr_fname,

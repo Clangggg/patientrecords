@@ -8,11 +8,11 @@
   <div class="row"> <!-- Begin of Row -->
 
       <div class="col-xl-8 col-md-8 mb-4">
-              <div class="card border-left-success shadow h-100 py-2">
+              <div class="card border-left-primary shadow h-100 py-2">
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col-auto">
-             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">STUDENT NAME</div>
+             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">STUDENT NAME</div>
              </div>
                     <div class="col mr-2">
                       <div class="h5 mb-0 font-weight-bold text-gray-800">
@@ -29,11 +29,11 @@
             </div>
 
               <div class="col-xl-4 col-md-6 mb-4 ml-auto">
-              <div class="card border-left-success shadow h-100 py-2">
+              <div class="card border-left-primary shadow h-100 py-2">
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col-auto">
-               <div class="text-xs font-weight-bold text-success text-uppercase mb-1">LRN</div>
+               <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">LRN</div>
              </div>
                        <div class="col mr-2">
                       <div class="h5 mb-0 font-weight-bold text-gray-800">
@@ -59,16 +59,16 @@
               <!-- Details -->
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-success">Details <?php echo "<a style='margin-left: 225px; text-decoration:none;' class='text-secondary' href='". base_url() ."admissioncontrol/patient_edit_option/". $get_data->pr_id ."'>" ?> 
+                  <h6 class="m-0 font-weight-bold text-primary">Details <?php echo "<a style='margin-left: 225px; text-decoration:none;' class='text-secondary' href='". base_url() ."admissioncontrol/patient_edit_option/". $get_data->pr_id ."'>" ?> 
                     <i class="fa fa-edit"></i></a> </h6>        
                 </div>
                <div class="card-body"> <!--Card Body begin tag  -->
-
+<!-- 
            <?php if($this->session->flashdata('patientrecordoption_updated')): ?>  
           <?php echo "<div style='#1cc88a' class='alert alert-success alert-dismissible text-center'>
                 <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
                 <h6><i class='con fa fa-check'></i></h6>".$this->session->flashdata('patientrecordoption_updated') ."</div>" ?>
-           <?php endif; ?>
+           <?php endif; ?> -->
                
                <div style="margin-bottom:17px;">
                 <div class="row no-gutters">
@@ -166,7 +166,7 @@
               <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                   <h6 class="m-0 font-weight-bold text-success">OPD Examination <?php echo "<a style='margin-left: 400px; text-decoration:none;' class='text-secondary' href='". base_url() ."admissioncontrol/add_findings/". $get_data->pr_id ."#findings'>" ?> <i class="fa 
+                   <h6 class="m-0 font-weight-bold text-primary">Student Health Examination <?php echo "<a style='margin-left: 400px; text-decoration:none;' class='text-secondary' href='". base_url() ."admissioncontrol/add_findings/". $get_data->pr_id ."#findings'>" ?> <i class="fa 
                    fa-plus"></i></a></h6>
                 </div>
                 <!-- Card Body -->
@@ -207,7 +207,7 @@
                     <div id="admission" class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-success">Parent/Guardian Information <?php echo "<a style='margin-left: 400px; text-decoration:none;' class='text-secondary' href='". base_url() ."admissioncontrol/patientdataview/". $get_data->pr_id ."#admission'>" ?> <i class="fa 
+                  <h6 class="m-0 font-weight-bold text-primary">Clinical visit <?php echo "<a style='margin-left: 520px; text-decoration:none;' class='text-secondary' href='". base_url() ."admissioncontrol/patientdataview/". $get_data->pr_id ."#admission'>" ?> <i class="fa 
                    fa-arrow-left"></i></a></h6>
                 </div>
                 <!-- Card Body -->

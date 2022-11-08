@@ -15,7 +15,7 @@
                     <div class="col mr-2">
                       <div class="h5 mb-0 font-weight-bold text-gray-800">
                       	&nbsp&nbsp&nbsp&nbsp&nbsp
-                      	<?php echo $get_data->pr_lname ?>&nbsp&nbsp
+                      	<?php echo $get_data->pr_lname ?>,&nbsp&nbsp
                       	<?php echo $get_data->pr_fname ?>&nbsp&nbsp
                       	<?php echo $get_data->pr_mname ?>
                       
@@ -166,7 +166,7 @@
               <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                   <h6 class="m-0 font-weight-bold text-primary">Physical Examination <?php echo "<a style='margin-left: 450px; text-decoration:none;' class='text-secondary' href='". base_url() ."admissioncontrol/patientdataview/". $get_data->pr_id ."#findings'>" ?> <i class="fa 
+                   <h6 class="m-0 font-weight-bold text-primary">Student Health Examination <?php echo "<a style='margin-left: 390px; text-decoration:none;' class='text-secondary' href='". base_url() ."admissioncontrol/patientdataview/". $get_data->pr_id ."#findings'>" ?> <i class="fa 
                    fa-arrow-left"></i></a></h6>
                 </div>
                 <!-- Card Body -->
@@ -179,7 +179,7 @@
                <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Oral Health Examination <?php echo "<a style='margin-left: 450px; text-decoration:none;' class='text-secondary' href='". base_url() ."admissioncontrol/admit_form/". $get_data->pr_id ."#admission'>" ?> <i class="fa 
+                  <h6 class="m-0 font-weight-bold text-primary">Clinical Visit <?php echo "<a style='margin-left: 500px; text-decoration:none;' class='text-secondary' href='". base_url() ."admissioncontrol/admit_form/". $get_data->pr_id ."#admission'>" ?> <i class="fa 
                    fa-plus"></i></a></h6>
                 </div>
                 <!-- Card Body -->

@@ -5,7 +5,7 @@
 
      </div>
      <div class="row">
-         <div class="col-sm-6">
+         <div class="col-sm-3">
 
              <div style="margin-bottom:20px;">
                  <div class="row no-gutters">
@@ -40,16 +40,25 @@
              </div>
 
 
-             <div style="margin-bottom:20px;">
+             <div style="margin-top:20px;">
                  <div class="row no-gutters">
-                     <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Admission Details</div>
+                     <div class="text-xs font-weight-bold text-secondary text-uppercase">Examination Details</div>
                  </div>
                  <div class="h5 mb-3 font-weight-bold text-gray-800">
-                     <input class="form-control  <?= (form_error('e_historyillness') == "" ? '':'is-invalid') ?>"
-                         type="text" name="e_historyillness"
-                         value="<?php echo $get_findings_view->f_historypresentillness; ?>">
-
+                     <select class="form-control" name="e_historyillness">
+                         <option
+                             value=<?php echo $get_findings_view->f_historypresentillness;?><?php echo set_select('e_historyillness', $get_findings_view->f_historypresentillness);?>>
+                             <?php echo $get_findings_view->f_historypresentillness; ?></option>
+                         <?php if(count($get_details)): ?>
+                         <?php foreach($get_details as $details): ?>
+                         <option
+                             value=<?php echo $details->de_name; ?><?php echo set_select('e_historyillness', $details->de_name); ?>>
+                             <?php echo $details->de_name; ?></option>
+                         <?php endforeach; ?>
+                         <?php endif; ?>
+                     </select>
                  </div>
+
                  <div class="text-danger text-center"><?php echo form_error('e_historyillness'); ?></div>
              </div>
 
@@ -106,7 +115,7 @@
 
              <div style="margin-bottom:17px;">
                  <div class="row no-gutters">
-                     <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Mouth/Throat/Neck</div>
+                     <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Mouth/Neck/Throat</div>
                  </div>
                  <div class="h5 mb-1 font-weight-bold text-gray-800">
                      <input class="form-control  <?= (form_error('e_mouth') == "" ? '':'is-invalid') ?>" type="text"
@@ -178,28 +187,7 @@
 
          </div><!-- End of Column 1 -->
 
-         <div class="col-sm-6">
-
-
-             <div style="margin-bottom:17px;">
-                 <div class="row no-gutters">
-                     <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Send to Physician's
-                         Account</div>
-                 </div>
-                 <div class="h5 mb-1 font-weight-bold text-gray-800">
-                     <select class="form-control" name="e_physician">
-                         <option value="">Select</option>
-                         <?php if(count($get_user)): ?>
-                         <?php foreach($get_user as $useraccount): ?>
-                         <option
-                             value=<?php echo $useraccount->su_id; ?><?php echo set_select('e_physician', $useraccount->su_user); ?>>
-                             <?php echo  "Dr. ".$useraccount->su_user; ?></option>
-                         <?php endforeach; ?>
-                         <?php endif; ?>
-                     </select>
-                 </div>
-                 <div class="text-danger text-center"><?php echo form_error('e_physician'); ?></div>
-             </div>
+         <div class="col-sm-4">
 
              <div style="margin-bottom:17px;">
                  <div class="row no-gutters">
@@ -502,20 +490,181 @@
 
 
              </div>
-
-
          </div><!-- End of Column 2 -->
+         <div class="col-sm-5">
+             <!-- Card Header - Dropdown -->
 
+             <h6 class="ml-3 mb-0 font-weight-bold text-center text-xs text-uppercase text-primary">Reference
+             </h6>
+
+             <!-- Card Body -->
+             <div class="card-body text-xs">
+
+                 <div class="table">
+
+                     <table class="table table-bordered" cellspacing="0">
+                         <tbody>
+
+                             <tr>
+                                 <td class="text-center">Visual Acuity</td>
+                                 <td class="text-left">a. Normal right &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp c.
+                                     Abnormal
+                                     right
+                                     <br> b. Normal left &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp d. Abnormal
+                                     left
+                                 </td>
+
+                             </tr>
+                             <tr>
+                                 <td class="text-center">Hearing</td>
+                                 <td class="text-left">a. Normal right &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp c.
+                                     Abnormal
+                                     right
+                                     <br> b. Normal left &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp d. Abnormal
+                                     left
+                                 </td>
+
+                             </tr>
+                             <tr>
+                                 <td class="text-center">Skin/Scalp</td>
+                                 <td class="text-left">a. Normal &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                                     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp g. Hematoma <br> b. Pediculosis
+                                     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp h. Bruises <br>
+                                     c. Tinea Flava &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp i.
+                                     Cuts/lacerations<br> d. Ringworm
+                                     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp j.
+                                     Allergy <br>
+                                     e. Eczema
+                                     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                     k. Others, Specify <br> f. Impetigo/boil</td>
+                             </tr>
+                             <tr>
+                                 <td class="text-center">Eye/Ear/Nose</td>
+                                 <td class="text-left">a. Normal eye &nbsp &nbsp &nbsp
+                                     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspf.
+                                     Ear
+                                     discharge <br> b. Normal ears
+                                     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp g.
+                                     Impacted
+                                     cerumen<br> c. Normal nose &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                     h. Septal
+                                     deviation<br> d. Squinting
+                                     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                     i. Nasal
+                                     discharge<br>
+                                     e. Pale
+                                     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                     j. Others, specify <br>&nbsp&nbsp&nbsp&nbspconjunctivae
+                                 </td>
+
+                             </tr>
+                             <tr>
+                                 <td class="text-center">Mouth/Neck/<br>Throat</td>
+                                 <td class="text-left">a. Normal mouth &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp f.
+                                     Inflamed pharynx <br> b. Normal throat
+                                     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspwith/w/o
+                                     exudates
+                                     <br> c. Enlarged tonsils &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp g. Enlarged thyroid
+                                     <br>&nbsp&nbsp&nbspwith/w/o exudates &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp gland<br>
+                                     d. Lip lesion
+                                     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                     h. Speech defect <br> e. Enlarged tonsils
+                                     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp i. Dental problem
+                                     <br> &nbsp&nbsp&nbsp&nbspwith/w/o exudates
+                                     &nbsp&nbsp&nbsp j. Others, specify
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td class="text-center">Lungs/Heart</td>
+                                 <td class="text-left">a. Normal lungs
+                                     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp f. Deformed
+                                     chest
+                                     <br> b. Normal heart&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp g.
+                                     Distant heart
+                                     sounds
+                                     <br> c. Rales
+                                     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                     h. Irregular heart rate
+                                     <br> d. Wheeze
+                                     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                     i.
+                                     Others, speficy
+                                     <br> e. Murmur
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td class="text-center">Abdomen/<br>Genitalia</td>
+                                 <td class="text-left">a. Normal abdomen &nbsp&nbsp&nbsp&nbsp&nbsp e.
+                                     Tenderness
+                                     <br> b. Normal genitalia &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp f. Genital
+                                     discharge
+                                     <br> c. Mass
+                                     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                     g. Hernia
+                                     <br> d. Hemorrhoids
+                                     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp h.
+                                     Others, specify
+                                     <br>
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td class="text-center">Spine/<br>Extremities</td>
+                                 <td class="text-left">a. Normal spine
+                                     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp e. Lordosis
+                                     <br> b. N upper
+                                     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                     &nbsp &nbsp f.
+                                     Kyphosis
+                                     <br> &nbsp&nbsp&nbsp extremities
+                                     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp g.
+                                     Bowlegs/knock knees <br>
+                                     c. N lower
+                                     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                     h. Flat
+                                     foot
+                                     <br> &nbsp&nbsp&nbsp&nbspextremities
+                                     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp i.
+                                     Club foot
+                                     <br> d. Scoliosis
+                                     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                     j. Others,
+                                     specify
+                                 </td>
+                             </tr>
+                         </tbody>
+                     </table>
+                 </div>
+             </div>
+             <div style="margin-bottom:17px;">
+                 <div class="row no-gutters">
+                     <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Send to Teacher's
+                         Account</div>
+                 </div>
+                 <div class="h5 mb-1 font-weight-bold text-gray-800">
+                     <select class="form-control" name="e_physician">
+                         <option value="">Select</option>
+                         <?php if(count($get_user)): ?>
+                         <?php foreach($get_user as $useraccount): ?>
+                         <option
+                             value=<?php echo $useraccount->su_id; ?><?php echo set_select('e_physician', $useraccount->su_user); ?>>
+                             <?php echo  "Ma'am/Sir. ".$useraccount->su_user; ?></option>
+                         <?php endforeach; ?>
+                         <?php endif; ?>
+                     </select>
+                 </div>
+                 <div class="text-danger text-center"><?php echo form_error('e_physician'); ?></div>
+             </div>
+         </div>
 
 
      </div><!-- End of Row -->
 
 
 
-     <?php echo "<button style='margin-left: 235px; margin-bottom: 20px; text-decoration:none' type='submit' class='btn btn-primary bg-blue' name='submit' href='". base_url() ."admissioncontrol/edit_findings/". $get_findings_view->pr_id ."#findings'>" ?>
+     <?php echo "<button style='margin-left: 450px; margin-bottom: 20px; text-decoration:none' type='submit' class='btn btn-primary bg-blue' name='submit' href='". base_url() ."admissioncontrol/edit_findings/". $get_findings_view->pr_id ."#findings'>" ?>
      <span class="icon text-white-100">
          <i class="fas fa-arrow-right"></i>
-         Add to Doctor
+         Add to Teacher
      </span>
      </button>
 
