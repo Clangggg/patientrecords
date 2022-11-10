@@ -70,6 +70,42 @@ if($query->num_rows() > 0) {
 
 }
 
+public function get_details(){
+
+  $query = $this->db->get('details');
+  
+  if($query->num_rows() > 0) {
+  
+   return $query->result();
+  
+   }
+  
+  }
+
+  public function get_cr(){
+
+    $query = $this->db->get('cr');
+    
+    if($query->num_rows() > 0) {
+    
+     return $query->result();
+    
+     }
+    
+    }
+
+    public function get_remarks(){
+
+      $query = $this->db->get('remarks');
+      
+      if($query->num_rows() > 0) {
+      
+       return $query->result();
+      
+       }
+      
+      }
+
 
 
 public function patientFinding($data){

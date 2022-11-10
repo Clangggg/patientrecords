@@ -646,8 +646,8 @@
                          <?php if(count($get_user)): ?>
                          <?php foreach($get_user as $useraccount): ?>
                          <option
-                             value=<?php echo $useraccount->su_id; ?><?php echo set_select('e_physician', $useraccount->su_user); ?>>
-                             <?php echo  "Ma'am/Sir. ".$useraccount->su_user; ?></option>
+                             value=<?php echo $useraccount->su_id; ?><?php echo set_select('e_physician', $useraccount->su_fname); ?>>
+                             <?php echo  "Ma'am/Sir. ".$useraccount->su_fname; ?></option>
                          <?php endforeach; ?>
                          <?php endif; ?>
                      </select>

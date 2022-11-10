@@ -5,7 +5,7 @@
             <div class="card-header py-3">
            
             <!-- Page Heading -->
-          <h5 class="mb-2 text-gray-800">Log Findings
+          <h5 class="mb-2 text-gray-800">Examination Logs
                   </h5>  
 
             </div>
@@ -26,7 +26,7 @@
                       
                       <th class="text-center">Username</th>
                       <th class="text-center">First Name</th>
-                      <th class="text-center">Patient</th>
+                      <th class="text-center">Student</th>
                    
                       <th class="text-center">Log Date/Time</th>
                       <th class="text-center">Details</th>

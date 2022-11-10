@@ -9,7 +9,7 @@ public function logsview(){
 $admin_id = $this->session->userdata('u_id');
 
 $data['get_log_findings'] = $this->Logs_model->get_findings_log($admin_id);
-$data['title'] = 'Findings';
+$data['title'] = 'Examination Logs';
 $data['topbar'] = 'user_logs/userlogsnavbar';
 $data['main_view'] = 'user_logs/userfindingslogview';
 
@@ -26,7 +26,7 @@ public function logsadmissionview(){
 $admin_id = $this->session->userdata('u_id');
 
 $data['get_log_admission'] = $this->Logs_model->get_admission_log($admin_id);
-$data['title'] = 'Admission';
+$data['title'] = 'Clinical Visit logs';
 $data['topbar'] = 'user_logs/userlogsnavbar';
 $data['main_view'] = 'user_logs/useradmissionlogview';
 

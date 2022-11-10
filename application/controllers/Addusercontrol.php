@@ -93,7 +93,7 @@ $data['get_user'] = $this->Addusers_model->get_users(); <-- line of code
 */
 
 
-$data['title'] = 'Add Users'; /* dito naman yung nasa loob ng $data['title'] = 'Add Users' 
+$data['title'] = 'Add Teachers'; /* dito naman yung nasa loob ng $data['title'] = 'Add Users' 
 si ['title'] is equal to Add Users name, gagamitin mo yung varible title as $title kung san sya ay naglalaman ng value na Add Users, sesend mo yan sa loob ng VIEW, nakaset yan sa may <title> <?php echo $title; ?> </title> open nyo lng yung file na central_template.php then sa pinakataas n part, nilagyan mo yung title bar ng browser as Add Users
 */
 
@@ -153,7 +153,7 @@ public function add_user(){
 
 $this->form_validation->set_rules('a_user', 'Username', 'trim|required|is_unique[standardusers.su_user]', array('is_unique'=>'Username already exist!'));
 $this->form_validation->set_rules('a_pass', 'Password', 'trim|required|min_length[9]');
-$this->form_validation->set_rules('a_fname', 'Firstname', 'trim|required|alpha');
+$this->form_validation->set_rules('a_fname', 'Firstname', 'trim|required');
 $this->form_validation->set_rules('a_position', 'Position', 'trim|required', array('required'=>'Please select position'));
 
 if($this->form_validation->run() == FALSE){
@@ -198,7 +198,7 @@ public function edit_user($user_id){
 
 $this->form_validation->set_rules('e_user', 'Username', 'trim|required');
 $this->form_validation->set_rules('e_pass', 'Password', 'trim|required|min_length[9]');
-$this->form_validation->set_rules('e_fname', 'Firstname', 'trim|required|alpha');
+$this->form_validation->set_rules('e_fname', 'Firstname', 'trim|required');
 $this->form_validation->set_rules('e_position', 'Position', 'trim|required', array('required'=>'Please select position'));
 
 if($this->form_validation->run() == FALSE){
@@ -207,7 +207,7 @@ if($this->form_validation->run() == FALSE){
 $data['get_user_id'] = $this->Addusers_model->get_users_id(
 	$user_id);
 
-$data['title'] = 'Edit Users';
+$data['title'] = 'Edit Account';
 $data['topbar'] = 'standardusers/addusernavbar';
 $data['editform'] = 'standardusers/edit_user_form';
 $data['main_view'] = "standardusers/edit_user_view";

@@ -9,7 +9,7 @@
      <div style="margin-bottom:17px;">
                 <div class="row no-gutters">
                  <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">
-                   Firstname
+                   First name
                  </div>   
                 </div>
         <div class="h5 mb-1 font-weight-bold text-gray-800"><input class="form-control <?= (form_error('a_fname') == "" ? '':'is-invalid') ?>" type="text" name="a_fname" placeholder="Enter Firstname" value="<?php echo set_value('a_fname'); ?>" ></div>
@@ -21,7 +21,7 @@
                 <div style="margin-bottom:17px;">
                 <div class="row no-gutters">
                  <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">
-                   Lastname
+                   Last name
                  </div>   
                 </div>
         <div class="h5 mb-1 font-weight-bold text-gray-800"><input class="form-control  <?= (form_error('a_lname') == "" ? '':'is-invalid') ?>" type="text" name="a_lname" placeholder="Enter Lastname" value="<?php echo set_value('a_lname'); ?>" ></div>
@@ -50,7 +50,7 @@
    
       <div class="col-sm-2">
         <div class="text-gray-800">
-         <?php echo "<button  style='margin-top:19px;' type='submit' class='btn btn-success btn-icon-split' name='submit' href='". base_url() ."admissioncontrol/add_user/#demo'>" ?> 
+         <?php echo "<button  style='margin-top:19px;' type='submit' class='btn btn-primary bg-blue' name='submit' href='". base_url() ."admissioncontrol/add_user/#demo'>" ?> 
                  <span class="icon text-white-100">
                   <i class="fas fa-arrow-right"></i>  
                     Add Doctor

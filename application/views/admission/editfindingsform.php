@@ -93,7 +93,6 @@
                      </div>
                      <!--End Second Column -->
                  </div>
-
              </div><!-- End of Column 1 -->
 
              <div class="col-sm-10">
@@ -258,9 +257,6 @@
                      </div>
                      <div class="text-danger text-center"><?php echo form_error('e_physician'); ?></div>
                  </div>
-
-
-
              </div><!-- End of Row -->
          </div>
          <div class="col-sm-7">
@@ -271,7 +267,6 @@
 
              <!-- Card Body -->
              <div class="card-body">
-
                  <div class="table">
 
                      <table class="table table-bordered" cellspacing="0">

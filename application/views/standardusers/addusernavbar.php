@@ -6,7 +6,7 @@
          <!-- Nav Item - Tables -->
         <a  class="nav-link collapsed text-secondary" href="<?php echo base_url(); ?>addusercontrol/adduserview">
           <i class="fas fa-fw fa-user-plus "></i>
-          <span>Add Users</span></a>
+          <span>Add Teachers</span></a>
 
 
  <div class="topbar-divider d-none d-sm-block"></div>

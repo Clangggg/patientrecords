@@ -42,7 +42,7 @@
                   <div class="row">
                      <div style="margin-left: 4px;" class="col-sm-4">
                           <?php echo form_label('Learner Reference Number'); ?>
-                   <input type="text" minlenght="12" maxlength="12" class="form-control  <?= (form_error('lrn') == "" ? '':'is-invalid') ?>"  name="lrn" placeholder="Enter LRN" value="<?php echo set_value('lrn') ?>">
+                   <input type="text" minlength="12" maxlength="12" class="form-control  <?= (form_error('lrn') == "" ? '':'is-invalid') ?>"  name="lrn" placeholder="Enter LRN" value="<?php echo set_value('lrn') ?>">
                   <div class="text-danger text-center"><?php echo form_error('lrn'); ?></div>
                      </div>
                   </div>

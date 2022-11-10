@@ -6,7 +6,7 @@
             <div class="card-header py-3">
            
             <!-- Page Heading -->
-          <h5 class="mb-2 text-gray-800"> Out Patient Findings 
+          <h5 class="mb-2 text-gray-800"> Student Health Examination 
                   </h5>  
 
             </div>

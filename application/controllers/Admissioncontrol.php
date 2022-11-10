@@ -25,7 +25,7 @@ $this->load->view('layouts/central_template', $data);
 public function opd_process(){
 
 
-$this->form_validation->set_rules('lrn', 'LRN', 'trim|required|alpha_numeric_spaces');
+$this->form_validation->set_rules('lrn', 'LRN', 'trim|required|numeric|min_length[12]|max_length[12]');
 $this->form_validation->set_rules('lname', 'Lastname', 'trim|required|alpha_numeric_spaces');
 $this->form_validation->set_rules('fname', 'Firstname', 'trim|required|alpha_numeric_spaces');
 $this->form_validation->set_rules('middlen', 'Middlename', 'trim|required|alpha');
@@ -130,7 +130,7 @@ $this->load->view('layouts/central_template', $data);
 public function edit_opd_form($pr_id) {
 
 $this->form_validation->set_rules('date', 'Date', 'required');
-$this->form_validation->set_rules('lrn', 'LRN', 'required|alpha_numeric_spaces');
+$this->form_validation->set_rules('lrn', 'LRN', 'required|numeric|min_length[12]|max_length[12]');
 $this->form_validation->set_rules('lname', 'Lastname', 'required|alpha_numeric_spaces');
 $this->form_validation->set_rules('fname', 'Firstname', 'required|alpha_numeric_spaces');
 $this->form_validation->set_rules('middlen', 'Middlename', 'required|alpha');

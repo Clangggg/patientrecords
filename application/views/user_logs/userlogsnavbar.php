@@ -6,7 +6,7 @@
          <!-- Nav Item - Tables -->
         <a  class="nav-link collapsed text-secondary" href="<?php echo base_url(); ?>logscontrol/logsview">
           <i class="fas fa-fw fa-file "></i>
-          <span>Findings</span></a>
+          <span>Student Health Examination</span></a>
 
 
         <div class="topbar-divider d-none d-sm-block"></div>
@@ -14,7 +14,7 @@
          <!-- Nav Item - Tables -->
         <a  class="nav-link collapsed text-secondary" href="<?php echo base_url(); ?>logscontrol/logsadmissionview">
           <i class="fas fa-fw fa-bed "></i>
-          <span>Admission Record</span></a>
+          <span>Clinical visit</span></a>
 
 
     

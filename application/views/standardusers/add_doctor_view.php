@@ -56,7 +56,7 @@
                   <thead>
                     <tr>
                   
-                      <th class="text-center">FullName</th>
+                      <th class="text-center">Full Name</th>
                       <th class="text-center">Position</th>
                       <th class="text-center">Date Added</th>
                       <th class="text-center">Action</th>

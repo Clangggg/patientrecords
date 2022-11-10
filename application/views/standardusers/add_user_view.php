@@ -2,7 +2,7 @@
           <div class="card shadow mb-4">
       
             <div class="card-header py-3">
-         <h5 class="mb-2 text-gray-800"> Add Users </h5>
+         <h5 class="mb-2 text-gray-800"> Add Teachers </h5>
 
             </div>
             <div class="card-body">
@@ -31,13 +31,13 @@
             <div class="card-header py-3">
            
             <!-- Page Heading -->
-          <h5 class="mb-2 text-gray-800">Users </h5>  
+          <h5 class="mb-2 text-gray-800">User Accounts </h5>  
 
             </div>
             <div class="card-body">
        <div class="container">
      
-              <?php if($this->session->flashdata('edit_user')): ?>  
+              <!-- <?php if($this->session->flashdata('edit_user')): ?>  
           <?php echo "<div style='#1cc88a' class='alert alert-success alert-dismissible text-center'>
                 <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
                 <h6><i class='con fa fa-check'></i></h6>".$this->session->flashdata('edit_user') ."</div>" ?>
@@ -48,7 +48,7 @@
           <?php echo "<div style='#1cc88a' class='alert alert-success alert-dismissible text-center'>
                 <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
                 <h6><i class='con fa fa-check'></i></h6>".$this->session->flashdata('delete_user') ."</div>" ?>
-           <?php endif; ?>
+           <?php endif; ?> -->
 
              </div>
               <div class="table">
@@ -57,8 +57,7 @@
                   <thead>
                     <tr>
                       <th class="text-center">Username</th>
-                      <th class="text-center">First Name</th>
-                      <th class="text-center">Position</th>
+                      <th class="text-center">Full Name</th>
                       <th class="text-center">Date Added</th>
                       <th class="text-center">Action</th>
                     </tr>
@@ -71,7 +70,6 @@
                    
                  <?php echo "<td class='text-center'>". $user->su_user ."</td>" ?>
                  <?php echo "<td class='text-center'>". $user->su_fname ."</td>" ?>
-                 <?php echo "<td class='text-center'>". $user->su_position ."</td>" ?>
                  <?php echo "<td class='text-center'>". $user->date_created ."</td>" ?>
                 
                  <?php echo "<td class='text-center'><a class='btn btn-success' href='". base_url() ."addusercontrol/edit_user/". $user->su_id ."'>Edit

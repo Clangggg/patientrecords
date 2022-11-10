@@ -7,7 +7,7 @@
             <div class="card-header py-3">
            
             <!-- Page Heading -->
-          <h5 class="mb-2 text-gray-800">Edit User <?php echo "<a style='margin-left: 800px; text-decoration:none;' class='text-secondary' href='". base_url() ."addusercontrol/adduserview/#addusertable'>" ?> <i class="fa 
+          <h5 class="mb-2 text-gray-800">Edit Account <?php echo "<a style='margin-left: 800px; text-decoration:none;' class='text-secondary' href='". base_url() ."addusercontrol/adduserview/#addusertable'>" ?> <i class="fa 
                    fa-arrow-left"></i></a> </h5>  
 
             </div>

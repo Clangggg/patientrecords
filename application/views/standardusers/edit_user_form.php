@@ -38,7 +38,7 @@
    <div style="margin-bottom:17px;">
                 <div class="row no-gutters">
                  <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">
-                   Firstname
+                   Full name
                  </div>   
                 </div>
         <div class="h5 mb-1 font-weight-bold text-gray-800"><input class="form-control  <?= (form_error('e_fname') == "" ? '':'is-invalid') ?>" type="text" name="e_fname" placeholder="Enter Firstname" value="<?php echo $get_user_id->su_fname; ?>" ></div>
@@ -53,18 +53,17 @@
                 </div>
            <select class="form-control" name="e_position">
                 
-             <option value="Standard User"<?php echo set_select('e_position','Standard User', (!empty($data) && $data == "Standard User" ? TRUE : FALSE )); ?>>Standard User</option>
-                <option value="Doctor"<?php echo set_select('e_position','Doctor', (!empty($data) && $data == "Doctor" ? TRUE : FALSE )); ?>>Doctor</option>
+             <option value="Doctor"<?php echo set_select('e_position','Doctor', (!empty($data) && $data == "Doctor" ? TRUE : FALSE )); ?>>Teacher</option>
          </select>
         <div class="text-danger text-center"><?php echo form_error('e_position'); ?></div>  
      </div>
    
       <div class="col-sm-2">
         <div class="text-gray-800">
-         <?php echo "<button  style='margin-top:19px;' type='submit' class='btn btn-success btn-icon-split' name='submit' href='". base_url() ."addusercontrol/edit_user/#editusertable'>" ?> 
+         <?php echo "<button  style='margin-top:19px;' type='submit' class='btn btn-primary bg-blue' name='submit' href='". base_url() ."addusercontrol/edit_user/#editusertable'>" ?> 
                  <span class="icon text-white-100">
                   <i class="fas fa-arrow-right"></i>  
-                    Update User
+                    Update
                   </span>
                 </button> 
           </div>

@@ -6,7 +6,7 @@
             <div class="card-header py-3">
            
             <!-- Page Heading -->
-          <h5 class="mb-2 text-gray-800"> Admission Record
+          <h5 class="mb-2 text-gray-800"> Clinical Visit
                   </h5>  
 
             </div>

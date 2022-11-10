@@ -681,7 +681,7 @@
                                             <?php if($get_findings_view->f_allergy): ?>
                                             <?php echo "<td class='text-center'>".$get_findings_view->f_allergy; ?>
                                             <?php else: ?>
-                                            <p>N/A</p>
+                                            
                                             <?php endif; ?></td>
 
                                         </tr>
@@ -690,7 +690,7 @@
                                             <?php if($get_findings_view->f_asthma): ?>
                                             <?php echo "<td class='text-center'>".$get_findings_view->f_asthma; ?>
                                             <?php else: ?>
-                                            <p>N/A</p>
+                                           
                                             <?php endif; ?></td>
                                         </tr>
                                         <tr>
@@ -698,7 +698,7 @@
                                             <?php if($get_findings_view->f_anemia): ?>
                                             <?php echo "<td class='text-center'>".$get_findings_view->f_anemia; ?>
                                             <?php else: ?>
-                                            <p>N/A</p>
+                                          
                                             <?php endif; ?></td>
                                         </tr>
                                         <tr>
@@ -706,7 +706,7 @@
                                             <?php if($get_findings_view->f_bleeding): ?>
                                             <?php echo "<td class='text-center'>".$get_findings_view->f_bleeding; ?>
                                             <?php else: ?>
-                                            <p>N/A</p>
+                                            
                                             <?php endif; ?></td>
                                         </tr>
                                         <tr>
@@ -715,7 +715,7 @@
                                             <?php if($get_findings_view->f_hailment): ?>
                                             <?php echo "<td class='text-center'>".$get_findings_view->f_hailment; ?>
                                             <?php else: ?>
-                                            <p>N/A</p>
+                                           
                                             <?php endif; ?></td>
                                         </tr>
                                         <tr>
@@ -724,7 +724,7 @@
                                             <?php if($get_findings_view->f_diabetes): ?>
                                             <?php echo "<td class='text-center'>".$get_findings_view->f_diabetes; ?>
                                             <?php else: ?>
-                                            <p>N/A</p>
+                                        
                                             <?php endif; ?></td>
                                         </tr>
                                         <tr>
@@ -732,7 +732,7 @@
                                             <?php if($get_findings_view->f_epilepsy): ?>
                                             <?php echo  "<td class='text-center'>".$get_findings_view->f_epilepsy; ?>
                                             <?php else: ?>
-                                            <p>N/A</p>
+                                            
                                             <?php endif; ?></td>
                                         </tr>
                                         <tr>
@@ -741,7 +741,7 @@
                                             <?php if($get_findings_view->f_kidney): ?>
                                             <?php echo "<td class='text-center'>".$get_findings_view->f_kidney; ?>
                                             <?php else: ?>
-                                            <p>N/A</p>
+                                            
                                             <?php endif; ?></td>
                                         </tr>
                                         <tr>
@@ -750,7 +750,7 @@
                                             <?php if($get_findings_view->f_convulsion): ?>
                                             <?php echo "<td class='text-center'>".$get_findings_view->f_convulsion; ?>
                                             <?php else: ?>
-                                            <p>N/A</p>
+                                           
                                             <?php endif; ?></td>
                                         </tr>
                                         <tr>
@@ -759,7 +759,7 @@
                                             <?php if($get_findings_view->f_fainting): ?>
                                             <?php echo "<td class='text-center'>".$get_findings_view->f_fainting; ?>
                                             <?php else: ?>
-                                            <p>N/A</p>
+                                         
                                             <?php endif; ?></td>
                                         </tr>
 

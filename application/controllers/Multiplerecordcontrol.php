@@ -68,7 +68,7 @@ class Multiplerecordcontrol extends CI_Controller {
   
             
        
-            $this->session->set_flashdata('import_record_failed', 'Patient Already Exist');
+            $this->session->set_flashdata('import_record_failed', 'Student Already Exist');
              redirect('admissioncontrol/admitdatatable', $data); 
          
 
@@ -77,7 +77,7 @@ class Multiplerecordcontrol extends CI_Controller {
   
             
              $data['response'] = "failed";
-             $this->session->set_flashdata('import_record_failed', 'Patient Already Exist');
+             $this->session->set_flashdata('import_record_failed', 'Student Already Exist');
             $data['topbar'] = 'navbar-default';
            $data['main_view'] = 'admission/admitdatatable';
            $this->load->view('layouts/central_template',$data); 
@@ -88,7 +88,7 @@ class Multiplerecordcontrol extends CI_Controller {
        
             
              $data['response'] = "failed";
-             $this->session->set_flashdata('import_record_failed', 'Patient Already Exist');
+             $this->session->set_flashdata('import_record_failed', 'Student Already Exist');
             $data['topbar'] = 'navbar-default';
            $data['main_view'] = 'admission/admitdatatable';
            $this->load->view('layouts/central_template',$data); 
@@ -105,7 +105,10 @@ public function multiplerecordview(){
  
 
    $data['add_physician'] = $this->Multiplerecord_model->get_physician();
-    $data['title'] = 'Out Patient Findings'; 
+   $data['get_details'] = $this->Multiplerecord_model->get_details();
+   $data['get_cr'] = $this->Multiplerecord_model->get_cr();
+   $data['get_remarks'] = $this->Multiplerecord_model->get_remarks();
+    $data['title'] = 'Student Health Examination'; 
      $data['topbar'] = 'multiplerecordinsert/multiplerecordnavbar';
     $data['opd_form'] = 'multiplerecordinsert/opdfindingsforminsertion';
     $data['main_view'] = 'multiplerecordinsert/multiplerecordview';
@@ -121,11 +124,12 @@ public function multiplerecordview(){
 public function add_multiple_findings(){
 
 
-$this->form_validation->set_rules('a_casenumber', 'Patient Case Number', 'required');
+$this->form_validation->set_rules('a_casenumber', 'Patient Case Number', 'trim|required|numeric|min_length[12]|max_length[12]');
 $this->form_validation->set_rules('a_chief_complaint', 'Chief Complaint');
 $this->form_validation->set_rules('a_historyillness', 'History of Present Illness', 'required');
 $this->form_validation->set_rules('a_bp', 'Blood Pressure');
 $this->form_validation->set_rules('a_rr', 'Respiratory Rate');
+$this->form_validation->set_rules('a_pulse', 'Pulserate');
 $this->form_validation->set_rules('a_cr', 'Capillary Refill');
 $this->form_validation->set_rules('a_temp', 'Temperature');
 $this->form_validation->set_rules('a_wt', 'Weight');
@@ -133,6 +137,12 @@ $this->form_validation->set_rules('a_pr', 'Pulse Rate');
 $this->form_validation->set_rules('a_physicalexam', 'Physical Examination');
 $this->form_validation->set_rules('a_diagnosis', 'Diagnosis', 'required');
 $this->form_validation->set_rules('a_medical_treatment', 'Medication/Treatment', 'required');
+$this->form_validation->set_rules('a_mouth', 'Mouth', 'required');
+$this->form_validation->set_rules('a_lungs', 'Lungs', 'required');
+$this->form_validation->set_rules('a_abdo', 'Abdomen', 'required');
+$this->form_validation->set_rules('a_spine', 'Spine', 'required');
+$this->form_validation->set_rules('a_remarks', 'Remarks', 'required');
+$this->form_validation->set_rules('a_others', 'Others', 'required');
 $this->form_validation->set_rules('a_physician', 'Attending Physician', 'trim|required',array('required'=>'Please select physician'));
 $this->form_validation->set_rules('a_date', 'Date', 'required');
 
@@ -142,7 +152,10 @@ $this->form_validation->set_rules('a_date', 'Date', 'required');
 if($this->form_validation->run() == FALSE){
  
  $data['add_physician'] = $this->Multiplerecord_model->get_physician();
- $data['title'] = "Out Patient Findings";
+ $data['get_details'] = $this->Multiplerecord_model->get_details();
+ $data['get_cr'] = $this->Multiplerecord_model->get_cr();
+ $data['get_remarks'] = $this->Multiplerecord_model->get_remarks();
+ $data['title'] = "Add Student Health Examination";
  $data['topbar'] = 'multiplerecordinsert/multiplerecordnavbar';
   $data['opd_form'] = 'multiplerecordinsert/opdfindingsforminsertion';
  $data['main_view'] = 'multiplerecordinsert/multiplerecordview';
@@ -163,6 +176,7 @@ if($this->form_validation->run() == FALSE){
    'f_historypresentillness' => $this->input->post('a_historyillness'),
    'f_bp' => $this->input->post('a_bp'),
    'f_rr' => $this->input->post('a_rr'),
+   'f_pulse' => $this->input->post('a_pulse'),
    'f_cr' => $this->input->post('a_cr'),
    'f_temp' => $this->input->post('a_temp'),
    'f_wt' => $this->input->post('a_wt'),
@@ -170,6 +184,12 @@ if($this->form_validation->run() == FALSE){
    'f_physicalexam' => $this->input->post('a_physicalexam'),
    'f_diagnosis' => $this->input->post('a_diagnosis'),
    'f_medication' => $this->input->post('a_medical_treatment'),
+   'f_mouth' => $this->input->post('a_mouth'),
+   'f_lungs' => $this->input->post('a_lungs'),
+   'f_abdo' => $this->input->post('a_abdo'),
+   'f_spine' => $this->input->post('a_spine'),
+   'f_remarks' => $this->input->post('a_remarks'),
+   'f_others' => $this->input->post('a_others'),
    'f_nameofphysician' => $this->input->post('a_physician'),
    'f_date' => $this->input->post('a_date')
    );
@@ -178,12 +198,15 @@ if($this->form_validation->run() == FALSE){
     if($this->Multiplerecord_model->patientFinding($data)){
       
       $data['add_physician'] = $this->Multiplerecord_model->get_physician();
-      $data['title'] = "Out Patient Findings";
+      $data['get_details'] = $this->Multiplerecord_model->get_details();
+      $data['get_cr'] = $this->Multiplerecord_model->get_cr();
+      $data['get_remarks'] = $this->Multiplerecord_model->get_remarks();
+      $data['title'] = "Add Student Health Examination";
       $data['topbar'] = 'multiplerecordinsert/multiplerecordnavbar';
        $data['opd_form'] = 'multiplerecordinsert/opdfindingsforminsertion';
        $data['main_view'] = 'multiplerecordinsert/multiplerecordview';
   
-      $this->session->set_flashdata('add_multiple_findings', 'OPD Findings Added');
+      $this->session->set_flashdata('add_multiple_findings', 'Student Health Record Added');
       redirect('Multiplerecordcontrol/multiplerecordview/#Findings', $data);
 
 
@@ -202,8 +225,7 @@ public function admissionviewform(){
 
 
 
-   $data['get_physician'] = $this->Multiplerecord_model->get_physician();
-    $data['title'] = 'Admission Record'; 
+    $data['title'] = 'Clinical Visit'; 
      $data['topbar'] = 'multiplerecordinsert/multiplerecordnavbar';
      $data['get_ward'] = $this->Multiplerecord_model->get_ward();
    $data['admission_form'] = 'multiplerecordinsert/admissionrecordforminsertion';
@@ -220,18 +242,16 @@ public function admissionviewform(){
 
 public function add_multiple_admission(){
 
-$this->form_validation->set_rules('a_caseno','Patient Case Number', 'required');
+$this->form_validation->set_rules('a_caseno','Patient Case Number', 'required|numeric|min_length[12]|max_length[12]');
 $this->form_validation->set_rules('a_date','Date', 'required');
-$this->form_validation->set_rules('a_chargeaccount', 'Charge Account to');
 $this->form_validation->set_rules('a_relationtopatient', 'Relation to Patient');
+$this->form_validation->set_rules('a_wards', 'Wards');
 
 
 if($this->form_validation->run() == FALSE){
  
-
- $data['get_physician'] = $this->Multiplerecord_model->get_physician();
  $data['get_ward'] = $this->Multiplerecord_model->get_ward();
- $data['title'] = "Admission Record";
+ $data['title'] = "Clinical Visit";
  $data['topbar'] = 'multiplerecordinsert/multiplerecordnavbar';
    $data['admission_form'] = 'multiplerecordinsert/admissionrecordforminsertion';
     $data['main_view'] = 'multiplerecordinsert/multiplerecordadmissionview';
@@ -245,18 +265,16 @@ if($this->form_validation->run() == FALSE){
    $data = array(
    'pr_admission_id' => $this->input->post('a_caseno'),
    'ad_date' => $this->input->post('a_date'),
-   'ad_chargetoaccount' => $this->input->post('a_chargeaccount'),
    'ad_relationtopatient' => $this->input->post('a_relationtopatient'),
+   'ad_wardname' => $this->input->post('a_wards'),
 
    );
 
    
     if($this->Multiplerecord_model->patientAdmission($data)){
 
-  
-      
-       $data['get_physician'] = $this->Multiplerecord_model->get_physician();
-      $data['title'] = "Admission Record";
+
+      $data['title'] = "Clinical Visit";
        $data['get_ward'] = $this->Multiplerecord_model->get_ward();
  $data['topbar'] = 'multiplerecordinsert/multiplerecordnavbar';
    $data['admission_form'] = 'multiplerecordinsert/admissionrecordforminsertion';
