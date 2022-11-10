@@ -241,7 +241,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-sm-4 ml-4">
+                                    <div class="col-sm-5 ml-4">
 
 
                                         <div type="margin-bottom:17px; margin-left:50px;">

@@ -17,7 +17,7 @@
                   
     <?php if($this->session->userdata('su_user')): ?> <!-- u_user coming from database -->
 
-       <?php echo  '<b>Dr. '.$this->session->userdata('su_user').'</b>' ?>
+       <?php echo  '<b>Teacher '.$this->session->userdata('su_user').'</b>' ?>
 
            <?php endif; ?>
                 </span>

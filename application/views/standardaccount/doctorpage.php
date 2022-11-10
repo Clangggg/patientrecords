@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <link rel="shortcut icon" href="<?php echo base_url(); ?>img/rizal.png" />
+  <link rel="shortcut icon" href="<?php echo base_url(); ?>img/valnat.png" />
 
   <title><?php echo $title ?></title>
 
@@ -81,53 +81,28 @@
   <div id="wrapper">
 
     <!-- Sidebar -->
-    <ul class=" navbar-nav bg-gradient-success sidenav sidebar sidebar-dark accordion " id="accordionSidebar">
+    <ul class=" navbar-nav bg-gradient-primary sidenav sidebar sidebar-dark accordion " id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center"  href="#">
         <div class="sidebar-brand-icon rotate-n-0">
            <i class="fas fa-folder-open"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">Patient Records</div>
+        <div class="sidebar-brand-text mx-3">Teacher's Copy</div>
       </a>
    
 
  <!-- Divider -->
       <hr class="sidebar-divider my-0">
 
-      <!-- Nav Item - Dashboard -->
-      <li class="nav-item active">
-        <a class="nav-link" href="#">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Dashboard</span></a>
-      </li>
 
-      <!-- Divider -->
-      <hr class="sidebar-divider">
-
-
-      <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item active">
-         <!-- Nav Item - Tables -->
-        <a class="nav-link collapsed " href="<?php echo base_url(); ?>standardusercontrol/outpatientview">
-          <i class="fas fa-fw fa-table "></i>
-          <span>Out Patient Table</span></a>
-      </li>
-
-       <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item active">
-         <!-- Nav Item - Tables -->
-        <a class="nav-link collapsed " href="<?php echo base_url(); ?>standardusercontrol/admissionview">
-          <i class="fas fa-fw fa-table "></i>
-          <span>Admission Table</span></a>
-      </li>
 
        <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item active">
          <!-- Nav Item - Tables -->
         <a class="nav-link collapsed " href="<?php echo base_url(); ?>standardusercontrol/oldrecords">
           <i class="fas fa-folder-open "></i>
-          <span>Old Records</span></a>
+          <span>Student Health Records</span></a>
       </li>
 
 
@@ -166,7 +141,7 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Patient Record Management System 2019</span>
+            <span>Copyright &copy; ValNat SHIMS 2022</span>
           </div>
         </div>
       </footer>
@@ -196,7 +171,7 @@
         <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-success" href="<?php echo base_url(); ?>standardusercontrol/logout">Logout</a>
+          <a class="btn btn-primary bg-blue" href="<?php echo base_url(); ?>standardusercontrol/logout">Logout</a>
         </div>
       </div>
     </div>

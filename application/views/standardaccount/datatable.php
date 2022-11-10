@@ -5,7 +5,7 @@
             <div class="card-header py-3">
            
             <!-- Page Heading -->
-          <h5 class="mb-2 text-gray-800">Out Patient Table
+          <h5 class="mb-2 text-gray-800">Health Examination Table
                   </h5>  
 
             </div>
@@ -27,10 +27,10 @@
                       <th>Last Name</th>
                       <th>First Name</th>
                       <th>Middle Name</th>
-                      <th class="text-center">History of Present Illness</th>
+                      <th class="text-center">Examination Details</th>
                       <th>Gender</th>
                       <th>Age</th>
-                      <th>Date Consulted</th>
+                      <th>Examination Date</th>
                       <th class="text-center">Action</th>
                     </tr>
                   </thead>

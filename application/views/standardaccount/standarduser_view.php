@@ -40,7 +40,7 @@
               </div>     
               <hr>
               <div class="text-center">
-                 <h5 class="h5 text-gray-900 mb-1">Standard User </h1>
+                 <h5 class="h5 text-gray-900 mb-1">Teacher Account</h1>
               </div> 
                 
             <?php $this->load->view($form); ?>

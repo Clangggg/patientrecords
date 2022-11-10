@@ -7,7 +7,7 @@
             <div class="card-header py-3">
            
             <!-- Page Heading -->
-          <h5 class="mb-2 text-gray-800">Old Findings
+          <h5 class="mb-2 text-gray-800">Student Health Examination
                   </h5>  
 
             </div>
@@ -29,10 +29,10 @@
                       <th>Last Name</th>
                       <th>First Name</th>
                       <th>Middle Name</th>
-                      <th class="text-center">History of Present Illness</th>
+                      <th class="text-center">Examination Details</th>
                       <th>Gender</th>
                       <th>Age</th>
-                      <th>Date Consulted</th>
+                      <th>Date of Examination</th>
                       <th>Action</th>
                     </tr>
                   </thead>
@@ -51,7 +51,7 @@
                 <?php echo "<td class='text-center'>". $patient->of_date ."</td>" ?>
                 
                 
-                 <?php echo "<td class='text-center'><a style='margin-left:5px;' class='btn btn-info' href='". base_url() ."standardusercontrol/oldfindingsview/". $patient->of_id ."'>View
+                 <?php echo "<td class='text-center'><a style='margin-left:5px;' class='btn btn-primary bg-blue' href='". base_url() ."standardusercontrol/oldfindingsview/". $patient->of_id ."'>View
                   </a></td>" ?>
 
             

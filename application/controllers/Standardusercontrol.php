@@ -44,7 +44,7 @@ $this->load->view('standardaccount/standarduser_view', $data);
 
          $data['title'] = "Patient Record Management";
          $this->session->set_userdata($data);
-         $this->session->set_flashdata('login_success', '<div class="text-center">Your are now logged in as Dr. <b>'.$this->session->userdata('su_user'). '</b></div>');
+         $this->session->set_flashdata('login_success', '<div class="text-center">You are now logged in as Teacher <b>'.$this->session->userdata('su_user'). '</b></div>');
           redirect('standardusercontrol/outpatientview', $data);  
 
 
@@ -82,7 +82,7 @@ public function outpatientview(){
 $user_id = $this->session->userdata('su_id');
 
 $data['get_doctor_patient'] = $this->Standarduser_model->get_patient($user_id);
-$data['title'] = 'Outpatient Datatable';
+$data['title'] = 'Student Health Examination';
 $data['topbar'] = 'standardaccount/doctorpagenavbar';
 $data['main_view'] = "standardaccount/datatable";
 
@@ -96,7 +96,7 @@ public function admissionview(){
 $user_id = $this->session->userdata('su_id');
 
 $data['get_doctor_patient'] = $this->Standarduser_model->get_patient_admitted($user_id);
-$data['title'] = 'Admission Datatable';
+$data['title'] = 'Clinical Visit Datatable';
 $data['topbar'] = 'standardaccount/doctorpagenavbar';
 $data['main_view'] = "standardaccount/admissiontable";
 
@@ -201,7 +201,7 @@ $data['form'] = 'standardaccount/admissionviewform';
 $data['main_view'] = "standardaccount/editadmissionview";
 
  
-  $this->session->set_flashdata('admission_success', 'Admission Updated Successfully');
+  $this->session->set_flashdata('admission_success', 'Record Updated Successfully');
  redirect('standardusercontrol/admission_view/'.$id->a_id.'/#admission', $data);
 
  
@@ -539,6 +539,16 @@ $data['get_details'] = $this->Record_model->get_details();
    'of_temp' => $this->input->post('e_temp'),
    'of_wt' => $this->input->post('e_wt'),
    'of_diagnosis' => $this->input->post('e_diagnosis'),
+   'of_allergy' => $this->input->post('e_allergy'),
+   'of_asthma' => $this->input->post('e_asthma'),
+   'of_anemia' => $this->input->post('e_anemia'),
+   'of_bleeding' => $this->input->post('e_bleeding'),
+   'of_hailment' => $this->input->post('e_hailment'),
+   'of_diabetes' => $this->input->post('e_diabetes'),
+   'of_epilepsy' => $this->input->post('e_epilepsy'),
+   'of_kidney' => $this->input->post('e_kidney'),
+   'of_convulsion' => $this->input->post('e_convulsion'),
+   'of_fainting' => $this->input->post('e_fainting'),
    'of_medication' => $this->input->post('e_medical_treatment'),
    'of_pr' => $this->input->post('e_pr'),
    'of_physician_id' => $this->input->post('e_physician'),
@@ -735,7 +745,7 @@ public function oldrecords(){
 
 $data['oldrecords'] = $this->Standarduser_model->get_old_findings($userid);
 
-$data['title'] = 'Old Findings';
+$data['title'] = 'Health Examination Records';
 $data['topbar'] = 'standardaccount/oldrecordsnavbar';
 $data['main_view'] = "standardaccount/oldrecordsview";
 
@@ -750,7 +760,7 @@ $this->load->view('standardaccount/doctorpage', $data);
 public function oldfindingsview($oldfindings_id){
 
 $data['get_patient_data'] = $this->Standarduser_model->get_old_findings_data($oldfindings_id);
-$data['title'] = 'Old Findings';
+$data['title'] = 'Health Examination Records';
 $data['topbar'] = 'standardaccount/oldrecordsnavbar';
 $data['main_view'] = "standardaccount/oldrecordfindingsview";
 
@@ -776,7 +786,7 @@ public function oldadmissionview(){
 
 $data['get_doctor_patient'] = $this->Standarduser_model->get_old_admission($userid);
 
-$data['title'] = 'Old Admission Records';
+$data['title'] = 'Old Clinic Visit Records';
 $data['topbar'] = 'standardaccount/oldrecordsnavbar';
 $data['main_view'] = "standardaccount/oldadmissiondata";
 
@@ -790,7 +800,7 @@ $this->load->view('standardaccount/doctorpage', $data);
 public function oldadmission_data($oldadmissiondata){
 
 $data['get_patient_data'] = $this->Standarduser_model->get_old_admission_data($oldadmissiondata);
-$data['title'] = 'Old Admission Records';
+$data['title'] = 'Old Clinic Visit Records';
 $data['topbar'] = 'standardaccount/oldrecordsnavbar';
 $data['main_view'] = "standardaccount/oldadmission_view";
 

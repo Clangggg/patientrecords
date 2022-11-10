@@ -72,7 +72,7 @@
                  <?php echo "<td class='text-center'>". $user->su_fname ."</td>" ?>
                  <?php echo "<td class='text-center'>". $user->date_created ."</td>" ?>
                 
-                 <?php echo "<td class='text-center'><a class='btn btn-success' href='". base_url() ."addusercontrol/edit_user/". $user->su_id ."'>Edit
+                 <?php echo "<td class='text-center'><a class='btn btn-primary' href='". base_url() ."addusercontrol/edit_user/". $user->su_id ."'>Edit
                   </a>" ?>
                   
                  <?php echo "<a class='btn btn-danger'  href='". base_url() ."addusercontrol/delete_user/". $user->su_id ."' onClick='return doconfirm()' >Delete

@@ -327,7 +327,7 @@
                          <div class="row no-gutters">
                              <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Anemia</div>
                          </div>
-                         <select class="form-control" name="e_asthma">
+                         <select class="form-control" name="e_anemia">
                              <option
                                  value=<?php echo $get_findings_view->f_anemia;?><?php echo set_select('e_anemia', $get_findings_view->f_anemia);?>>
                                  <?php echo $get_findings_view->f_anemia; ?></option>

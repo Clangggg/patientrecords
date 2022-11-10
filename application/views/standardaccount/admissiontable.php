@@ -5,7 +5,7 @@
             <div class="card-header py-3">
            
             <!-- Page Heading -->
-          <h5 class="mb-2 text-gray-800">Admission Table
+          <h5 class="mb-2 text-gray-800">Clinical Visit Table
                   </h5>  
 
             </div>
@@ -27,10 +27,8 @@
                       <th>Last Name</th>
                       <th>First Name</th>
                       <th>Middle Name</th>
-                      <th class="text-center">Ward</th>
-                      <th>Gender</th>
-                      <th>Age</th>
-                      <th>Date Admitted</th>
+                      <th class="text-center">Reason of visit</th>
+                      <th>Date of visit</th>
                       <th>Action</th>
                     </tr>
                   </thead>
@@ -45,8 +43,6 @@
                 <?php echo "<td class='text-center'>". $patient->a_fname ."</td>" ?>
                 <?php echo "<td class='text-center'>". $patient->a_mname ."</td>" ?>
                 <?php echo "<td class='text-center'>". $patient->a_wardname ."</td>" ?>
-                <?php echo "<td class='text-center'>". $patient->a_gender ."</td>" ?>
-                <?php echo "<td class='text-center'>". $patient->a_age ."</td>" ?>
                 <?php echo "<td class='text-center'>". $patient->a_date ."</td>" ?>
 
                       

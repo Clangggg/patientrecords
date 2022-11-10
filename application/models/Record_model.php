@@ -404,7 +404,6 @@ public function get_patient_admission_id($pr_id) { // Join tables
      admission_record.ad_wardname,
      admission_record.ad_id as admission_id,
      admission_record.ad_date,
-     admission_record.ad_chargetoaccount,
      admission_record.ad_relationtopatient,
      patient_record.pr_date,
      patient_record.pr_lname,
