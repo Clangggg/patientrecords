@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.2
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 04, 2019 at 04:22 PM
--- Server version: 10.1.34-MariaDB
--- PHP Version: 7.2.8
+-- Generation Time: Nov 12, 2022 at 03:04 AM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 8.1.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -29,10 +28,9 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `add_patientadmission` (
-  `a_id` int(11) NOT NULL,
   `a_wardname` varchar(255) NOT NULL,
+  `a_id` varchar(128) NOT NULL,
   `a_date` date NOT NULL,
-  `a_admittedby` varchar(255) NOT NULL,
   `a_user_id` int(11) NOT NULL,
   `a_fname` varchar(255) NOT NULL,
   `a_mname` varchar(255) NOT NULL,
@@ -40,28 +38,17 @@ CREATE TABLE `add_patientadmission` (
   `a_gender` varchar(255) NOT NULL,
   `a_age` varchar(255) NOT NULL,
   `a_physician_id` varchar(255) NOT NULL,
-  `a_father` varchar(255) NOT NULL,
-  `a_mother` varchar(255) NOT NULL,
   `a_chargetoaccount` varchar(255) NOT NULL,
   `a_relationtopatient` varchar(255) NOT NULL,
-  `a_address` varchar(255) NOT NULL,
-  `a_number` varchar(255) NOT NULL,
-  `a_totalpayment` varchar(255) NOT NULL,
-  `a_dischargedate` date NOT NULL,
-  `a_complaint` text NOT NULL,
-  `a_completediagnosis` text NOT NULL,
-  `a_medication` varchar(255) NOT NULL,
-  `a_conditiontodischarge` varchar(255) NOT NULL,
-  `a_remarks` varchar(255) NOT NULL,
-  `log_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `log_time` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `add_patientadmission`
 --
 
-INSERT INTO `add_patientadmission` (`a_id`, `a_wardname`, `a_date`, `a_admittedby`, `a_user_id`, `a_fname`, `a_mname`, `a_lname`, `a_gender`, `a_age`, `a_physician_id`, `a_father`, `a_mother`, `a_chargetoaccount`, `a_relationtopatient`, `a_address`, `a_number`, `a_totalpayment`, `a_dischargedate`, `a_complaint`, `a_completediagnosis`, `a_medication`, `a_conditiontodischarge`, `a_remarks`, `log_time`) VALUES
-(5, 'Pulmonary', '2019-05-02', 'Nina', 1, 'James', 'Fernandez', 'Navarro', 'Male', '25', '53', '', '', '', '', '', '', '', '0000-00-00', '', 'abab', 'ab', '', '', '2019-05-02 15:23:02');
+INSERT INTO `add_patientadmission` (`a_wardname`, `a_id`, `a_date`, `a_user_id`, `a_fname`, `a_mname`, `a_lname`, `a_gender`, `a_age`, `a_physician_id`, `a_chargetoaccount`, `a_relationtopatient`, `log_time`) VALUES
+('', '', '2019-05-02', 1, 'James', 'Fernandez', 'Navarro', 'Male', '25', '53', '', '', '2019-05-02 15:23:02');
 
 -- --------------------------------------------------------
 
@@ -86,11 +73,28 @@ CREATE TABLE `add_patientfindings` (
   `a_wt` varchar(255) NOT NULL,
   `a_pr` varchar(255) NOT NULL,
   `a_physicalexam` text NOT NULL,
+  `a_mouth` varchar(128) NOT NULL,
+  `a_lungs` varchar(128) NOT NULL,
+  `a_spine` varchar(128) NOT NULL,
+  `a_abdo` varchar(128) NOT NULL,
+  `a_remarks` varchar(128) NOT NULL,
+  `a_others` varchar(128) NOT NULL,
+  `a_allergy` varchar(128) NOT NULL,
+  `a_pulse` varchar(128) NOT NULL,
+  `a_asthma` varchar(128) NOT NULL,
+  `a_anemia` varchar(128) NOT NULL,
+  `a_bleeding` varchar(128) NOT NULL,
+  `a_hailment` varchar(128) NOT NULL,
+  `a_diabetes` varchar(128) NOT NULL,
+  `a_epilepsy` varchar(128) NOT NULL,
+  `a_kidney` varchar(128) NOT NULL,
+  `a_convulsion` varchar(128) NOT NULL,
+  `a_fainting` varchar(128) NOT NULL,
   `a_diagnosis` text NOT NULL,
   `a_medication` text NOT NULL,
   `a_physician_id` int(11) NOT NULL,
   `a_date` date NOT NULL,
-  `log_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `log_time` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `status` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -98,9 +102,9 @@ CREATE TABLE `add_patientfindings` (
 -- Dumping data for table `add_patientfindings`
 --
 
-INSERT INTO `add_patientfindings` (`a_id`, `a_user_id`, `a_fname`, `a_mname`, `a_lname`, `a_gender`, `a_age`, `a_complaint`, `a_historypresentillness`, `a_bp`, `a_rr`, `a_cr`, `a_temp`, `a_wt`, `a_pr`, `a_physicalexam`, `a_diagnosis`, `a_medication`, `a_physician_id`, `a_date`, `log_time`, `status`) VALUES
-(13, 1, 'Jenna', 'Castro', 'Hassan', 'Female', 26, 'asdasdd', '*Under Observation', '', '', '', '', '', '', 'a', 'a', 'a', 53, '2019-05-02', '2019-05-03 04:54:32', 0),
-(14, 1, 'James', 'Fernandez', 'Navarro', 'Male', 25, '', '*Under Observation', '', '', '', '', '', '', '', '', '', 54, '2019-05-02', '2019-05-02 15:36:34', 0);
+INSERT INTO `add_patientfindings` (`a_id`, `a_user_id`, `a_fname`, `a_mname`, `a_lname`, `a_gender`, `a_age`, `a_complaint`, `a_historypresentillness`, `a_bp`, `a_rr`, `a_cr`, `a_temp`, `a_wt`, `a_pr`, `a_physicalexam`, `a_mouth`, `a_lungs`, `a_spine`, `a_abdo`, `a_remarks`, `a_others`, `a_allergy`, `a_pulse`, `a_asthma`, `a_anemia`, `a_bleeding`, `a_hailment`, `a_diabetes`, `a_epilepsy`, `a_kidney`, `a_convulsion`, `a_fainting`, `a_diagnosis`, `a_medication`, `a_physician_id`, `a_date`, `log_time`, `status`) VALUES
+(1, 1, 'Jenna', 'Castro', 'Hassan', 'Female', 26, 'asdasdd', '*Under Observation', '', '', '', '', '', '', 'a', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'a', 'a', 53, '2019-05-02', '2019-05-03 04:54:32', 0),
+(2, 1, 'James', 'Fernandez', 'Navarro', 'Male', 25, '', '*Under Observation', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 54, '2019-05-02', '2019-05-02 15:36:34', 0);
 
 -- --------------------------------------------------------
 
@@ -109,36 +113,48 @@ INSERT INTO `add_patientfindings` (`a_id`, `a_user_id`, `a_fname`, `a_mname`, `a
 --
 
 CREATE TABLE `admission_record` (
-  `ad_id` int(11) NOT NULL,
-  `ad_wardname` varchar(255) NOT NULL,
+  `ad_id` varchar(128) NOT NULL,
   `ad_date` date NOT NULL,
-  `ad_admittedby` varchar(255) NOT NULL,
-  `pr_admission_id` int(11) NOT NULL,
-  `ad_physician` varchar(255) NOT NULL,
-  `ad_father` varchar(255) NOT NULL,
-  `ad_mother` varchar(255) NOT NULL,
-  `ad_chargetoaccount` varchar(255) NOT NULL,
+  `pr_admission_id` varchar(128) NOT NULL,
   `ad_relationtopatient` varchar(255) NOT NULL,
-  `ad_address` varchar(255) NOT NULL,
-  `ad_number` varchar(255) NOT NULL,
-  `ad_totalpayment` varchar(255) NOT NULL,
-  `ad_dischargedate` date NOT NULL,
-  `ad_complaint` text NOT NULL,
-  `ad_completediagnosis` text NOT NULL,
-  `ad_medication` varchar(255) NOT NULL,
-  `ad_conditiontodischarge` varchar(255) NOT NULL,
-  `ad_remarks` varchar(255) NOT NULL
+  `ad_wardname` varchar(128) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `admission_record`
 --
 
-INSERT INTO `admission_record` (`ad_id`, `ad_wardname`, `ad_date`, `ad_admittedby`, `pr_admission_id`, `ad_physician`, `ad_father`, `ad_mother`, `ad_chargetoaccount`, `ad_relationtopatient`, `ad_address`, `ad_number`, `ad_totalpayment`, `ad_dischargedate`, `ad_complaint`, `ad_completediagnosis`, `ad_medication`, `ad_conditiontodischarge`, `ad_remarks`) VALUES
-(11, 'ICU', '2019-04-21', 'Neli', 3, 'James.Santos', '', '', '', '', '', '', '', '0000-00-00', '', ' Coughing up blood', 'Isoniazid', '', ''),
-(12, '*Under.Observation', '2019-04-21', 'Neli', 2, 'Jobelle.Castro', '', '', '', '', '', '', '', '0000-00-00', '', '', '', '', ''),
-(13, 'Male', '2019-05-01', 'Noel', 4, 'Gabriel.Lopez', '', '', '', '', '', '', '', '0000-00-00', '', '', '', '', ''),
-(14, 'Gyne', '2019-05-02', '', 2, 'Jobelle.Castro', '', '', '', '', '', '', '', '0000-00-00', '', '', '', '', '');
+INSERT INTO `admission_record` (`ad_id`, `ad_date`, `pr_admission_id`, `ad_relationtopatient`, `ad_wardname`) VALUES
+('', '2022-11-08', '2147483647', 'Issued headache medicine', ''),
+('', '2019-04-21', '3', '', ''),
+('', '2019-04-21', '2', '', ''),
+('', '2019-05-01', '4', '', ''),
+('', '2019-05-02', '2', '', ''),
+('', '2022-11-07', '2147483647', 'sister', ''),
+('', '2022-11-08', '2147483647', 'sister', ''),
+('', '2022-11-08', '2147483647', 'sister', ''),
+('', '2022-11-08', '2147483647', 'sister', ''),
+('', '2022-11-08', '2147483647', 'Issued headache medicine', ''),
+('', '2022-11-08', '2147483647', 'sister', ''),
+('', '2022-11-08', '2147483647', 'e2e21d', ''),
+('', '2022-11-08', '2147483647', 'Issued headache medicine', ''),
+('', '2022-11-08', '2147483647', 'Issued headache medicine', ''),
+('', '2022-11-08', '2147483647', 'wewfe', ''),
+('', '2022-11-08', '2147483647', 'sister', ''),
+('', '2022-11-08', '192323233444', 'Issued headache medicine', ''),
+('', '2022-11-08', '192321424000', 'sister', ''),
+('', '2022-11-08', '192321424000', 'Issued headache medicine', 'ICU'),
+('', '2022-11-08', '192321424000', 'wewfe', 'ICU'),
+('', '2022-11-08', '192321424000', 'Issued headache medicine', 'Female'),
+('', '2022-11-08', '192321424000', 'Issued headache medicine', 'Female'),
+('', '2022-11-08', '192321429999', 'Issued headache medicine', 'Headache'),
+('', '2022-11-08', '192321433332', 'Issued headache medicine', 'Headache'),
+('', '2022-11-09', '190000000000', 'Issued allergy medicine', ''),
+('', '2022-11-09', '190000000000', 'sister', ''),
+('', '2022-11-09', '190000000000', 'Issued headache medicine', ''),
+('', '2022-11-09', '192321429999', 'Neozep', 'Colds'),
+('', '2022-11-10', '192323233444', 'Issued headache medicine', ''),
+('', '2022-11-10', '192323233444', 'Issued headache medicine', 'Headache');
 
 -- --------------------------------------------------------
 
@@ -156,9 +172,99 @@ CREATE TABLE `civilstat` (
 --
 
 INSERT INTO `civilstat` (`c_id`, `c_name`) VALUES
-(1, 'Single'),
-(2, 'Married'),
-(3, 'Separated');
+(1, 'NCR – National Capital Region'),
+(2, 'RegionI – Ilocos Region'),
+(3, 'RegionII – Cagayan Valley'),
+(4, 'RegionIII – Central Luzon'),
+(5, 'RegionIV – CALABARZON'),
+(6, 'RegionIV – MIMAROPA Region'),
+(7, 'RegionVI – Western Visayas'),
+(8, 'RegionVII – Central Visayas'),
+(9, 'RegionVIII – Eastern Visayas'),
+(10, 'RegionIX – Zamboanga Peninsula'),
+(11, 'RegionX – Northern Mindanao'),
+(12, 'RegionXI – Davao Region'),
+(13, 'RegionXII – SOCCSKSARGEN'),
+(14, 'RegionXII – SOCCSKSARGEN'),
+(15, 'CAR – Cordillera Administrative Region'),
+(16, 'BARMM – Bangsamoro Autonomous Region in Muslim Mindanao');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cr`
+--
+
+CREATE TABLE `cr` (
+  `cr_id` int(128) NOT NULL,
+  `cr_name` text CHARACTER SET latin1 NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cr`
+--
+
+INSERT INTO `cr` (`cr_id`, `cr_name`) VALUES
+(1, 'Normal'),
+(2, 'Below-Normal'),
+(3, 'Above-Normal');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `details`
+--
+
+CREATE TABLE `details` (
+  `de_id` int(11) NOT NULL,
+  `de_name` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `details`
+--
+
+INSERT INTO `details` (`de_id`, `de_name`) VALUES
+(1, 'Grade7-Findings'),
+(2, 'Grade8-Findings'),
+(3, 'Grade9-Findings'),
+(4, 'Grade10-Findings'),
+(5, 'Grade11-Findings'),
+(6, 'Grade12-Findings');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `divi`
+--
+
+CREATE TABLE `divi` (
+  `d_id` int(11) NOT NULL,
+  `d_name` varchar(128) CHARACTER SET latin1 NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `divi`
+--
+
+INSERT INTO `divi` (`d_id`, `d_name`) VALUES
+(1, 'Caloocan-City'),
+(2, 'Malabon-City'),
+(3, 'Navotas-City'),
+(4, 'Valenzuela-City'),
+(5, 'Quezon-City'),
+(6, 'Marikina-City'),
+(7, 'Pasig-City'),
+(8, 'Taguig-City'),
+(9, 'Makati-City'),
+(10, 'Manila-City'),
+(11, 'Mandaluyong-City'),
+(12, 'SanJuan-City'),
+(13, 'Pasay-City'),
+(14, 'Paranaque-City'),
+(15, 'LasPinas-City'),
+(16, 'Muntinlupa-City'),
+(17, 'Pateros');
 
 -- --------------------------------------------------------
 
@@ -176,14 +282,22 @@ CREATE TABLE `fieldsphysician` (
 --
 
 INSERT INTO `fieldsphysician` (`fp_id`, `fp_name`) VALUES
-(1, 'Gynecologist'),
-(2, 'Ophthalmologist'),
-(3, 'Surgeon'),
-(4, 'Pediatrician'),
-(5, 'Orthopedic.surgeon'),
-(6, 'Emergency.Medicine.Specialist'),
-(7, 'Psychiatrist'),
-(8, 'Dermatologist');
+(1, 'Clinic_Admin'),
+(2, 'Pediatrician'),
+(3, 'Family_Medicine'),
+(4, 'Cardiologist'),
+(5, 'Dermatologist'),
+(6, 'ENT(Ear,Nose,Throat)'),
+(7, 'Gastroentorologist'),
+(8, 'General Surgeon'),
+(9, 'Nephrologist'),
+(10, 'OB-GYNE'),
+(11, 'Ophthalmologist'),
+(12, 'Orthopedic'),
+(13, 'Pulmonologist'),
+(14, 'Rehabilitation Med'),
+(15, 'Urologist'),
+(16, 'Nurse');
 
 -- --------------------------------------------------------
 
@@ -193,7 +307,7 @@ INSERT INTO `fieldsphysician` (`fp_id`, `fp_name`) VALUES
 
 CREATE TABLE `findings` (
   `f_id` int(11) NOT NULL,
-  `pr_findings_id` int(11) NOT NULL,
+  `pr_findings_id` varchar(255) NOT NULL,
   `f_chiefcomplaint` text NOT NULL,
   `f_historypresentillness` text NOT NULL,
   `f_status` varchar(255) NOT NULL,
@@ -207,19 +321,46 @@ CREATE TABLE `findings` (
   `f_diagnosis` text NOT NULL,
   `f_medication` text NOT NULL,
   `f_nameofphysician` varchar(255) NOT NULL,
-  `f_date` date NOT NULL
+  `f_date` date NOT NULL,
+  `f_pulse` varchar(128) NOT NULL,
+  `f_mouth` varchar(128) NOT NULL,
+  `f_lungs` varchar(128) NOT NULL,
+  `f_spine` varchar(128) NOT NULL,
+  `f_remarks` varchar(128) NOT NULL,
+  `f_others` varchar(128) NOT NULL,
+  `f_abdo` varchar(128) NOT NULL,
+  `f_allergy` text NOT NULL,
+  `f_asthma` text NOT NULL,
+  `f_anemia` text NOT NULL,
+  `f_bleeding` text NOT NULL,
+  `f_hailment` text NOT NULL,
+  `f_diabetes` text NOT NULL,
+  `f_epilepsy` text NOT NULL,
+  `f_kidney` text NOT NULL,
+  `f_convulsion` text NOT NULL,
+  `f_fainting` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `findings`
 --
 
-INSERT INTO `findings` (`f_id`, `pr_findings_id`, `f_chiefcomplaint`, `f_historypresentillness`, `f_status`, `f_bp`, `f_rr`, `f_cr`, `f_temp`, `f_wt`, `f_pr`, `f_physicalexam`, `f_diagnosis`, `f_medication`, `f_nameofphysician`, `f_date`) VALUES
-(30, 3, '', 'Tuberculosis', '', '', '', '', '', '', '', '', 'fever, night sweats, cough', 'initial Phase Daily INH, RIF, PZA, and EMB* for 56 doses (8 weeks)', 'Juan.Monton', '2019-04-16'),
-(33, 2, '', 'High Blood Pressure', '', '134/80', '', '', '', '', '', '', 'dizziness, headache', 'Exercise, Eat a low-sodium, low-fat diet, Eat potassium-rich foods ', 'Noa.Santiago', '2019-04-18'),
-(36, 1, '', 'Headache', '', '', '', '', '', '', '', '', 'vomiting', 'ibuprofen ', 'Jobelle.Castro', '2019-04-18'),
-(43, 2, '', '*Under Observation', '', '', '', '', '', '', '', '', '', '', '', '2019-05-02'),
-(44, 1, '', '*Under Observation', '', '', '', '', '', '', '', '', '', '', '', '2019-05-03');
+INSERT INTO `findings` (`f_id`, `pr_findings_id`, `f_chiefcomplaint`, `f_historypresentillness`, `f_status`, `f_bp`, `f_rr`, `f_cr`, `f_temp`, `f_wt`, `f_pr`, `f_physicalexam`, `f_diagnosis`, `f_medication`, `f_nameofphysician`, `f_date`, `f_pulse`, `f_mouth`, `f_lungs`, `f_spine`, `f_remarks`, `f_others`, `f_abdo`, `f_allergy`, `f_asthma`, `f_anemia`, `f_bleeding`, `f_hailment`, `f_diabetes`, `f_epilepsy`, `f_kidney`, `f_convulsion`, `f_fainting`) VALUES
+(57, '192321424000', 'a/b/c', 'Grade9-Findings', '', '110/90', '13/min', 'Normal', '36.0', '45', '157', 'a/b', 'a/b', 'a', 'Justin.Ortiz', '2022-11-07', '60/min', 'a/b', 'a/b', 'a/b/c', 'Treated', '', 'a/b', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO'),
+(58, '192325977777', '', 'G8 - Findings', '', '23', '13/min', 'Below-Normal', '36', '213', '157', '', '', '', 'Justin.Ortiz', '2022-11-07', '2123', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(59, '091220309555', '', 'G7 - Findings', '', '110/90', '13/min', 'Normal', '37', '60', '157', '', '', '', 'Justin.Ortiz', '2022-11-07', '60/min', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(60, '192321424000', 'a/b/c', 'Grade8-Findings', '', '110/90', '13/min', 'Normal', '36', '45', '157', 'a/b', 'a/b', 'a/b', 'Justin.Ortiz', '2022-11-08', '60/min', 'a/b', 'a/b', 'a/b/c', 'Needs_Supervision', '', 'a/b', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO'),
+(61, '192321424000', '', 'Grade10-Findings', '', '110/90', '13/min', 'Normal', '36', '45', '157', '', '', '', 'Justin.Ortiz', '2022-11-08', '60/min', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(62, '192321429999', 'a/b/c', 'Grade8-Findings', '', 'rfw', '1223', 'Normal', '23', '45', '325', 'a/b', 'a/b', 'a/b', 'Juztin.Ortiz', '2022-11-08', '2123', 'a/b', 'a/b', 'a/b/c', 'Advised/Counseled', 'fghj', 'a/b', 'NO', 'NO', 'YES', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO'),
+(63, '192321433332', 'a/b/c', 'Grade7-Findings', '', '110/90', '13/min', 'Normal', '36', '45', '157', 'a/b', 'a/b', 'a', 'Juztin.Ortiz', '2022-11-08', '60/min', 'a/b', 'a/b', 'a/b/c', 'Needs_follow_up', '', 'a/b', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO'),
+(64, '192321433332', '', 'Grade8-Findings', '', '23', '1223', 'Normal', '23', '45', '159', '', '', '', 'Juztin.Ortiz', '2022-11-08', '60/min', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(66, '190000000000', 'a', 'Grade7-Findings', '', '110/90', '13/min', 'Normal', '36', '45', '157', 'a/b', 'a', 'a', 'Juztin.Ortiz', '2022-11-09', '60/min', 'a', 'a', 'a', 'Advised/Counseled', 'aaa', 'a', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO'),
+(67, '192321429988', 'a', 'Grade7-Findings', '', '110/90', '13/min', 'Below-Normal', '36.4', '2234', '325', '', 'a', 'a', 'Juztin.Ortiz', '2022-11-09', '60/min', 'a', 'a', 'a', 'Corrected', 'a', 'a', '', '', '', '', '', '', '', '', '', ''),
+(68, '190000000000', 'a', 'Grade8-Findings', '', '110/90', '13/min', 'Below-Normal', '37', '60', '1232', 'a/b', 'a', 'a', 'Juztin.Ortiz', '2022-11-09', '2123', 'a', 'a', 'a', 'Advised/Counseled', 'aaa', 'a', '', '', '', '', '', '', '', '', '', ''),
+(69, '111111111111', '', 'Grade7-Findings', '', '155', '1223', 'Normal', '36', '45', '157', '', '', '', 'Kimberly.Bustarde', '2022-11-10', '60/min', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(70, '111111111111', 'a/b/c', 'Grade7-Findings', '', '155', '1223', 'Normal', '36', '45', '157', 'a/b', 'fsfs', 'a/b', 'Kimberly.Bustarde', '2022-11-10', '60/min', 'a/b', 'a/b', 'a/b/c', 'Needs_close_supervision', '', 'a/b', 'NO', 'YES', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO'),
+(71, '192323233444', 'a', 'Grade11-Findings', '', '110/90', '13/min', 'Above-Normal', '37', '60', '159', 'a/b', 'a', 'a', 'Juztin.Ortiz', '2022-11-10', '60/min', 'a', 'a', 'a', 'Needs_close_supervision', 'aaa', 'a', 'YES', 'YES', 'YES', 'YES', 'YES', 'YES', 'YES', 'YES', 'YES', 'YES'),
+(72, '192321429999', '', 'Grade7-Findings', '', '110/90', '13/min', 'Normal', '36', '213', '157', '', '', '', 'Juztin.Ortiz', '2022-11-10', '2123', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -248,9 +389,7 @@ INSERT INTO `gender` (`g_id`, `g_name`) VALUES
 
 CREATE TABLE `log_admission` (
   `lo_id` int(11) NOT NULL,
-  `lo_wardname` varchar(255) NOT NULL,
   `lo_date` date NOT NULL,
-  `lo_admittedby` varchar(255) NOT NULL,
   `lo_user_id` int(11) NOT NULL,
   `lo_fname` varchar(255) NOT NULL,
   `lo_mname` varchar(255) NOT NULL,
@@ -258,29 +397,18 @@ CREATE TABLE `log_admission` (
   `lo_gender` varchar(255) NOT NULL,
   `lo_age` varchar(255) NOT NULL,
   `lo_physician_id` varchar(255) NOT NULL,
-  `lo_father` varchar(255) NOT NULL,
-  `lo_mother` varchar(255) NOT NULL,
-  `lo_chargetoaccount` varchar(255) NOT NULL,
   `lo_relationtopatient` varchar(255) NOT NULL,
-  `lo_address` varchar(255) NOT NULL,
-  `lo_number` varchar(255) NOT NULL,
-  `lo_totalpayment` varchar(255) NOT NULL,
-  `lo_dischargedate` date NOT NULL,
-  `lo_complaint` text NOT NULL,
-  `lo_completediagnosis` text NOT NULL,
-  `lo_medication` varchar(255) NOT NULL,
-  `lo_conditiontodischarge` varchar(255) NOT NULL,
-  `lo_remarks` varchar(255) NOT NULL,
-  `log_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `log_time` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `lo_wardname` varchar(128) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `log_admission`
 --
 
-INSERT INTO `log_admission` (`lo_id`, `lo_wardname`, `lo_date`, `lo_admittedby`, `lo_user_id`, `lo_fname`, `lo_mname`, `lo_lname`, `lo_gender`, `lo_age`, `lo_physician_id`, `lo_father`, `lo_mother`, `lo_chargetoaccount`, `lo_relationtopatient`, `lo_address`, `lo_number`, `lo_totalpayment`, `lo_dischargedate`, `lo_complaint`, `lo_completediagnosis`, `lo_medication`, `lo_conditiontodischarge`, `lo_remarks`, `log_time`) VALUES
-(16, 'Pulmonary', '0000-00-00', 'Nina', 53, 'James', 'Fernandez', 'Navarro', '', '', '1', '', '', '', '', '', '', '', '0000-00-00', '', 'abab', 'ab', '', '', '2019-05-02 16:14:53'),
-(17, 'Pulmonary', '0000-00-00', 'Nina', 53, 'James', 'Fernandez', 'Navarro', '', '', '1', '', '', '', '', '', '', '', '0000-00-00', '', 'abab', 'ab', '', '', '2019-05-03 03:15:23');
+INSERT INTO `log_admission` (`lo_id`, `lo_date`, `lo_user_id`, `lo_fname`, `lo_mname`, `lo_lname`, `lo_gender`, `lo_age`, `lo_physician_id`, `lo_relationtopatient`, `log_time`, `lo_wardname`) VALUES
+(16, '0000-00-00', 53, 'James', 'Fernandez', 'Navarro', '', '', '1', '', '2019-05-02 16:14:53', ''),
+(17, '0000-00-00', 53, 'James', 'Fernandez', 'Navarro', '', '', '1', '', '2019-05-03 03:15:23', '');
 
 -- --------------------------------------------------------
 
@@ -307,19 +435,36 @@ CREATE TABLE `log_findings` (
   `lo_physicalexam` text NOT NULL,
   `lo_diagnosis` text NOT NULL,
   `lo_medication` text NOT NULL,
+  `lo_pulse` varchar(128) NOT NULL,
+  `lo_mouth` varchar(128) NOT NULL,
+  `lo_lungs` varchar(128) NOT NULL,
+  `lo_spine` varchar(128) NOT NULL,
+  `lo_abdo` varchar(128) NOT NULL,
+  `lo_remarks` varchar(128) NOT NULL,
+  `lo_others` varchar(128) NOT NULL,
+  `lo_allergy` varchar(128) NOT NULL,
+  `lo_asthma` varchar(128) NOT NULL,
+  `lo_anemia` varchar(128) NOT NULL,
+  `lo_bleeding` varchar(128) NOT NULL,
+  `lo_hailment` varchar(128) NOT NULL,
+  `lo_diabetes` varchar(128) NOT NULL,
+  `lo_epilepsy` varchar(128) NOT NULL,
+  `lo_kidney` varchar(128) NOT NULL,
+  `lo_convulsion` varchar(128) NOT NULL,
+  `lo_fainting` varchar(128) NOT NULL,
   `lo_physician_id` int(11) NOT NULL,
   `lo_date` date NOT NULL,
-  `log_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `log_time` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `log_findings`
 --
 
-INSERT INTO `log_findings` (`lo_id`, `lo_user_id`, `lo_fname`, `lo_mname`, `lo_lname`, `lo_gender`, `lo_age`, `lo_complaint`, `lo_historypresentillness`, `lo_bp`, `lo_rr`, `lo_cr`, `lo_temp`, `lo_wt`, `lo_pr`, `lo_physicalexam`, `lo_diagnosis`, `lo_medication`, `lo_physician_id`, `lo_date`, `log_time`) VALUES
-(17, '53', 'Jenna', 'Castro', 'Hassan', '', 0, '', '', '', '', '', '', '', '', '', '', '', 1, '0000-00-00', '2019-05-02 16:15:27'),
-(18, '53', 'Jenna', 'Castro', 'Hassan', '', 0, '', '*Under Observation', '', '', '', '', '', '', 'dsaad', 'dsaad', 'asd', 1, '0000-00-00', '2019-05-02 16:15:33'),
-(20, '53', 'Jenna', 'Castro', 'Hassan', '', 0, '', '*Under Observation', '', '', '', '', '', '', 'a', 'a', 'a', 1, '0000-00-00', '2019-05-03 04:54:32');
+INSERT INTO `log_findings` (`lo_id`, `lo_user_id`, `lo_fname`, `lo_mname`, `lo_lname`, `lo_gender`, `lo_age`, `lo_complaint`, `lo_historypresentillness`, `lo_bp`, `lo_rr`, `lo_cr`, `lo_temp`, `lo_wt`, `lo_pr`, `lo_physicalexam`, `lo_diagnosis`, `lo_medication`, `lo_pulse`, `lo_mouth`, `lo_lungs`, `lo_spine`, `lo_abdo`, `lo_remarks`, `lo_others`, `lo_allergy`, `lo_asthma`, `lo_anemia`, `lo_bleeding`, `lo_hailment`, `lo_diabetes`, `lo_epilepsy`, `lo_kidney`, `lo_convulsion`, `lo_fainting`, `lo_physician_id`, `lo_date`, `log_time`) VALUES
+(17, '53', 'Jenna', 'Castro', 'Hassan', '', 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 1, '0000-00-00', '2019-05-02 16:15:27'),
+(18, '53', 'Jenna', 'Castro', 'Hassan', '', 0, '', '*Under Observation', '', '', '', '', '', '', 'dsaad', 'dsaad', 'asd', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 1, '0000-00-00', '2019-05-02 16:15:33'),
+(20, '53', 'Jenna', 'Castro', 'Hassan', '', 0, '', '*Under Observation', '', '', '', '', '', '', 'a', 'a', 'a', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 1, '0000-00-00', '2019-05-03 04:54:32');
 
 -- --------------------------------------------------------
 
@@ -329,38 +474,22 @@ INSERT INTO `log_findings` (`lo_id`, `lo_user_id`, `lo_fname`, `lo_mname`, `lo_l
 
 CREATE TABLE `oldadmission` (
   `oad_id` int(11) NOT NULL,
-  `oad_wardname` varchar(255) NOT NULL,
   `oad_date` date NOT NULL,
-  `oad_admittedby` varchar(255) NOT NULL,
   `oad_user_id` int(11) NOT NULL,
-  `oad_fname` varchar(255) NOT NULL,
-  `oad_mname` varchar(255) NOT NULL,
-  `oad_lname` varchar(255) NOT NULL,
   `oad_gender` varchar(255) NOT NULL,
   `oad_age` varchar(255) NOT NULL,
   `oad_physician_id` varchar(255) NOT NULL,
-  `oad_father` varchar(255) NOT NULL,
-  `oad_mother` varchar(255) NOT NULL,
   `oad_chargetoaccount` varchar(255) NOT NULL,
   `oad_relationtopatient` varchar(255) NOT NULL,
-  `oad_address` varchar(255) NOT NULL,
-  `oad_number` varchar(255) NOT NULL,
-  `oad_totalpayment` varchar(255) NOT NULL,
-  `oad_dischargedate` date NOT NULL,
-  `oad_complaint` text NOT NULL,
-  `oad_completediagnosis` text NOT NULL,
-  `oad_medication` varchar(255) NOT NULL,
-  `oad_conditiontodischarge` varchar(255) NOT NULL,
-  `oad_remarks` varchar(255) NOT NULL,
-  `log_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `log_time` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `oldadmission`
 --
 
-INSERT INTO `oldadmission` (`oad_id`, `oad_wardname`, `oad_date`, `oad_admittedby`, `oad_user_id`, `oad_fname`, `oad_mname`, `oad_lname`, `oad_gender`, `oad_age`, `oad_physician_id`, `oad_father`, `oad_mother`, `oad_chargetoaccount`, `oad_relationtopatient`, `oad_address`, `oad_number`, `oad_totalpayment`, `oad_dischargedate`, `oad_complaint`, `oad_completediagnosis`, `oad_medication`, `oad_conditiontodischarge`, `oad_remarks`, `log_time`) VALUES
-(1, 'Gyne', '2019-05-02', '', 1, 'James', 'Fernandez', 'Navarro', 'Male', '25', '53', '', '', '', '', '', '', '', '0000-00-00', '', '', '', '', '', '2019-05-02 09:18:19');
+INSERT INTO `oldadmission` (`oad_id`, `oad_date`, `oad_user_id`, `oad_gender`, `oad_age`, `oad_physician_id`, `oad_chargetoaccount`, `oad_relationtopatient`, `log_time`) VALUES
+(1, '2019-05-02', 1, 'Male', '25', '53', '', '', '2019-05-02 09:18:19');
 
 -- --------------------------------------------------------
 
@@ -387,17 +516,37 @@ CREATE TABLE `oldfindings` (
   `of_physicalexam` text NOT NULL,
   `of_diagnosis` text NOT NULL,
   `of_medication` text NOT NULL,
+  `of_pulse` varchar(128) NOT NULL,
+  `of_mouth` varchar(128) NOT NULL,
+  `of_lungs` varchar(128) NOT NULL,
+  `of_abdo` varchar(128) NOT NULL,
+  `of_spine` varchar(128) NOT NULL,
+  `of_remarks` varchar(128) NOT NULL,
+  `of_others` varchar(128) NOT NULL,
+  `of_allergy` varchar(128) NOT NULL,
+  `of_asthma` varchar(128) NOT NULL,
+  `of_anemia` varchar(128) NOT NULL,
+  `of_bleeding` varchar(128) NOT NULL,
+  `of_hailment` varchar(128) NOT NULL,
+  `of_diabetes` varchar(128) NOT NULL,
+  `of_epilepsy` varchar(128) NOT NULL,
+  `of_kidney` varchar(128) NOT NULL,
+  `of_convulsion` varchar(128) NOT NULL,
+  `of_findings` varchar(128) NOT NULL,
   `of_physician_id` int(11) NOT NULL,
   `of_date` date NOT NULL,
-  `log_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `log_time` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `of_fainting` varchar(128) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `oldfindings`
 --
 
-INSERT INTO `oldfindings` (`of_id`, `of_user_id`, `of_fname`, `of_mname`, `of_lname`, `of_gender`, `of_age`, `of_complaint`, `of_historypresentillness`, `of_bp`, `of_rr`, `of_cr`, `of_temp`, `of_wt`, `of_pr`, `of_physicalexam`, `of_diagnosis`, `of_medication`, `of_physician_id`, `of_date`, `log_time`) VALUES
-(4, 1, 'Jenna', 'Castro', 'Hassan', 'Female', 26, '', 'Headache', '', '', '', '', '', '', '', 'vomiting', 'ibuprofen ', 53, '2019-05-02', '2019-05-02 08:04:09');
+INSERT INTO `oldfindings` (`of_id`, `of_user_id`, `of_fname`, `of_mname`, `of_lname`, `of_gender`, `of_age`, `of_complaint`, `of_historypresentillness`, `of_bp`, `of_rr`, `of_cr`, `of_temp`, `of_wt`, `of_pr`, `of_physicalexam`, `of_diagnosis`, `of_medication`, `of_pulse`, `of_mouth`, `of_lungs`, `of_abdo`, `of_spine`, `of_remarks`, `of_others`, `of_allergy`, `of_asthma`, `of_anemia`, `of_bleeding`, `of_hailment`, `of_diabetes`, `of_epilepsy`, `of_kidney`, `of_convulsion`, `of_findings`, `of_physician_id`, `of_date`, `log_time`, `of_fainting`) VALUES
+(4, 1, 'Jenna', 'Castro', 'Hassan', 'Female', 26, '', 'Headache', '', '', '', '', '', '', '', 'vomiting', 'ibuprofen ', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 53, '2019-05-02', '2019-05-02 08:04:09', ''),
+(15, 1, 'Kimberly', 'Declines', 'Bustarde', 'Female', 21, 'a/b/c', 'Grade8-Findings', 'rfw', '1223', 'Normal', '23', '45', '325', 'a/b', 'a/b', 'a/b', '2123', 'a/b', 'a/b', 'a/b', 'a/b/c', 'Advised/Counseled', 'fghj', 'NO', 'NO', 'YES', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', '', 59, '2022-11-10', '2022-11-10 15:24:31', 'NO'),
+(16, 1, 'Clarence', 'Tanaliga', 'Tampilic', 'Female', 23, 'a', 'Grade11-Findings', '110/90', '13/min', 'Above-Normal', '37', '60', '159', 'a/b', 'a', 'a', '60/min', 'a', 'a', 'a', 'a', 'Needs_close_supervision', 'aaa', 'YES', 'YES', 'YES', 'YES', 'YES', 'YES', 'YES', 'YES', 'YES', '', 59, '2022-11-10', '2022-11-10 16:12:23', 'YES');
 
 -- --------------------------------------------------------
 
@@ -406,7 +555,7 @@ INSERT INTO `oldfindings` (`of_id`, `of_user_id`, `of_fname`, `of_mname`, `of_ln
 --
 
 CREATE TABLE `patient_record` (
-  `pr_id` int(11) NOT NULL,
+  `pr_id` varchar(255) NOT NULL,
   `pr_user_id` int(11) NOT NULL,
   `pr_date` date NOT NULL,
   `pr_lname` varchar(255) NOT NULL,
@@ -416,6 +565,8 @@ CREATE TABLE `patient_record` (
   `pr_age` int(11) NOT NULL,
   `pr_bdate` date NOT NULL,
   `pr_bplace` varchar(255) NOT NULL,
+  `pr_vaccinestat` varchar(128) NOT NULL,
+  `pr_divi` varchar(128) NOT NULL,
   `pr_civilstat` varchar(255) NOT NULL,
   `pr_gen` varchar(255) NOT NULL,
   `pr_number` varchar(255) NOT NULL,
@@ -429,11 +580,12 @@ CREATE TABLE `patient_record` (
 -- Dumping data for table `patient_record`
 --
 
-INSERT INTO `patient_record` (`pr_id`, `pr_user_id`, `pr_date`, `pr_lname`, `pr_fname`, `pr_mname`, `pr_addrs`, `pr_age`, `pr_bdate`, `pr_bplace`, `pr_civilstat`, `pr_gen`, `pr_number`, `pr_religion`, `pr_occup`, `month`, `year`) VALUES
-(1, 1, '2019-03-13', 'Hassan', 'Jenna', 'Castro', 'San Carlos Heights Binangonan Rizal', 26, '1992-07-03', 'Cainta Rizal', 'Single', 'Female', '09293932931', 'Catholic', 'Call Center', 'Apr', '2019'),
-(2, 1, '2019-03-19', 'Navarro', 'James', 'Fernandez', 'Pantok Binangonan Rizal', 25, '1993-11-25', 'Angono Rizal', 'Single', 'Male', '09292342923', 'KIDKH', 'Merchandiser', 'Apr', '2019'),
-(3, 1, '2019-04-13', 'Cuevas', 'Justin', 'Aquino', 'San Carlos Binangonan Rizal', 29, '1998-05-27', 'Angono Rizal', 'Married', 'Male', '09292234122', 'Catholic', 'Factory Worker', 'Apr', '2019'),
-(4, 1, '2019-04-26', 'Castro', 'Chris', 'Moreno', 'San Carlos Heights Binangonan Rizal', 26, '1992-04-09', 'Cainta Rizal', 'Single', 'Male', '09023923020', 'Catholic', 'Factory Worker', 'Apr', '2019');
+INSERT INTO `patient_record` (`pr_id`, `pr_user_id`, `pr_date`, `pr_lname`, `pr_fname`, `pr_mname`, `pr_addrs`, `pr_age`, `pr_bdate`, `pr_bplace`, `pr_vaccinestat`, `pr_divi`, `pr_civilstat`, `pr_gen`, `pr_number`, `pr_religion`, `pr_occup`, `month`, `year`) VALUES
+('111111111111', 1, '2022-11-07', 'Tampilic', 'Clarence', 'Tanaliga', '3117-A Reposo St. Brgy. 589', 21, '2001-10-11', 'Lubang, Occidental Mindoro', 'FullyVaccinated', 'Manila-City', 'NCR', 'Female', '09472599976', 'Albert Tampilic', 'Technology University of the Philippines', 'Nov', '2022'),
+('190000000000', 1, '2022-11-09', 'Tampilic', 'Clarence', 'Tanaliga', '3117-A Reposo St. Brgy. 589', 23, '2022-11-09', 'Lubang, Occidental Mindoro', 'FullyVaccinated', 'Makati-City', 'NCR', 'Female', '09472599976', 'Albert Tampilic', 'Technology University of the Philippines', 'Nov', '2022'),
+('192321429999', 1, '2022-11-07', 'Bustarde', 'Kimberly', 'Declines', '44 Galguerra Compound Encarnation St., Valenzuela City', 21, '2001-05-16', 'Malolos City, Bulacan', 'Fully_Vaccinated_w/_Booster', 'Manila-City', 'NCR', 'Female', '09685443580', 'Anna Bustarde', 'Technology University of the Philippines', 'Nov', '2022'),
+('192321433332', 1, '2022-11-08', 'Tampilic', 'Clarence', 'Tanaliga', '3117-A Reposo St. Brgy. 589', 22, '2001-10-11', 'Lubang, Occidental Mindoro', 'FullyVaccinated', 'Manila-City', 'NCR', 'Female', '09472599976', 'Albert Tampilic', 'Technology University of the Philippines', 'Nov', '2022'),
+('192323233444', 1, '2022-11-08', 'Tampilic', 'Clarence', 'Tanaliga', '3117-A Reposo St. Brgy. 589', 23, '2022-11-08', 'Valenzuela', 'Partially', 'SanJuan-City', 'NCR', 'Female', '09472599976', 'wewewewe', 'Technology University of the Philippines', 'Nov', '2022');
 
 -- --------------------------------------------------------
 
@@ -445,7 +597,7 @@ CREATE TABLE `physicians` (
   `ph_id` int(11) NOT NULL,
   `ph_name` varchar(255) NOT NULL,
   `ph_fieldofphysician` varchar(255) NOT NULL,
-  `date_added` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `date_added` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -453,14 +605,33 @@ CREATE TABLE `physicians` (
 --
 
 INSERT INTO `physicians` (`ph_id`, `ph_name`, `ph_fieldofphysician`, `date_added`) VALUES
-(24, 'Marilyn.Madrid', 'Pediatrician', '2019-04-24 15:03:20'),
-(26, 'Noa.Santiago', 'Dermatologist', '2019-04-24 15:08:08'),
-(28, 'James.Santos', 'Ophthalmologist', '2019-04-24 15:09:35'),
-(30, 'John.Gomez', 'Orthopedic.surgeon', '2019-04-24 15:13:41'),
-(32, 'Jobelle.Castro', 'Psychiatrist', '2019-04-24 15:15:08'),
-(37, 'Maria.Cruz', 'Gynecologist', '2019-04-25 08:43:29'),
-(38, 'Gabriel.Lopez', 'Surgeon', '2019-05-03 03:40:26'),
-(39, 'Juan.Monton', 'Emergency.Medicine.Specialist', '2019-05-03 03:47:50');
+(41, 'Juztin.Ortiz', 'Clinic_Admin', '2022-11-08 10:54:38');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `remarks`
+--
+
+CREATE TABLE `remarks` (
+  `r_id` int(128) NOT NULL,
+  `r_name` varchar(128) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `remarks`
+--
+
+INSERT INTO `remarks` (`r_id`, `r_name`) VALUES
+(1, 'Needs_Supervision'),
+(2, 'Needs_close_supervision'),
+(3, 'Needs_follow_up'),
+(4, 'Corrected'),
+(5, 'Treated'),
+(6, 'Advised/Counseled'),
+(7, 'Referred'),
+(8, 'Parents_Notified'),
+(9, 'Others');
 
 -- --------------------------------------------------------
 
@@ -475,7 +646,7 @@ CREATE TABLE `standardusers` (
   `su_pass` varchar(255) NOT NULL,
   `su_fname` varchar(255) NOT NULL,
   `su_position` varchar(255) NOT NULL,
-  `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `date_created` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -483,11 +654,26 @@ CREATE TABLE `standardusers` (
 --
 
 INSERT INTO `standardusers` (`su_id`, `su_userid`, `su_user`, `su_pass`, `su_fname`, `su_position`, `date_created`) VALUES
-(47, 1, 'marilyn', '$2y$12$i1smyg0fT4rbFFiocy58lOaRFj/g7.TPwSBznxhyuyTWXqurPkW/C', 'Marilyn', 'Doctor', '2019-04-28 10:48:51'),
-(49, 1, 'noa', '$2y$12$QrsjNiuyC8dQTg3k/FfVxO2at6mEEocVuMKSXBnDlri0rLaKFh47q', 'Noa', 'Doctor', '2019-04-29 01:43:49'),
-(52, 1, 'juan', '$2y$12$IKToBmzw43SRz7tOXHcpSemnBizmxMFPv8g017JmO.Hp6PrN.yLJ.', 'Juan', 'Doctor', '2019-04-29 01:49:56'),
-(53, 1, 'jobelle', '$2y$12$7ryPDjB4QM5RJzH3tcyu.uEEe82Is0Mq5eX3rmuKSkIBOsSpa49CC', 'Jobelle', 'Doctor', '2019-05-01 06:49:30'),
-(54, 1, 'gabriel', '$2y$12$Dk9NNuBkqv9WvPwNJp9BuOYySQdfpvxkv9rtcDGwl9XTCALPIvgsi', 'Gabriel', 'Doctor', '2019-05-01 16:52:10');
+(59, 1, 'Kim', '$2y$12$y.FA/mvpY27zze/u6FXMsu1/tEU.BUpd1pgvlS0fNZOiwjVS3Wq66', 'Kimberly Bustarde', 'Doctor', '2022-11-10 11:11:03');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `status`
+--
+
+CREATE TABLE `status` (
+  `st_id` int(11) NOT NULL,
+  `st_name` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `status`
+--
+
+INSERT INTO `status` (`st_id`, `st_name`) VALUES
+(1, 'YES'),
+(2, 'NO');
 
 -- --------------------------------------------------------
 
@@ -502,7 +688,7 @@ CREATE TABLE `users` (
   `u_pass` varchar(255) NOT NULL,
   `u_secretquestion` varchar(255) NOT NULL,
   `u_secretanswer` varchar(255) NOT NULL,
-  `date_registered` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `date_registered` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -510,9 +696,30 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`u_id`, `u_fname`, `u_user`, `u_pass`, `u_secretquestion`, `u_secretanswer`, `date_registered`) VALUES
-(1, 'Jomer', 'admin', '$2y$10$eclpnpHC0v8QCiHNU62cJOzock3Ar1SnI840AguzpyTPkIhJ8Riv6', 'What was your childhood nickname?', '0043f605eeeae08811074cc2f26c5126d21b24da', '2019-03-12 13:35:12'),
+(1, 'Jomer', 'admin', '$2y$10$2VQOY6mwW.qVEyjWjUy2deYaK5oj6qmx.1JEGqA5p5WBLDDo7seHa', 'What was your childhood nickname?', '0043f605eeeae08811074cc2f26c5126d21b24da', '2019-03-12 13:35:12'),
 (3, 'admin', 'admin1', '$2y$10$sPNp25r0Y9yPae4neC3TK.RdIliPu0lu6rnZmP3EQAgNiiDeD56TO', 'What was your childhood nickname?', 'a58f327705b16842a432710949f4fc0cee0071da', '2019-05-09 02:22:24'),
 (5, 'admin', 'admin12', '$2y$10$sPNp25r0Y9yPae4neC3TK.RdIliPu0lu6rnZmP3EQAgNiiDeD56TO', '', '', '2019-05-09 03:19:30');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `vaccinestat`
+--
+
+CREATE TABLE `vaccinestat` (
+  `v_id` int(11) NOT NULL,
+  `v_name` varchar(128) CHARACTER SET latin1 NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `vaccinestat`
+--
+
+INSERT INTO `vaccinestat` (`v_id`, `v_name`) VALUES
+(1, 'FullyVaccinated'),
+(2, 'Partially Vaccinated'),
+(3, 'Fully_Vaccinated_w/_Booster'),
+(4, 'Not_yet Vaccinated ');
 
 -- --------------------------------------------------------
 
@@ -522,36 +729,30 @@ INSERT INTO `users` (`u_id`, `u_fname`, `u_user`, `u_pass`, `u_secretquestion`, 
 
 CREATE TABLE `wards` (
   `w_id` int(11) NOT NULL,
-  `w_name` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `w_name` varchar(128) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `wards`
 --
 
 INSERT INTO `wards` (`w_id`, `w_name`) VALUES
-(1, 'Male Ward'),
-(2, 'Female Ward'),
-(3, 'Pulmonary'),
-(4, 'ICU'),
-(5, 'Gyne'),
-(6, 'Caesarian Section'),
-(7, 'NSD'),
-(8, 'MaleSurgical'),
-(9, 'FemaleSurgical'),
-(10, 'Pedia'),
-(11, 'OB-Gyne'),
-(13, '*Under.Observation');
+(1, 'Headache'),
+(2, 'Colds'),
+(3, 'Fever'),
+(4, 'Allergies'),
+(5, 'Stomachache'),
+(6, 'Dizziness'),
+(7, 'Menstrual cramps'),
+(8, 'Muscle_aches'),
+(9, 'Vomiting'),
+(10, 'Abdominal_pain'),
+(11, 'Rashes'),
+(12, 'Others');
 
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `add_patientadmission`
---
-ALTER TABLE `add_patientadmission`
-  ADD PRIMARY KEY (`a_id`);
 
 --
 -- Indexes for table `add_patientfindings`
@@ -560,16 +761,28 @@ ALTER TABLE `add_patientfindings`
   ADD PRIMARY KEY (`a_id`);
 
 --
--- Indexes for table `admission_record`
---
-ALTER TABLE `admission_record`
-  ADD PRIMARY KEY (`ad_id`);
-
---
 -- Indexes for table `civilstat`
 --
 ALTER TABLE `civilstat`
   ADD PRIMARY KEY (`c_id`);
+
+--
+-- Indexes for table `cr`
+--
+ALTER TABLE `cr`
+  ADD PRIMARY KEY (`cr_id`);
+
+--
+-- Indexes for table `details`
+--
+ALTER TABLE `details`
+  ADD PRIMARY KEY (`de_id`);
+
+--
+-- Indexes for table `divi`
+--
+ALTER TABLE `divi`
+  ADD PRIMARY KEY (`d_id`);
 
 --
 -- Indexes for table `fieldsphysician`
@@ -617,7 +830,8 @@ ALTER TABLE `oldfindings`
 -- Indexes for table `patient_record`
 --
 ALTER TABLE `patient_record`
-  ADD PRIMARY KEY (`pr_id`);
+  ADD PRIMARY KEY (`pr_id`),
+  ADD UNIQUE KEY `pr_id` (`pr_id`);
 
 --
 -- Indexes for table `physicians`
@@ -626,16 +840,34 @@ ALTER TABLE `physicians`
   ADD PRIMARY KEY (`ph_id`);
 
 --
+-- Indexes for table `remarks`
+--
+ALTER TABLE `remarks`
+  ADD PRIMARY KEY (`r_id`);
+
+--
 -- Indexes for table `standardusers`
 --
 ALTER TABLE `standardusers`
   ADD PRIMARY KEY (`su_id`);
 
 --
+-- Indexes for table `status`
+--
+ALTER TABLE `status`
+  ADD PRIMARY KEY (`st_id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`u_id`);
+
+--
+-- Indexes for table `vaccinestat`
+--
+ALTER TABLE `vaccinestat`
+  ADD PRIMARY KEY (`v_id`);
 
 --
 -- Indexes for table `wards`
@@ -648,40 +880,46 @@ ALTER TABLE `wards`
 --
 
 --
--- AUTO_INCREMENT for table `add_patientadmission`
---
-ALTER TABLE `add_patientadmission`
-  MODIFY `a_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
 -- AUTO_INCREMENT for table `add_patientfindings`
 --
 ALTER TABLE `add_patientfindings`
-  MODIFY `a_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
-
---
--- AUTO_INCREMENT for table `admission_record`
---
-ALTER TABLE `admission_record`
-  MODIFY `ad_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `a_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `civilstat`
 --
 ALTER TABLE `civilstat`
-  MODIFY `c_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `c_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
+-- AUTO_INCREMENT for table `cr`
+--
+ALTER TABLE `cr`
+  MODIFY `cr_id` int(128) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `details`
+--
+ALTER TABLE `details`
+  MODIFY `de_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `divi`
+--
+ALTER TABLE `divi`
+  MODIFY `d_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `fieldsphysician`
 --
 ALTER TABLE `fieldsphysician`
-  MODIFY `fp_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `fp_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `findings`
 --
 ALTER TABLE `findings`
-  MODIFY `f_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `f_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
 
 --
 -- AUTO_INCREMENT for table `gender`
@@ -711,25 +949,31 @@ ALTER TABLE `oldadmission`
 -- AUTO_INCREMENT for table `oldfindings`
 --
 ALTER TABLE `oldfindings`
-  MODIFY `of_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT for table `patient_record`
---
-ALTER TABLE `patient_record`
-  MODIFY `pr_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `of_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `physicians`
 --
 ALTER TABLE `physicians`
-  MODIFY `ph_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `ph_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+
+--
+-- AUTO_INCREMENT for table `remarks`
+--
+ALTER TABLE `remarks`
+  MODIFY `r_id` int(128) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `standardusers`
 --
 ALTER TABLE `standardusers`
-  MODIFY `su_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+  MODIFY `su_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
+
+--
+-- AUTO_INCREMENT for table `status`
+--
+ALTER TABLE `status`
+  MODIFY `st_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`
@@ -738,10 +982,16 @@ ALTER TABLE `users`
   MODIFY `u_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
+-- AUTO_INCREMENT for table `vaccinestat`
+--
+ALTER TABLE `vaccinestat`
+  MODIFY `v_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT for table `wards`
 --
 ALTER TABLE `wards`
-  MODIFY `w_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `w_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
