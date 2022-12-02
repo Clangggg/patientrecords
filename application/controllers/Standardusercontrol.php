@@ -390,9 +390,9 @@ $this->load->view('standardaccount/doctorpage', $data);
 public function add_to_doctor($findings_id) { 
 
 
-$this->form_validation->set_rules('e_patientfname','Firstname','required|trim|alpha');
+$this->form_validation->set_rules('e_patientfname','Firstname','required');
 $this->form_validation->set_rules('e_patientmname','Middlename', 'required|trim');
-$this->form_validation->set_rules('e_patientlname','Lastname', 'required|trim|alpha');
+$this->form_validation->set_rules('e_patientlname','Lastname', 'required');
 $this->form_validation->set_rules('e_gender','Gender', 'required|trim');
 $this->form_validation->set_rules('e_age','Age', 'required|trim');
 $this->form_validation->set_rules('e_chief_complaint','Chief Complaint');
@@ -595,12 +595,12 @@ $data['get_details'] = $this->Record_model->get_details();
 public function add_admission_doctor($admission_id) {
 
 
-$this->form_validation->set_rules('e_patientfname','Firstname','required|trim|alpha');
-$this->form_validation->set_rules('e_patientmname','Middlename', 'required|trim');
-$this->form_validation->set_rules('e_patientlname','Lastname', 'required|trim|alpha');
+$this->form_validation->set_rules('e_patientfname','Firstname','required');
+$this->form_validation->set_rules('e_patientmname','Middlename', 'required');
+$this->form_validation->set_rules('e_patientlname','Lastname', 'required');
 $this->form_validation->set_rules('e_gender','Gender', 'required|trim');
 $this->form_validation->set_rules('e_age','Age', 'required|trim');
-$this->form_validation->set_rules('e_chief_complaint','Chief Complaint','alpha');
+$this->form_validation->set_rules('e_chief_complaint','Chief Complaint');
 $this->form_validation->set_rules('e_ward','Ward', 'required|trim');
 $this->form_validation->set_rules('e_physician','Username','required', array('required' => 'Please select the username of the doctor!'));
 

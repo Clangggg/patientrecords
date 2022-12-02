@@ -26,9 +26,9 @@ public function opd_process(){
 
 
 $this->form_validation->set_rules('lrn', 'LRN', 'trim|required|numeric|min_length[12]|max_length[12]');
-$this->form_validation->set_rules('lname', 'Lastname', 'trim|required|alpha_numeric_spaces');
-$this->form_validation->set_rules('fname', 'Firstname', 'trim|required|alpha_numeric_spaces');
-$this->form_validation->set_rules('middlen', 'Middlename', 'trim|required|alpha');
+$this->form_validation->set_rules('lname', 'Lastname', 'trim|required');
+$this->form_validation->set_rules('fname', 'Firstname', 'trim|required');
+$this->form_validation->set_rules('middlen', 'Middlename', 'trim|required');
 $this->form_validation->set_rules('address', 'Address', 'required');
 $this->form_validation->set_rules('occup', 'Occupation', 'required');
 $this->form_validation->set_rules('age', 'Age', 'trim|required|numeric|min_length[2]|max_length[2]');
@@ -88,7 +88,7 @@ $year = date("Y", strtotime("+8 HOURS"));
 
     if($this->Record_model->patient_record($data)){
   
-		$data['title'] = 'Add Student Data';
+		$data['title'] = 'Added Student Data';
 $data['topbar'] = 'navbar-default';
 		$data['main_view'] = 'admission/opdform';
         
@@ -131,9 +131,9 @@ public function edit_opd_form($pr_id) {
 
 $this->form_validation->set_rules('date', 'Date', 'required');
 $this->form_validation->set_rules('lrn', 'LRN', 'required|numeric|min_length[12]|max_length[12]');
-$this->form_validation->set_rules('lname', 'Lastname', 'required|alpha_numeric_spaces');
-$this->form_validation->set_rules('fname', 'Firstname', 'required|alpha_numeric_spaces');
-$this->form_validation->set_rules('middlen', 'Middlename', 'required|alpha');
+$this->form_validation->set_rules('lname', 'Lastname', 'required');
+$this->form_validation->set_rules('fname', 'Firstname', 'required');
+$this->form_validation->set_rules('middlen', 'Middlename', 'required');
 $this->form_validation->set_rules('address', 'Address', 'required');
 $this->form_validation->set_rules('birthplace', 'Birthplace', 'required');
 $this->form_validation->set_rules('occup', 'Occupation', 'required');

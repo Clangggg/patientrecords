@@ -9,7 +9,8 @@
                  </div>
                  <div class="h5 mb-1 font-weight-bold text-gray-800"><input
                          class="form-control  <?= (form_error('a_casenumber') == "" ? '':'is-invalid') ?>" type="text"
-                         minlength="12" maxlength="12" name="a_casenumber" placeholder="Enter LRN" value="<?php echo set_value('a_casenumber'); ?>">
+                         minlength="12" maxlength="12" name="a_casenumber" placeholder="Enter LRN"
+                         value="<?php echo set_value('a_casenumber'); ?>">
                  </div>
                  <div class="text-danger text-center"><?php echo form_error('a_casenumber'); ?></div>
              </div>
@@ -182,7 +183,7 @@
                  <div class="row no-gutters mt-3">
                      <?php echo form_label('Others, specify'); ?>
                      <input class="form-control" type="text" name="a_others"
-                         value="<?php echo set_value('a_others'); ?>" placeholder="">
+                         value="<?php echo set_value('a_others'); ?>" placeholder="Type N/A if not applicable">
                  </div>
 
                  <div class="row no-gutters mt-3">
@@ -214,42 +215,551 @@
                  <h6 class="ml-3 mb-2 font-weight-bold text-s text-center mt-4 text-uppercase text-primary">Reference
                  </h6>
 
-                 <p class="ml-5">Visual Acuity (Snellen's) <br> &nbsp &nbsp &nbsp &nbsp &nbsp a. Normal right &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp c. AbNormal right <br> &nbsp &nbsp &nbsp &nbsp &nbsp b. Normal left
-                 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp d. AbNormal left</p>
+                 <p class="ml-5">Visual Acuity (Snellen's) <br> &nbsp &nbsp &nbsp &nbsp &nbsp a. Normal right &nbsp
+                     &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                     c. AbNormal right <br> &nbsp &nbsp &nbsp &nbsp &nbsp b. Normal left
+                     &nbsp &nbsp &nbsp &nbsp &nbsp
+                     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp d. AbNormal
+                     left</p>
 
-                 <p class="ml-5">Hearing (Tuning fork) <br> &nbsp &nbsp &nbsp &nbsp &nbsp a. Normal right &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp c. AbNormal right <br> &nbsp &nbsp &nbsp &nbsp &nbsp b. Normal left
-                 &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp d. AbNormal left</p>
+                 <p class="ml-5">Hearing (Tuning fork) <br> &nbsp &nbsp &nbsp &nbsp &nbsp a. Normal right &nbsp &nbsp
+                     &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp c.
+                     AbNormal right <br> &nbsp &nbsp &nbsp &nbsp &nbsp b. Normal left
+                     &nbsp &nbsp &nbsp &nbsp
+                     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp d.
+                     AbNormal left</p>
 
-                 <p class="ml-5">Skin/Scalp <br> &nbsp &nbsp &nbsp &nbsp &nbsp a. Normal &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  g. Hematoma <br> &nbsp &nbsp &nbsp &nbsp &nbsp b. Pediculosis
-                 &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp h. Bruises <br> &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp  c. Tinea Flava &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp i. Cuts/lacerations <br>
-                 &nbsp &nbsp &nbsp &nbsp &nbsp d. Ringworm &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp j. Allergy <br> &nbsp &nbsp &nbsp &nbsp &nbsp  e. Eczema &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp k. Others, specify <br>
-                &nbsp &nbsp &nbsp &nbsp &nbsp   f. Impetigo/boil</p>
+                 <p class="ml-5">Skin/Scalp <br> &nbsp &nbsp &nbsp &nbsp &nbsp a. Normal &nbsp &nbsp &nbsp &nbsp &nbsp
+                     &nbsp
+                     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                     g. Hematoma <br> &nbsp &nbsp &nbsp &nbsp &nbsp b. Pediculosis
+                     &nbsp &nbsp &nbsp &nbsp
+                     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp h.
+                     Bruises <br> &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp c. Tinea Flava &nbsp &nbsp &nbsp
+                     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                     i. Cuts/lacerations <br>
+                     &nbsp &nbsp &nbsp &nbsp &nbsp d. Ringworm &nbsp &nbsp &nbsp
+                     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                     j. Allergy <br> &nbsp &nbsp &nbsp &nbsp &nbsp e. Eczema &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp
+                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp k. Others, specify <br>
+                     &nbsp &nbsp &nbsp &nbsp &nbsp f. Impetigo/boil</p>
 
-                <p class="ml-5">Eye/Ear/Nose <br> &nbsp &nbsp &nbsp &nbsp &nbsp a. Normal eye &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  f. Ear discharge <br> &nbsp &nbsp &nbsp &nbsp &nbsp b. Normal ears
-                 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  g. Impacted cerumen <br> &nbsp &nbsp &nbsp &nbsp &nbsp c. Normal nose &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  h. Septal deviation <br> 
-                 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspd. Squinting &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  i. Nasal discharge <br> &nbsp &nbsp &nbsp &nbsp &nbsp e. Pale conjunctivae &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp j. Others, specify</p>
+                 <p class="ml-5">Eye/Ear/Nose <br> &nbsp &nbsp &nbsp &nbsp &nbsp a. Normal eye &nbsp &nbsp &nbsp &nbsp
+                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp f. Ear discharge <br> &nbsp &nbsp &nbsp
+                     &nbsp &nbsp b. Normal ears
+                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp g. Impacted cerumen
+                     <br> &nbsp &nbsp &nbsp &nbsp &nbsp c. Normal nose &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                     &nbsp &nbsp &nbsp &nbsp &nbsp h. Septal deviation <br>
+                     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspd. Squinting &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp i. Nasal discharge <br> &nbsp &nbsp
+                     &nbsp &nbsp &nbsp e. Pale conjunctivae &nbsp &nbsp &nbsp &nbsp
+                     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp j. Others, specify</p>
 
-                <p class="ml-5">Mouth/Neck/Throat <br> &nbsp &nbsp &nbsp &nbsp &nbsp a. Normal mouth &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp f. Inflamed pharynx<br> &nbsp &nbsp &nbsp &nbsp &nbsp b. Normal throat
-                 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp with/w/o exudates  <br> &nbsp &nbsp &nbsp &nbsp &nbsp c. Enlarged tonsils &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp g. Enlarged thyroid gland  <br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp with/w/o exudates  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp h. Speech defect<br> 
-                 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspd. Lip lesion &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp i. Dental problem <br> &nbsp &nbsp &nbsp &nbsp &nbsp e. Enlarged tonsils  &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp j. Others, specify <br>  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbspwith/w/o exudates</p>
+                 <p class="ml-5">Mouth/Neck/Throat <br> &nbsp &nbsp &nbsp &nbsp &nbsp a. Normal mouth &nbsp &nbsp &nbsp
+                     &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp f. Inflamed
+                     pharynx<br> &nbsp &nbsp &nbsp &nbsp &nbsp b. Normal throat
+                     &nbsp &nbsp &nbsp &nbsp &nbsp
+                     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp with/w/o
+                     exudates <br> &nbsp &nbsp &nbsp &nbsp &nbsp c. Enlarged tonsils &nbsp &nbsp &nbsp &nbsp
+                     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp g. Enlarged thyroid gland <br> &nbsp
+                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp with/w/o exudates &nbsp &nbsp &nbsp &nbsp &nbsp
+                     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp h. Speech defect<br>
+                     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspd. Lip lesion &nbsp &nbsp &nbsp &nbsp
+                     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                     i. Dental problem <br> &nbsp &nbsp &nbsp &nbsp &nbsp e. Enlarged tonsils &nbsp &nbsp &nbsp &nbsp
+                     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp j. Others, specify <br> &nbsp
+                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbspwith/w/o exudates</p>
 
-                <p class="ml-5">Lungs/Heart <br> &nbsp &nbsp &nbsp &nbsp &nbsp a. Normal lungs &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp f. Deformed chest<br> &nbsp &nbsp &nbsp &nbsp &nbsp b. Normal heart
-                 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbspg. Distant heart sounds <br> &nbsp &nbsp &nbsp &nbsp &nbsp c. Rales &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsph. Irregular heart rate <br> 
-                 &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspd. Wheeze &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp i. Others, specify <br> &nbsp &nbsp &nbsp &nbsp &nbsp e. Murmur </p>
+                 <p class="ml-5">Lungs/Heart <br> &nbsp &nbsp &nbsp &nbsp &nbsp a. Normal lungs &nbsp &nbsp &nbsp &nbsp
+                     &nbsp&nbsp&nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp f. Deformed chest<br> &nbsp &nbsp
+                     &nbsp &nbsp &nbsp b. Normal heart
+                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbspg. Distant
+                     heart sounds <br> &nbsp &nbsp &nbsp &nbsp &nbsp c. Rales &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsph. Irregular
+                     heart rate <br>
+                     &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspd. Wheeze &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp
+                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp i. Others, specify
+                     <br> &nbsp &nbsp &nbsp &nbsp &nbsp e. Murmur </p>
 
-                <p class="ml-5">Abdomen/Genitalia <br> &nbsp &nbsp &nbsp &nbsp &nbsp a. Normal abdomen &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp&nbsp e. Tenderness<br> &nbsp &nbsp &nbsp &nbsp &nbsp b. Normal genitalia
-                &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp f. Genital discharge <br> &nbsp &nbsp &nbsp &nbsp &nbsp c. Mass &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  g. Hernia <br> 
-                 &nbsp &nbsp  &nbsp &nbsp &nbsp d. Hemorrhoids &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsph. Others, specify  </p>
+                 <p class="ml-5">Abdomen/Genitalia <br> &nbsp &nbsp &nbsp &nbsp &nbsp a. Normal abdomen &nbsp &nbsp
+                     &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp&nbsp e. Tenderness<br> &nbsp &nbsp &nbsp &nbsp
+                     &nbsp b. Normal genitalia
+                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp f. Genital discharge <br>
+                     &nbsp &nbsp &nbsp &nbsp &nbsp c. Mass &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                     &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp g. Hernia <br>
+                     &nbsp &nbsp &nbsp &nbsp &nbsp d. Hemorrhoids &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsph. Others, specify </p>
 
-                <p class="ml-5">Spine/Extremities <br> &nbsp &nbsp &nbsp &nbsp &nbsp a. Normal spine &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  f. Kyphosis <br> &nbsp &nbsp &nbsp &nbsp &nbsp b. N upper extremities
-                 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp g. Bowlegs/knock knees <br> &nbsp &nbsp &nbsp &nbsp &nbsp c. N lower extremities &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsph. Flat foot <br> 
-                 &nbsp &nbsp &nbsp &nbsp &nbsp d. Scoliosis &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp &nbsp &nbspi. Club foot <br> 
-                 &nbsp &nbsp &nbsp &nbsp &nbsp  e. Lordosis &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbspj. Others, specify</p>
+                 <p class="ml-5">Spine/Extremities <br> &nbsp &nbsp &nbsp &nbsp &nbsp a. Normal spine &nbsp &nbsp &nbsp
+                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp f. Kyphosis <br> &nbsp
+                     &nbsp &nbsp &nbsp &nbsp b. N upper extremities
+                     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp g. Bowlegs/knock knees <br> &nbsp &nbsp &nbsp
+                     &nbsp &nbsp c. N lower extremities &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsph.
+                     Flat foot <br>
+                     &nbsp &nbsp &nbsp &nbsp &nbsp d. Scoliosis &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp &nbsp &nbspi. Club
+                     foot <br>
+                     &nbsp &nbsp &nbsp &nbsp &nbsp e. Lordosis &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                     &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbspj. Others, specify</p>
              </div>
 
 
          </div><!-- End of Column 2 -->
      </div><!-- End of Row -->
+
+
+     <!-- Card Header - Dropdown -->
+     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+         <h6 class="m-0 font-weight-bold text-primary">Medical History</h6>
+     </div>
+
+     <div class="card-body">
+         <div class="row">
+             <div class="col-sm-5 ml-5">
+                 <div style="margin-bottom:17px;">
+                     <div class="row no-gutters">
+                         <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Allergy
+                         </div>
+                     </div>
+                     <div class="h5 mb-1 font-weight-bold text-gray-800">
+                         <select name="a_allergy" class="form-control">
+                             <option value="">Select</option>
+                             <?php if(count($get_status)): ?>
+                             <?php foreach($get_status as $status): ?>
+                             <option
+                                 value=<?php echo $status->st_name; ?><?php echo set_select('a_allergy', $status->st_name); ?>>
+                                 <?php echo $status->st_name; ?></option>
+                             <?php endforeach; ?>
+                             <?php endif; ?>
+                         </select>
+                     </div>
+                     <div class="text-danger text-center"><?php echo form_error('a_allergy'); ?></div>
+                 </div>
+
+                 <div style="margin-bottom:17px;">
+                     <div class="row no-gutters">
+                         <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Asthma
+                         </div>
+                     </div>
+                     <div class="h5 mb-1 font-weight-bold text-gray-800">
+                     <select name="a_asthma" class="form-control">
+                             <option value="">Select</option>
+                             <?php if(count($get_status)): ?>
+                             <?php foreach($get_status as $status): ?>
+                             <option
+                                 value=<?php echo $status->st_name; ?><?php echo set_select('a_asthma', $status->st_name); ?>>
+                                 <?php echo $status->st_name; ?></option>
+                             <?php endforeach; ?>
+                             <?php endif; ?>
+                         </select>
+                     </div>
+                     <div class="text-danger text-center"><?php echo form_error('a_asthma'); ?></div>
+                 </div>
+
+
+                 <div style="margin-bottom:17px;">
+                     <div class="row no-gutters">
+                         <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Anemia
+                         </div>
+                     </div>
+                     <div class="h5 mb-1 font-weight-bold text-gray-800">
+                     <select name="a_anemia" class="form-control">
+                             <option value="">Select </option>
+                             <?php if(count($get_status)): ?>
+                             <?php foreach($get_status as $status): ?>
+                             <option
+                                 value=<?php echo $status->st_name; ?><?php echo set_select('a_anemia', $status->st_name); ?>>
+                                 <?php echo $status->st_name; ?></option>
+                             <?php endforeach; ?>
+                             <?php endif; ?>
+                         </select>
+                     </div>
+                     <div class="text-danger text-center"><?php echo form_error('a_anemia'); ?></div>
+                 </div>
+
+                 <div style="margin-bottom:17px;">
+                     <div class="row no-gutters">
+                         <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Bleeding Problem
+                         </div>
+                     </div>
+                     <div class="h5 mb-1 font-weight-bold text-gray-800">
+                     <select name="a_bleeding" class="form-control">
+                             <option value=""> Select </option>
+                             <?php if(count($get_status)): ?>
+                             <?php foreach($get_status as $status): ?>
+                             <option
+                                 value=<?php echo $status->st_name; ?><?php echo set_select('a_bleeding', $status->st_name); ?>>
+                                 <?php echo $status->st_name; ?></option>
+                             <?php endforeach; ?>
+                             <?php endif; ?>
+                         </select>
+                     </div>
+                     <div class="text-danger text-center"><?php echo form_error('a_bleeding'); ?></div>
+                 </div>
+
+                 <div style="margin-bottom:17px;">
+                     <div class="row no-gutters">
+                         <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Heart Ailment
+                         </div>
+                     </div>
+                     <div class="h5 mb-1 font-weight-bold text-gray-800">
+                     <select name="a_hailment" class="form-control">
+                             <option value="">Select</option>
+                             <?php if(count($get_status)): ?>
+                             <?php foreach($get_status as $status): ?>
+                             <option
+                                 value=<?php echo $status->st_name; ?><?php echo set_select('a_hailment', $status->st_name); ?>>
+                                 <?php echo $status->st_name; ?></option>
+                             <?php endforeach; ?>
+                             <?php endif; ?>
+                         </select>
+                     </div>
+                     <div class="text-danger text-center"><?php echo form_error('a_hailment'); ?></div>
+                 </div>
+             </div>
+
+
+
+             <div class="col-sm-5">
+                 <div style="margin-bottom:17px;">
+                     <div class="row no-gutters">
+                         <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Diabetes</div>
+                     </div>
+                     <div class="h5 mb-1 font-weight-bold text-gray-800">
+                     <select name="a_diabetes" class="form-control">
+                             <option value="">Select</option>
+                             <?php if(count($get_status)): ?>
+                             <?php foreach($get_status as $status): ?>
+                             <option
+                                 value=<?php echo $status->st_name; ?><?php echo set_select('a_diabetes', $status->st_name); ?>>
+                                 <?php echo $status->st_name; ?></option>
+                             <?php endforeach; ?>
+                             <?php endif; ?>
+                         </select>
+                     </div>
+                     <div class="text-danger text-center"><?php echo form_error('a_diabetes'); ?></div>
+                 </div>
+
+                 <div style="margin-bottom:17px;">
+                     <div class="row no-gutters">
+                         <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Epilepsy</div>
+                     </div>
+                     <div class="h5 mb-1 font-weight-bold text-gray-800">
+                     <select name="a_epilepsy" class="form-control">
+                             <option value="">Select</option>
+                             <?php if(count($get_status)): ?>
+                             <?php foreach($get_status as $status): ?>
+                             <option
+                                 value=<?php echo $status->st_name; ?><?php echo set_select('a_epilepsy', $status->st_name); ?>>
+                                 <?php echo $status->st_name; ?></option>
+                             <?php endforeach; ?>
+                             <?php endif; ?>
+                         </select>
+                     </div>
+                     <div class="text-danger text-center"><?php echo form_error('a_epilepsy'); ?></div>
+                 </div>
+
+                 <div style="margin-bottom:17px;">
+                     <div class="row no-gutters">
+                         <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Kidney Disease
+                         </div>
+                     </div>
+                     <div class="h5 mb-1 font-weight-bold text-gray-800">
+                     <select name="a_kidney" class="form-control">
+                             <option value="">Select</option>
+                             <?php if(count($get_status)): ?>
+                             <?php foreach($get_status as $status): ?>
+                             <option
+                                 value=<?php echo $status->st_name; ?><?php echo set_select('a_kidney', $status->st_name); ?>>
+                                 <?php echo $status->st_name; ?></option>
+                             <?php endforeach; ?>
+                             <?php endif; ?>
+                         </select>
+                     </div>
+                     <div class="text-danger text-center"><?php echo form_error('a_kidney'); ?></div>
+                 </div>
+
+                 <div style="margin-bottom:17px;">
+                     <div class="row no-gutters">
+                         <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Convulsion</div>
+                     </div>
+                     <div class="h5 mb-1 font-weight-bold text-gray-800">
+                     <select name="a_convulsion" class="form-control">
+                             <option value="">Select</option>
+                             <?php if(count($get_status)): ?>
+                             <?php foreach($get_status as $status): ?>
+                             <option
+                                 value=<?php echo $status->st_name; ?><?php echo set_select('a_convulsion', $status->st_name); ?>>
+                                 <?php echo $status->st_name; ?></option>
+                             <?php endforeach; ?>
+                             <?php endif; ?>
+                         </select>
+                     </div>
+                     <div class="text-danger text-center"><?php echo form_error('a_convulsion'); ?></div>
+                 </div>
+
+                 <div style="margin-bottom:17px;">
+                     <div class="row no-gutters">
+                         <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Fainting</div>
+                     </div>
+                     <div class="h5 mb-1 font-weight-bold text-gray-800">
+                     <select name="a_fainting" class="form-control">
+                             <option value="">Select</option>
+                             <?php if(count($get_status)): ?>
+                             <?php foreach($get_status as $status): ?>
+                             <option
+                                 value=<?php echo $status->st_name; ?><?php echo set_select('a_fainting', $status->st_name); ?>>
+                                 <?php echo $status->st_name; ?></option>
+                             <?php endforeach; ?>
+                             <?php endif; ?>
+                         </select>
+                     </div>
+                     <div class="text-danger text-center"><?php echo form_error('a_fainting'); ?></div>
+                 </div>
+
+             </div>
+         </div>
+     </div>
+
+     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+         <h6 class="m-0 font-weight-bold text-primary">Oral Health Examination</h6>
+     </div>
+
+     <div class="card-body">
+         <div class="row">
+             <div class="col-sm-5 ml-5">
+                 <!-- <div style="margin-bottom:17px;">
+                         <div class="row no-gutters">
+                             <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Allergy
+                             </div>
+                         </div>
+                         <div class="h5 mb-1 font-weight-bold text-gray-800">
+                             <select class="form-control" name="e_allergy">
+                                 <option
+                                     value=<?php echo $get_findings_view->f_allergy; ?><?php echo set_select('e_allergy', $get_findings_view->f_allergy); ?>>
+                                     <?php echo $get_findings_view->f_allergy; ?></option>
+                                 <?php if(count($get_status)): ?>
+                                 <?php foreach($get_status as $status): ?>
+                                 <option
+                                     value=<?php echo $status->st_name; ?><?php echo set_select('e_allergy', $status->st_name); ?>>
+                                     <?php echo $status->st_name; ?></option>
+                                 <?php endforeach; ?>
+                                 <?php endif; ?>
+                             </select>
+                         </div>
+                         <div class="text-danger text-center"><?php echo form_error('e_allergy'); ?></div>
+                     </div>
+
+                     <div style="margin-bottom:17px;">
+                         <div class="row no-gutters">
+                             <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Asthma
+                             </div>
+                         </div>
+                         <div class="h5 mb-1 font-weight-bold text-gray-800">
+                             <select class="form-control" name="e_asthma">
+                                 <option
+                                     value=<?php echo $get_findings_view->f_asthma; ?><?php echo set_select('e_asthma', $get_findings_view->f_asthma); ?>>
+                                     <?php echo $get_findings_view->f_asthma; ?></option>
+                                 <?php if(count($get_status)): ?>
+                                 <?php foreach($get_status as $status): ?>
+                                 <option
+                                     value=<?php echo $status->st_name; ?><?php echo set_select('e_asthma', $status->st_name); ?>>
+                                     <?php echo $status->st_name; ?></option>
+                                 <?php endforeach; ?>
+                                 <?php endif; ?>
+                             </select>
+                         </div>
+                         <div class="text-danger text-center"><?php echo form_error('e_asthma'); ?></div>
+                     </div>
+
+
+                     <div style="margin-bottom:17px;">
+                         <div class="row no-gutters">
+                             <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Anemia
+                             </div>
+                         </div>
+                         <div class="h5 mb-1 font-weight-bold text-gray-800">
+                             <select class="form-control" name="e_anemia">
+                                 <option
+                                     value=<?php echo $get_findings_view->f_anemia; ?><?php echo set_select('e_anemia', $get_findings_view->f_anemia); ?>>
+                                     <?php echo $get_findings_view->f_anemia; ?></option>
+                                 <?php if(count($get_status)): ?>
+                                 <?php foreach($get_status as $status): ?>
+                                 <option
+                                     value=<?php echo $status->st_name; ?><?php echo set_select('e_anemia', $status->st_name); ?>>
+                                     <?php echo $status->st_name; ?></option>
+                                 <?php endforeach; ?>
+                                 <?php endif; ?>
+                             </select>
+                         </div>
+                         <div class="text-danger text-center"><?php echo form_error('e_anemia'); ?></div>
+                     </div>
+
+                     <div style="margin-bottom:17px;">
+                         <div class="row no-gutters">
+                             <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Bleeding Problem
+                             </div>
+                         </div>
+                         <div class="h5 mb-1 font-weight-bold text-gray-800">
+                             <select class="form-control" name="e_bleeding">
+                                 <option
+                                     value=<?php echo $get_findings_view->f_bleeding; ?><?php echo set_select('e_bleeding', $get_findings_view->f_bleeding); ?>>
+                                     <?php echo $get_findings_view->f_bleeding; ?></option>
+                                 <?php if(count($get_status)): ?>
+                                 <?php foreach($get_status as $status): ?>
+                                 <option
+                                     value=<?php echo $status->st_name; ?><?php echo set_select('e_bleeding', $status->st_name); ?>>
+                                     <?php echo $status->st_name; ?></option>
+                                 <?php endforeach; ?>
+                                 <?php endif; ?>
+                             </select>
+                         </div>
+                         <div class="text-danger text-center"><?php echo form_error('e_bleeding'); ?></div>
+                     </div>
+
+                     <div style="margin-bottom:17px;">
+                         <div class="row no-gutters">
+                             <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Heart Ailment
+                             </div>
+                         </div>
+                         <div class="h5 mb-1 font-weight-bold text-gray-800">
+                             <select class="form-control" name="e_hailment">
+                                 <option
+                                     value=<?php echo $get_findings_view->f_hailment; ?><?php echo set_select('e_hailment', $get_findings_view->f_hailment); ?>>
+                                     <?php echo $get_findings_view->f_hailment; ?></option>
+                                 <?php if(count($get_status)): ?>
+                                 <?php foreach($get_status as $status): ?>
+                                 <option
+                                     value=<?php echo $status->st_name; ?><?php echo set_select('e_hailment', $status->st_name); ?>>
+                                     <?php echo $status->st_name; ?></option>
+                                 <?php endforeach; ?>
+                                 <?php endif; ?>
+                             </select>
+                         </div>
+                         <div class="text-danger text-center"><?php echo form_error('e_hailment'); ?></div>
+                     </div>
+                 </div>
+
+
+
+                 <div class="col-sm-5">
+                     <div style="margin-bottom:17px;">
+                         <div class="row no-gutters">
+                             <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Diabetes</div>
+                         </div>
+                         <div class="h5 mb-1 font-weight-bold text-gray-800">
+                             <select class="form-control" name="e_diabetes">
+                                 <option
+                                     value=<?php echo $get_findings_view->f_diabetes; ?><?php echo set_select('e_diabetes', $get_findings_view->f_diabetes); ?>>
+                                     <?php echo $get_findings_view->f_diabetes; ?></option>
+                                 <?php if(count($get_status)): ?>
+                                 <?php foreach($get_status as $status): ?>
+                                 <option
+                                     value=<?php echo $status->st_name; ?><?php echo set_select('e_diabetes', $status->st_name); ?>>
+                                     <?php echo $status->st_name; ?></option>
+                                 <?php endforeach; ?>
+                                 <?php endif; ?>
+                             </select>
+                         </div>
+                         <div class="text-danger text-center"><?php echo form_error('e_diabetes'); ?></div>
+                     </div>
+
+                     <div style="margin-bottom:17px;">
+                         <div class="row no-gutters">
+                             <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Epilepsy</div>
+                         </div>
+                         <div class="h5 mb-1 font-weight-bold text-gray-800">
+                             <select class="form-control" name="e_epilepsy">
+                                 <option
+                                     value=<?php echo $get_findings_view->f_epilepsy; ?><?php echo set_select('e_epilepsy', $get_findings_view->f_epilepsy); ?>>
+                                     <?php echo $get_findings_view->f_epilepsy; ?></option>
+                                 <?php if(count($get_status)): ?>
+                                 <?php foreach($get_status as $status): ?>
+                                 <option
+                                     value=<?php echo $status->st_name; ?><?php echo set_select('e_epilepsy', $status->st_name); ?>>
+                                     <?php echo $status->st_name; ?></option>
+                                 <?php endforeach; ?>
+                                 <?php endif; ?>
+                             </select>
+                         </div>
+                         <div class="text-danger text-center"><?php echo form_error('e_epilepsy'); ?></div>
+                     </div>
+
+                     <div style="margin-bottom:17px;">
+                         <div class="row no-gutters">
+                             <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Kidney Disease
+                             </div>
+                         </div>
+                         <div class="h5 mb-1 font-weight-bold text-gray-800">
+                             <select class="form-control" name="e_kidney">
+                                 <option
+                                     value=<?php echo $get_findings_view->f_kidney; ?><?php echo set_select('e_kidney', $get_findings_view->f_kidney); ?>>
+                                     <?php echo $get_findings_view->f_kidney; ?></option>
+                                 <?php if(count($get_status)): ?>
+                                 <?php foreach($get_status as $status): ?>
+                                 <option
+                                     value=<?php echo $status->st_name; ?><?php echo set_select('e_kidney', $status->st_name); ?>>
+                                     <?php echo $status->st_name; ?></option>
+                                 <?php endforeach; ?>
+                                 <?php endif; ?>
+                             </select>
+                         </div>
+                         <div class="text-danger text-center"><?php echo form_error('e_kidney'); ?></div>
+                     </div>
+
+                     <div style="margin-bottom:17px;">
+                         <div class="row no-gutters">
+                             <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Convulsion</div>
+                         </div>
+                         <div class="h5 mb-1 font-weight-bold text-gray-800">
+                             <select class="form-control" name="e_convulsion">
+                                 <option
+                                     value=<?php echo $get_findings_view->f_convulsion; ?><?php echo set_select('e_convulsion', $get_findings_view->f_convulsion); ?>>
+                                     <?php echo $get_findings_view->f_convulsion; ?></option>
+                                 <?php if(count($get_status)): ?>
+                                 <?php foreach($get_status as $status): ?>
+                                 <option
+                                     value=<?php echo $status->st_name; ?><?php echo set_select('e_convulsion', $status->st_name); ?>>
+                                     <?php echo $status->st_name; ?></option>
+                                 <?php endforeach; ?>
+                                 <?php endif; ?>
+                             </select>
+                         </div>
+                         <div class="text-danger text-center"><?php echo form_error('e_convulsion'); ?></div>
+                     </div>
+
+                     <div style="margin-bottom:17px;">
+                         <div class="row no-gutters">
+                             <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Fainting</div>
+                         </div>
+                         <div class="h5 mb-1 font-weight-bold text-gray-800">
+                             <select class="form-control" name="e_fainting">
+                                 <option
+                                     value=<?php echo $get_findings_view->f_fainting; ?><?php echo set_select('e_fainting', $get_findings_view->f_fainting); ?>>
+                                     <?php echo $get_findings_view->f_fainting; ?></option>
+                                 <?php if(count($get_status)): ?>
+                                 <?php foreach($get_status as $status): ?>
+                                 <option
+                                     value=<?php echo $status->st_name; ?><?php echo set_select('e_fainting', $status->st_name); ?>>
+                                     <?php echo $status->st_name; ?></option>
+                                 <?php endforeach; ?>
+                                 <?php endif; ?>
+                             </select>
+                         </div>
+                         <div class="text-danger text-center"><?php echo form_error('e_fainting'); ?></div>
+                     </div> -->
+
+             </div>
+         </div>
+     </div>
+
+
+
+
+
+
+
+
      <div class="row">
          <div class="col-sm-6">
 

@@ -12,7 +12,7 @@
                    Username
                  </div>   
                 </div>
-        <div class="h5 mb-1 font-weight-bold text-gray-800"><input class="form-control <?= (form_error('a_user') == "" ? '':'is-invalid') ?>" type="text" name="a_user" placeholder="Enter Username" value="<?php echo set_value('a_user'); ?>" ></div>
+        <div class="h5 mb-1 font-weight-bold text-gray-800"><input class="form-control <?= (form_error('a_user') == "" ? '':'is-invalid') ?>" type="text" name="a_user" placeholder="firstname.lastname" value="<?php echo set_value('a_user'); ?>" ></div>
          <div class="text-danger text-center"><?php echo form_error('a_user'); ?></div>
                </div>
 
@@ -48,7 +48,7 @@
                  </div>      
                 </div>
            <select name="a_position" class="form-control">
-                <option value="Teacher"<?php echo set_select('a_position','Doctor', (!empty($data) && $data == "Doctor" ? TRUE : FALSE )); ?>>Teacher</option>
+                <option value="Doctor"<?php echo set_select('a_position','Doctor', (!empty($data) && $data == "Doctor" ? TRUE : FALSE )); ?>>Teacher</option>
                 </select> 
         <div class="text-danger text-center"><?php echo form_error('a_position'); ?></div>  
      </div>

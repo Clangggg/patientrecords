@@ -13,7 +13,7 @@
 
 
                      <input class="form-control <?= (form_error('a_caseno') == "" ? '':'is-invalid') ?>" type="text"
-                     minlength="12" maxlength="12" name="a_caseno" placeholder="Enter Case Number" value="<?php echo set_value('a_caseno') ?>">
+                     minlength="12" maxlength="12" name="a_caseno" placeholder="Enter LRN" value="<?php echo set_value('a_caseno') ?>">
 
                      <div class="text-danger text-center"><?php echo form_error('a_caseno'); ?>
                      </div>

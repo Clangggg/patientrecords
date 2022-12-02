@@ -284,8 +284,8 @@ $this->load->view('layouts/central_template', $data);
 
 public function add_doctor(){
 
-$this->form_validation->set_rules('a_fname', 'Firstname', 'trim|required|alpha');
-$this->form_validation->set_rules('a_lname', 'Lastname', 'trim|required|alpha');
+$this->form_validation->set_rules('a_fname', 'Firstname', 'trim|required');
+$this->form_validation->set_rules('a_lname', 'Lastname', 'trim|required');
 $this->form_validation->set_rules('a_position', 'Position', 'trim|required', array('required' => 'Please choose position of doctor'));
 
 if($this->form_validation->run() == FALSE){

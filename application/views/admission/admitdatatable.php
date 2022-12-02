@@ -45,12 +45,9 @@
                   <thead>
                     <tr>
                       <th class="text-center">LRN</th>
-                      <th class="text-center">Last Name</th>
-                      <th class="text-center">First Name</th>
-                      <th class="text-center">Middle Name</th>
-                      <th class="text-center">Gender</th>
-                      <th class="text-center">Age</th>
-                      <th class="text-center">Date Added</th>
+                      <th class="text-center">Full Name</th>
+                      <th class="text-center">Parent/Guardian Name</th>
+                      <th class="text-center">Contact Number</th>
                       <th class="text-center">Action</th>
                     </tr>
                   </thead>
@@ -61,12 +58,9 @@
                    <tr>
 
                 <?php echo "<td class='text-center'>". $patient->pr_id ."</td>" ?>
-                <?php echo "<td class='text-center'>". $patient->pr_lname ."</td>" ?>
-                <?php echo "<td class='text-center'>". $patient->pr_fname ."</td>" ?>
-                <?php echo "<td class='text-center'>". $patient->pr_mname ."</td>" ?>
-                <?php echo "<td class='text-center'>". $patient->pr_gen ."</td>" ?>
-                <?php echo "<td class='text-center'>". $patient->pr_age ."</td>" ?>
-                <?php echo "<td class='text-center'>". $patient->pr_date ."</td>" ?>
+                <?php echo "<td class='text-center'>". $patient->pr_lname. ",    " .$patient->pr_fname. "    " .$patient->pr_mname ."</td>" ?>
+                <?php echo "<td class='text-center'>". $patient->pr_religion ."</td>" ?>
+                <?php echo "<td class='text-center'>". $patient->pr_number ."</td>" ?>
                 
                  <?php echo "<td class='text-center'><a class='btn btn-primary bg-blue' href='". base_url() ."admissioncontrol/edit_form/". $patient->pr_id ."'>Edit
                   </a><a style='margin-left:5px;' class='btn btn-success' href='". base_url() ."admissioncontrol/patientdataview/". $patient->pr_id ."'>View

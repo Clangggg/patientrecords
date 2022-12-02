@@ -680,8 +680,8 @@
 
                                             <?php if($get_findings_view->f_allergy): ?>
                                             <?php echo "<td class='text-center'>".$get_findings_view->f_allergy; ?>
-                                            <?php else: ?>
-                                            
+                                            <?php else:  ?>
+                                                
                                             <?php endif; ?></td>
 
                                         </tr>
