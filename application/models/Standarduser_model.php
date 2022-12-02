@@ -176,6 +176,18 @@ public function get_old_admission($user_id){
 }
 
 
+public function delete_user_data($oldfindings_id){
+
+  $this->db->where('of_id', $oldfindings_id);
+  
+  $query = $this->db->delete('oldfindings');
+  
+   
+   return $query;
+  
+  }
+  
+
 
 public function add_admission_to_doctor($data){
 

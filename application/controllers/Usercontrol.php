@@ -96,7 +96,7 @@ public function index(){ // get data of the user who is logged in
             'logged_in' => TRUE
        	  );
 
-         $data['title'] = "Patient Record Management";
+         $data['title'] = "Student Record Management";
          $this->session->set_userdata($data);
          $this->session->set_flashdata('login_success', '<div class="text-center">You are now logged in as <b>'.$this->session->userdata('u_user'). '</b></div>');
           redirect('admissioncontrol/admitdatatable', $data);  
@@ -152,7 +152,7 @@ redirect('usercontrol/login');
             'logged_in' => TRUE
           );
 
-         $data['title'] = "Patient Record Management";
+         $data['title'] = "Student Record Management";
          $this->session->set_userdata($data);
          $this->session->set_flashdata('login_success', '<div class="text-center">You are now logged in as <b>'.$this->session->userdata('u_user'). '</b></div>');
           redirect('admissioncontrol/admitdatatable', $data);  

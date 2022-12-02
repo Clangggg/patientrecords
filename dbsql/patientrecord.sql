@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 12, 2022 at 03:04 AM
+-- Generation Time: Dec 02, 2022 at 05:50 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.1
 
@@ -154,7 +154,8 @@ INSERT INTO `admission_record` (`ad_id`, `ad_date`, `pr_admission_id`, `ad_relat
 ('', '2022-11-09', '190000000000', 'Issued headache medicine', ''),
 ('', '2022-11-09', '192321429999', 'Neozep', 'Colds'),
 ('', '2022-11-10', '192323233444', 'Issued headache medicine', ''),
-('', '2022-11-10', '192323233444', 'Issued headache medicine', 'Headache');
+('', '2022-11-10', '192323233444', 'Issued headache medicine', 'Headache'),
+('', '2022-11-29', '192323233444', 'Issued headache medicine', 'Allergies');
 
 -- --------------------------------------------------------
 
@@ -173,21 +174,22 @@ CREATE TABLE `civilstat` (
 
 INSERT INTO `civilstat` (`c_id`, `c_name`) VALUES
 (1, 'NCR – National Capital Region'),
-(2, 'RegionI – Ilocos Region'),
+(2, 'RegionI–Ilocos Region'),
 (3, 'RegionII – Cagayan Valley'),
 (4, 'RegionIII – Central Luzon'),
-(5, 'RegionIV – CALABARZON'),
-(6, 'RegionIV – MIMAROPA Region'),
-(7, 'RegionVI – Western Visayas'),
-(8, 'RegionVII – Central Visayas'),
-(9, 'RegionVIII – Eastern Visayas'),
-(10, 'RegionIX – Zamboanga Peninsula'),
-(11, 'RegionX – Northern Mindanao'),
-(12, 'RegionXI – Davao Region'),
-(13, 'RegionXII – SOCCSKSARGEN'),
+(5, 'RegionIV–CALABARZON'),
+(6, 'RegionIV–MIMAROPA'),
+(7, 'RegionV – Bicol'),
+(8, 'RegionVI – Western Visayas'),
+(9, 'RegionVII – Central Visayas'),
+(10, 'RegionVIII – Eastern Visayas'),
+(11, 'RegionIX – Zamboanga Peninsula'),
+(12, 'RegionX – Northern Mindanao'),
+(13, 'RegionXI – Davao Region'),
 (14, 'RegionXII – SOCCSKSARGEN'),
-(15, 'CAR – Cordillera Administrative Region'),
-(16, 'BARMM – Bangsamoro Autonomous Region in Muslim Mindanao');
+(15, 'RegionXII – SOCCSKSARGEN'),
+(16, 'CAR – Cordillera Administrative Region'),
+(17, 'BARMM – Bangsamoro Autonomous Region in Muslim Mindanao');
 
 -- --------------------------------------------------------
 
@@ -297,7 +299,8 @@ INSERT INTO `fieldsphysician` (`fp_id`, `fp_name`) VALUES
 (13, 'Pulmonologist'),
 (14, 'Rehabilitation Med'),
 (15, 'Urologist'),
-(16, 'Nurse');
+(16, 'Nurse'),
+(17, 'Dentist');
 
 -- --------------------------------------------------------
 
@@ -357,10 +360,15 @@ INSERT INTO `findings` (`f_id`, `pr_findings_id`, `f_chiefcomplaint`, `f_history
 (66, '190000000000', 'a', 'Grade7-Findings', '', '110/90', '13/min', 'Normal', '36', '45', '157', 'a/b', 'a', 'a', 'Juztin.Ortiz', '2022-11-09', '60/min', 'a', 'a', 'a', 'Advised/Counseled', 'aaa', 'a', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO'),
 (67, '192321429988', 'a', 'Grade7-Findings', '', '110/90', '13/min', 'Below-Normal', '36.4', '2234', '325', '', 'a', 'a', 'Juztin.Ortiz', '2022-11-09', '60/min', 'a', 'a', 'a', 'Corrected', 'a', 'a', '', '', '', '', '', '', '', '', '', ''),
 (68, '190000000000', 'a', 'Grade8-Findings', '', '110/90', '13/min', 'Below-Normal', '37', '60', '1232', 'a/b', 'a', 'a', 'Juztin.Ortiz', '2022-11-09', '2123', 'a', 'a', 'a', 'Advised/Counseled', 'aaa', 'a', '', '', '', '', '', '', '', '', '', ''),
-(69, '111111111111', '', 'Grade7-Findings', '', '155', '1223', 'Normal', '36', '45', '157', '', '', '', 'Kimberly.Bustarde', '2022-11-10', '60/min', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-(70, '111111111111', 'a/b/c', 'Grade7-Findings', '', '155', '1223', 'Normal', '36', '45', '157', 'a/b', 'fsfs', 'a/b', 'Kimberly.Bustarde', '2022-11-10', '60/min', 'a/b', 'a/b', 'a/b/c', 'Needs_close_supervision', '', 'a/b', 'NO', 'YES', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO'),
+(69, '111111111111', 'a/b/c', 'Grade8-Findings', '', '155', '1223', 'Normal', '36', '45', '157', 'a/b', 'a/b', 'a/b', 'Kimberly.Bustarde', '2022-11-10', '60/min', 'a/b', 'a/b', 'a/b/c', 'Parents_Notified', '', 'a/b', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO'),
+(70, '111111111111', 'a/b/c', 'Grade7-Findings', '', '155', '1223', 'Normal', '36', '45', '157', 'a/b', 'fsfs', 'a/b', 'Alona.Mosquito-Leabres', '2022-11-10', '60/min', 'a/b', 'a/b', 'a/b/c', 'Needs_close_supervision', '', 'a/b', 'NO', 'YES', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO'),
 (71, '192323233444', 'a', 'Grade11-Findings', '', '110/90', '13/min', 'Above-Normal', '37', '60', '159', 'a/b', 'a', 'a', 'Juztin.Ortiz', '2022-11-10', '60/min', 'a', 'a', 'a', 'Needs_close_supervision', 'aaa', 'a', 'YES', 'YES', 'YES', 'YES', 'YES', 'YES', 'YES', 'YES', 'YES', 'YES'),
-(72, '192321429999', '', 'Grade7-Findings', '', '110/90', '13/min', 'Normal', '36', '213', '157', '', '', '', 'Juztin.Ortiz', '2022-11-10', '2123', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+(72, '192321429999', '', 'Grade7-Findings', '', '110/90', '13/min', 'Normal', '36', '213', '157', '', '', '', 'Juztin.Ortiz', '2022-11-10', '2123', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(73, '111111111111', 'a', 'Grade9-Findings', '', '110/90', '13/min', 'Normal', '36', '45', '157', 'a/b', 'a', 'a', 'Juztin.Ortiz', '2022-11-29', '60/min', 'a', 'a', 'a', 'Advised/Counseled', 'aaaa', 'a', '', '', '', '', '', '', '', '', '', ''),
+(74, '192000000009', 'a', 'Grade7-Findings', '', '110/90', '13/min', 'Normal', '36', '45', '157', 'a/b', 'a', 'a', 'Juztin.Ortiz', '2022-11-29', '60/min', 'a', 'a', 'a', 'Corrected', 'aaaa', 'a', '', '', '', '', '', '', '', '', '', ''),
+(75, '192442233889', 'a/b/c', 'Grade7-Findings', '', '110/90', '13/min', 'Normal', '36', '45', '157', 'a/b', 'a/b', 'a/b', 'Juztin.Ortiz', '2022-12-02', '60/min', 'a/b', 'a/b', 'a/b/c', 'Needs_close_supervision', 'N/A', 'a/b', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO'),
+(76, '192442233889', '', 'Grade8-Findings', '', '110/90', '13/min', 'Normal', '36', '45', '157', '', '', '', 'Juztin.Ortiz', '2022-12-02', '60/min', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(77, '192442233889', 'a', 'Grade9-Findings', '', '155', '13/min', 'Normal', '36.4', '12', '1232', 'a/b', 'a', 'a', 'Juztin.Ortiz', '2022-12-02', '60/min', 'a', 'a', 'a', 'Treated', 'N/A', 'a', 'YES', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO');
 
 -- --------------------------------------------------------
 
@@ -546,7 +554,10 @@ CREATE TABLE `oldfindings` (
 INSERT INTO `oldfindings` (`of_id`, `of_user_id`, `of_fname`, `of_mname`, `of_lname`, `of_gender`, `of_age`, `of_complaint`, `of_historypresentillness`, `of_bp`, `of_rr`, `of_cr`, `of_temp`, `of_wt`, `of_pr`, `of_physicalexam`, `of_diagnosis`, `of_medication`, `of_pulse`, `of_mouth`, `of_lungs`, `of_abdo`, `of_spine`, `of_remarks`, `of_others`, `of_allergy`, `of_asthma`, `of_anemia`, `of_bleeding`, `of_hailment`, `of_diabetes`, `of_epilepsy`, `of_kidney`, `of_convulsion`, `of_findings`, `of_physician_id`, `of_date`, `log_time`, `of_fainting`) VALUES
 (4, 1, 'Jenna', 'Castro', 'Hassan', 'Female', 26, '', 'Headache', '', '', '', '', '', '', '', 'vomiting', 'ibuprofen ', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 53, '2019-05-02', '2019-05-02 08:04:09', ''),
 (15, 1, 'Kimberly', 'Declines', 'Bustarde', 'Female', 21, 'a/b/c', 'Grade8-Findings', 'rfw', '1223', 'Normal', '23', '45', '325', 'a/b', 'a/b', 'a/b', '2123', 'a/b', 'a/b', 'a/b', 'a/b/c', 'Advised/Counseled', 'fghj', 'NO', 'NO', 'YES', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', '', 59, '2022-11-10', '2022-11-10 15:24:31', 'NO'),
-(16, 1, 'Clarence', 'Tanaliga', 'Tampilic', 'Female', 23, 'a', 'Grade11-Findings', '110/90', '13/min', 'Above-Normal', '37', '60', '159', 'a/b', 'a', 'a', '60/min', 'a', 'a', 'a', 'a', 'Needs_close_supervision', 'aaa', 'YES', 'YES', 'YES', 'YES', 'YES', 'YES', 'YES', 'YES', 'YES', '', 59, '2022-11-10', '2022-11-10 16:12:23', 'YES');
+(17, 1, 'Clarence', 'Tanaliga', 'Tampilic', 'Female', 21, 'a/b/c', 'Grade8-Findings', '155', '1223', 'Normal', '36', '45', '157', 'a/b', 'a/b', 'a/b', '60/min', 'a/b', 'a/b', 'a/b', 'a/b/c', 'Parents_Notified', '', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', '', 59, '2022-11-23', '2022-11-23 11:48:35', 'NO'),
+(18, 1, 'Clarence', 'Tanaliga', 'Tampilic', 'Female', 23, 'a', 'Grade11-Findings', '110/90', '13/min', 'Above-Normal', '37', '60', '159', 'a/b', 'a', 'a', '60/min', 'a', 'a', 'a', 'a', 'Needs_close_supervision', 'aaa', 'YES', 'YES', 'YES', 'YES', 'YES', 'YES', 'YES', 'YES', 'YES', '', 59, '2022-11-29', '2022-11-29 15:03:16', 'YES'),
+(20, 1, 'France', 'wdsafa', 'Ariola', 'Male', 23, 'a', 'Grade7-Findings', '110/90', '13/min', 'Normal', '36', '45', '157', 'a/b', 'a', 'a', '60/min', 'a', 'a', 'a', 'a', 'Corrected', 'aaaa', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', '', 59, '2022-11-29', '2022-11-29 15:10:42', 'NO'),
+(24, 1, 'Alaiza', 'Tanaliga', 'Tampilic', 'Female', 25, 'a/b/c', 'Grade7-Findings', '110/90', '13/min', 'Normal', '36', '45', '157', 'a/b', 'a/b', 'a/b', '60/min', 'a/b', 'a/b', 'a/b', 'a/b/c', 'Needs_close_supervision', 'N/A', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', '', 60, '2022-12-02', '2022-12-02 03:24:02', 'NO');
 
 -- --------------------------------------------------------
 
@@ -581,11 +592,14 @@ CREATE TABLE `patient_record` (
 --
 
 INSERT INTO `patient_record` (`pr_id`, `pr_user_id`, `pr_date`, `pr_lname`, `pr_fname`, `pr_mname`, `pr_addrs`, `pr_age`, `pr_bdate`, `pr_bplace`, `pr_vaccinestat`, `pr_divi`, `pr_civilstat`, `pr_gen`, `pr_number`, `pr_religion`, `pr_occup`, `month`, `year`) VALUES
-('111111111111', 1, '2022-11-07', 'Tampilic', 'Clarence', 'Tanaliga', '3117-A Reposo St. Brgy. 589', 21, '2001-10-11', 'Lubang, Occidental Mindoro', 'FullyVaccinated', 'Manila-City', 'NCR', 'Female', '09472599976', 'Albert Tampilic', 'Technology University of the Philippines', 'Nov', '2022'),
+('111111111111', 1, '2022-11-07', 'Tampilic', 'Clarence', 'Tanaliga', '3117-A Reposo St. Brgy. 589', 21, '2001-10-11', 'Lubang, Occidental Mindoro', 'FullyVaccinated', 'Manila-City', 'RegionIV–MIMAROPA', 'Female', '09472599976', 'Albert Tampilic', 'Technology University of the Philippines', 'Nov', '2022'),
 ('190000000000', 1, '2022-11-09', 'Tampilic', 'Clarence', 'Tanaliga', '3117-A Reposo St. Brgy. 589', 23, '2022-11-09', 'Lubang, Occidental Mindoro', 'FullyVaccinated', 'Makati-City', 'NCR', 'Female', '09472599976', 'Albert Tampilic', 'Technology University of the Philippines', 'Nov', '2022'),
+('192000000009', 1, '2022-11-29', 'Ariola', 'France Emiele', 'wdsafa', 'Tandang Sora, Quezon City', 23, '2022-11-08', 'Malolos City, Bulacan', 'Partially', 'Taguig-City', 'NCR', 'Male', '09157236485', 'Anna Bustarde', 'setw', 'Nov', '2022'),
+('192321400000', 2, '2022-11-29', 'Ariola', 'France Emiele', 'wdsafa', 'Tandang Sora, Quezon City', 25, '2022-11-26', 'Baguio City', 'FullyVaccinated', 'Manila-City', 'NCR', 'Male', '09543333333', 'Mr. Ariola', 'Technology University of the Philippines', 'Nov', '2022'),
 ('192321429999', 1, '2022-11-07', 'Bustarde', 'Kimberly', 'Declines', '44 Galguerra Compound Encarnation St., Valenzuela City', 21, '2001-05-16', 'Malolos City, Bulacan', 'Fully_Vaccinated_w/_Booster', 'Manila-City', 'NCR', 'Female', '09685443580', 'Anna Bustarde', 'Technology University of the Philippines', 'Nov', '2022'),
 ('192321433332', 1, '2022-11-08', 'Tampilic', 'Clarence', 'Tanaliga', '3117-A Reposo St. Brgy. 589', 22, '2001-10-11', 'Lubang, Occidental Mindoro', 'FullyVaccinated', 'Manila-City', 'NCR', 'Female', '09472599976', 'Albert Tampilic', 'Technology University of the Philippines', 'Nov', '2022'),
-('192323233444', 1, '2022-11-08', 'Tampilic', 'Clarence', 'Tanaliga', '3117-A Reposo St. Brgy. 589', 23, '2022-11-08', 'Valenzuela', 'Partially', 'SanJuan-City', 'NCR', 'Female', '09472599976', 'wewewewe', 'Technology University of the Philippines', 'Nov', '2022');
+('192323233444', 1, '2022-11-08', 'Tampilic', 'Clarence', 'Tanaliga', '3117-A Reposo St. Brgy. 589', 23, '2022-11-08', 'Valenzuela', 'Partially', 'SanJuan-City', 'NCR', 'Female', '09472599976', 'wewewewe', 'Technology University of the Philippines', 'Nov', '2022'),
+('192442233889', 1, '2022-12-02', 'Tampilic', 'Alaiza', 'Tanaliga', '090 G. Del Pilar St., Brgy. Ninikat ng Pag-Asa, Lubang, Occ. Mindoro', 25, '2022-12-16', 'Lubang, Occidental Mindoro', 'FullyVaccinated', 'Quezon-City', 'NCR', 'Female', '09122030955', 'Albert Tampilic', 'Technology University of the Philippines', 'Dec', '2022');
 
 -- --------------------------------------------------------
 
@@ -605,7 +619,9 @@ CREATE TABLE `physicians` (
 --
 
 INSERT INTO `physicians` (`ph_id`, `ph_name`, `ph_fieldofphysician`, `date_added`) VALUES
-(41, 'Juztin.Ortiz', 'Clinic_Admin', '2022-11-08 10:54:38');
+(41, 'Juztin.Ortiz', 'Clinic_Admin', '2022-11-08 10:54:38'),
+(43, 'Alona.Mosquito-Leabres', 'Dentist', '2022-12-02 03:27:49'),
+(44, 'Basilio.Cabasug II', 'Nurse', '2022-12-02 03:28:25');
 
 -- --------------------------------------------------------
 
@@ -654,7 +670,7 @@ CREATE TABLE `standardusers` (
 --
 
 INSERT INTO `standardusers` (`su_id`, `su_userid`, `su_user`, `su_pass`, `su_fname`, `su_position`, `date_created`) VALUES
-(59, 1, 'Kim', '$2y$12$y.FA/mvpY27zze/u6FXMsu1/tEU.BUpd1pgvlS0fNZOiwjVS3Wq66', 'Kimberly Bustarde', 'Doctor', '2022-11-10 11:11:03');
+(59, 1, 'Kim.Bustarde', '$2y$12$O5ww2fPTPfdmh1ntaKiH7.w9dcIyztOFVjTFYuFe0640Qo5Zq9MRm', 'Kimberly Bustarde', 'Doctor', '2022-12-02 03:13:43');
 
 -- --------------------------------------------------------
 
@@ -889,7 +905,7 @@ ALTER TABLE `add_patientfindings`
 -- AUTO_INCREMENT for table `civilstat`
 --
 ALTER TABLE `civilstat`
-  MODIFY `c_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `c_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `cr`
@@ -913,13 +929,13 @@ ALTER TABLE `divi`
 -- AUTO_INCREMENT for table `fieldsphysician`
 --
 ALTER TABLE `fieldsphysician`
-  MODIFY `fp_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `fp_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `findings`
 --
 ALTER TABLE `findings`
-  MODIFY `f_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
+  MODIFY `f_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
 
 --
 -- AUTO_INCREMENT for table `gender`
@@ -949,13 +965,13 @@ ALTER TABLE `oldadmission`
 -- AUTO_INCREMENT for table `oldfindings`
 --
 ALTER TABLE `oldfindings`
-  MODIFY `of_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `of_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `physicians`
 --
 ALTER TABLE `physicians`
-  MODIFY `ph_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `ph_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT for table `remarks`
@@ -967,7 +983,7 @@ ALTER TABLE `remarks`
 -- AUTO_INCREMENT for table `standardusers`
 --
 ALTER TABLE `standardusers`
-  MODIFY `su_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
+  MODIFY `su_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 
 --
 -- AUTO_INCREMENT for table `status`

@@ -42,10 +42,10 @@ $this->load->view('standardaccount/standarduser_view', $data);
             'logged_in' => TRUE
        	  );
 
-         $data['title'] = "Patient Record Management";
+         $data['title'] = "Student Record Management";
          $this->session->set_userdata($data);
          $this->session->set_flashdata('login_success', '<div class="text-center">You are now logged in as Teacher <b>'.$this->session->userdata('su_user'). '</b></div>');
-          redirect('standardusercontrol/outpatientview', $data);  
+          redirect('standardusercontrol/oldrecords', $data);  
 
 
        } else {
@@ -770,7 +770,26 @@ $this->load->view('standardaccount/doctorpage', $data);
 }
 
 
+public function delete_oldfindings($oldfindings_id){
+ 
 
+   if($this->Standarduser_model->delete_user_data($oldfindings_id)){
+  
+     $data['get_patient_data'] = $this->Standarduser_model->get_old_findings_data($oldfindings_id);
+  
+     $data['title'] = 'Health Examination Records';
+     $data['topbar'] = 'standardaccount/oldrecordsnavbar';
+     $data['main_view'] = "standardaccount/oldrecordfindingsview";
+    
+        redirect('standardusercontrol/oldrecords', $data);
+  
+  
+  
+   }
+  
+  
+  
+  }
 
 
 

@@ -26,14 +26,14 @@
                   <thead>
                     <tr>
                       
-                      <th>Last Name</th>
-                      <th>First Name</th>
-                      <th>Middle Name</th>
-                      <th class="text-center">Examination Details</th>
-                      <th>Gender</th>
-                      <th>Age</th>
-                      <th>Date of Examination</th>
-                      <th>Action</th>
+                      <th class="text-center">Last Name</th>
+                      <th class="text-center">First Name</th>
+                      <th class='text-center'>Middle Name</th>
+                      <th class="text-center">Findings</th>
+                      <th class="text-center">Gender</th>
+                      <th class="text-center">Age</th>
+                      <th class="text-center">Date of Examination</th>
+                      <th class='text-center' >Action</th>
                     </tr>
                   </thead>
 
@@ -51,10 +51,15 @@
                 <?php echo "<td class='text-center'>". $patient->of_date ."</td>" ?>
                 
                 
-                 <?php echo "<td class='text-center'><a style='margin-left:5px;' class='btn btn-primary bg-blue' href='". base_url() ."standardusercontrol/oldfindingsview/". $patient->of_id ."'>View
+                 <!-- <?php echo "<td class='text-center'><a style='margin-left:5px;' class='btn btn-primary bg-blue' href='". base_url() ."standardusercontrol/oldfindingsview/". $patient->of_id ."'>View
+                  </a></td>" ?>
+                 <?php echo "<td class='text-center'><a style='margin-left:5px;' class='btn btn-primary bg-blue' href='". base_url() ."standardusercontrol/delete_oldfindings/". $patient->of_id ."'>Delete
+                  </a></td>" ?> -->
+            
+                <?php echo "<td class='text-center'><a style='margin-left:5px;' class='btn btn-primary bg-blue' href='". base_url() ."standardusercontrol/oldfindingsview/". $patient->of_id ."'>View
+                  </a><a style='margin-left:5px;' class='btn btn-danger' href='". base_url() ."standardusercontrol/delete_oldfindings/". $patient->of_id ."'>Remove
                   </a></td>" ?>
 
-            
                     </tr>           
                  <?php endforeach; ?>
                
