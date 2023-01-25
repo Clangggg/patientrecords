@@ -466,7 +466,7 @@
             </div>
             <!-- Card Body -->
             <div class="card-body">
-            <p style="font-size:15px; font-weight:600; margin-bottom:27px;"> Medical History </p>
+                <p style="font-size:15px; font-weight:600; margin-bottom:27px;"> Medical History </p>
                 <div style="margin-left:20%;" class="row">
                     <div class="col-sm-3">
                         <div style="margin-bottom:17px;">
@@ -521,7 +521,8 @@
                     <div class="col-sm-6">
                         <div style="margin-bottom:17px; margin-left:40%;">
                             <div class="row no-gutters">
-                                <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Bleeding Problem
+                                <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Bleeding
+                                    Problem
                                 </div>
                             </div>
                             <div class="h5 mb-1 font-weight-bold text-gray-800">
@@ -534,7 +535,7 @@
                         </div>
                     </div>
                 </div>
-                <div style="margin-left:20%;"  class="row">
+                <div style="margin-left:20%;" class="row">
                     <div class="col-sm-3">
                         <div style="margin-bottom:17px;">
                             <div class="row no-gutters">
@@ -637,12 +638,200 @@
 
             <hr>
 
+            <!-- <div class="card-body">
+                <p style="font-size:13px; color:black; font-weight:700; margin-left:5%;">
+                    (Check the references below) </p>
+                <table class="table table-bordered" cellspacing="0">
+
+                    <thead>
+                        <tr>
+                            <th class="text-center">&nbsp&nbsp</th>
+                            <th class="text-center">Oral Health Condition</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center">Gingivitis</td>
+                            <?php if($get_patient_data->of_ging): ?>
+                            <?php echo "<td class='text-center'>".$get_patient_data->of_ging; ?>
+                            <?php else:  ?>
+                            <?php endif; ?></td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">Periodontal Disease</td>
+                            <?php if($get_patient_data->of_period): ?>
+                            <?php echo "<td class='text-center'>".$get_patient_data->of_period; ?>
+                            <?php else:  ?>
+                            <?php endif; ?></td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">Malocclussion</td>
+                            <?php if($get_patient_data->of_malo): ?>
+                            <?php echo "<td class='text-center'>".$get_patient_data->of_malo; ?>
+                            <?php else:  ?>
+                            <?php endif; ?></td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">Supernumerary teeth</td>
+                            <?php if($get_patient_data->of_super): ?>
+                            <?php echo "<td class='text-center'>".$get_patient_data->of_super; ?>
+                            <?php else:  ?>
+                            <?php endif; ?></td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">Decubital ulcer</td>
+                            <?php if($get_patient_data->of_ulcer): ?>
+                            <?php echo "<td class='text-center'>".$get_patient_data->of_ulcer; ?>
+                            <?php else:  ?>
+                            <?php endif; ?></td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">Calculus</td>
+                            <?php if($get_patient_data->of_calcu): ?>
+                            <?php echo "<td class='text-center'>".$get_patient_data->of_calcu; ?>
+                            <?php else:  ?>
+                            <?php endif; ?></td>
+                        <tr>
+                            <td class="text-center">Cleft lip/palate</td>
+                            <?php if($get_patient_data->of_cleft): ?>
+                            <?php echo "<td class='text-center'>".$get_patient_data->of_cleft; ?>
+                            <?php else:  ?>
+                            <?php endif; ?></td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">Root fragment</td>
+                            <?php if($get_patient_data->of_root): ?>
+                            <?php echo "<td class='text-center'>".$get_patient_data->of_root; ?>
+                            <?php else:  ?>
+                            <?php endif; ?></td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">Fluorosis</td>
+                            <?php if($get_patient_data->of_flu): ?>
+                            <?php echo "<td class='text-center'>".$get_patient_data->of_flu; ?>
+                            <?php else:  ?>
+                            <?php endif; ?></td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">Others, specify</td>
+                            <?php if($get_patient_data->of_specify): ?>
+                            <?php echo "<td class='text-center'>".$get_patient_data->of_specify; ?>
+                            <?php else: ?>
+                            <?php endif; ?></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> -->
+
+            <!-- <h6 class="mt-2 ml-5 font-weight-bold">PERMANENT TEETH</h6>
+            <div class="card-body">
+                <div class="table">
+
+                    <table class="table table-bordered" cellspacing="0">
+
+                        <thead>
+                            <tr>
+                                <th class="text-center">Index: D.M.F.T.</th>
+                                <th class="text-center">DMFT Index</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">No. T/Decayed</td>
+                                <?php if($get_patient_data->of_decay): ?>
+                                <?php echo "<td class='text-center'>".$get_patient_data->of_decay; ?>
+                                <?php else:  ?>
+                                <?php endif; ?></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">No. T/Missing</td>
+                                <?php if($get_patient_data->of_missing): ?>
+                                <?php echo "<td class='text-center'>".$get_patient_data->of_missing; ?>
+                                <?php else:  ?>
+                                <?php endif; ?></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">No. T/Filled</td>
+                                <?php if($get_patient_data->of_filled): ?>
+                                <?php echo "<td class='text-center'>".$get_patient_data->of_filled; ?>
+                                <?php else:  ?>
+                                <?php endif; ?></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">Total D.M.F.T</td>
+                                <?php if($get_patient_data->of_total): ?>
+                                <?php echo "<td class='text-center'>".$get_patient_data->of_total; ?>
+                                <?php else:  ?>
+                                <?php endif; ?></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">Total Sound teeth</td>
+                                <?php if($get_patient_data->of_sound): ?>
+                                <?php echo "<td class='text-center'>".$get_patient_data->of_sound; ?>
+                                <?php else:  ?>
+                                <?php endif; ?></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <h6 class="ml-3 mt-5 mb-2 font-weight-bold text-primary">Reference</h6>
+
+                <h6 class="font-weight-bold" style="margin-left:25%; margin-bottom:3%;">Symbols for Mouth
+                    Examination</h6>
+
+                <div class="row">
+                    <div class="col-sm-4 ml-5">
+                        <p style="font-size:13px; color:gray; font-weight:700; ">
+                            X - Tooth indicated for extraction <br> RF - Root fragment <br> M - Missing tooth
+                            <br>
+                            DU - Decubital ulcer
+                            <br> RD - Recurrence of decay <br> Mal - Malocclusion <br> Flu - Fluorosis <br> F -
+                            Tooth indicated for filling
+                        </p>
+                    </div>
+                    <div class="col-sm-5 ml-5">
+                        <p style="font-size:13px; color:gray; font-weight:700; ">
+                            OoF - Tooth with temporary filling <br> HS - Permanent filling <br> (&#x2713;) -
+                            Sound/erupted permanent tooth
+                            <br> Gn - Normal <br> Gm - moderate gingivitis (1-2 quadrant) <br> Gs - severe
+                            gingivitis (3-4 quadrant) <br>
+                            CMR - complete mouth rehab
+                        </p>
+                    </div>
+                </div>
+
+                
+
+                <div class="row">
+                    <div class="col-sm-5 ml-5">
+                    <h6 class="mt-4 font-weight-bold">Symbols for Accomplishment </h6>
+                        <p style="font-size:13px; color:gray; font-weight:700; ">
+                            Xt - Extracted permanent tooth <br> xt - Extracted temporary tooth <br> Ag F - Amalgam
+                            filling <br> Sy F - Synthetic filling <br> OP - Oral Prophylaxis <br> ZOE - Zinc Oxide
+                            Eugenol
+                            filling <br>
+                            TF - Temporary filling <br> R - Referred
+                        </p>
+                    </div>
+                    <div class="col-sm-5 ml-2">
+
+                        <h6 class="mt-4 mb-3 font-weight-bold">Artificial Restoration</h6>
+
+                        <p style="font-size:13px; color:gray; font-weight:700; ">
+                            JC - Jacket crown <br> I - Inlay
+                        </p>
+                    </div>
+                </div> -->
+
+
+            </div>
+
         </div>
 
-    </div>
 
 
 
 
-
-</div><!-- End of Row -->
+    </div><!-- End of Row -->

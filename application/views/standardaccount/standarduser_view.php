@@ -9,7 +9,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <link rel="shortcut icon" href="<?php echo base_url(); ?>img/valnat.png" />
+  <link rel="shortcut icon" href="<?php echo base_url(); ?>img/valnat.png">
+
+  <!-- <img width="52.7%" height="52.7%" style="margin-left:25%; margin-top:none;"
+                    src="<?php echo base_url(); ?>img/three.png"> -->
 
   <title><?php echo $title ?></title>
 
@@ -22,7 +25,7 @@
 
 </head>
 
-<body class="bg-primary bg-opacity-20" style="height:90vh;">
+<body style="background-image:linear-gradient(#0622759d,#1c3c9c83), url('https://valenzuelanhs.weebly.com/uploads/1/0/8/5/108507217/19437492-10209073023371938-6451739843484828435-n_orig.jpg'); background-size: cover; height: 90vh;">
   
   <div id="standard" class="container">
 

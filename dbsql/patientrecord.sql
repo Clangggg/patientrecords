@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 02, 2022 at 05:50 AM
+-- Generation Time: Jan 25, 2023 at 09:48 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.1
 
@@ -155,7 +155,11 @@ INSERT INTO `admission_record` (`ad_id`, `ad_date`, `pr_admission_id`, `ad_relat
 ('', '2022-11-09', '192321429999', 'Neozep', 'Colds'),
 ('', '2022-11-10', '192323233444', 'Issued headache medicine', ''),
 ('', '2022-11-10', '192323233444', 'Issued headache medicine', 'Headache'),
-('', '2022-11-29', '192323233444', 'Issued headache medicine', 'Allergies');
+('', '2022-11-29', '192323233444', 'Issued headache medicine', 'Allergies'),
+('', '2022-12-13', '136825120367', 'Issued headache medicine', 'Headache'),
+('', '2023-01-24', '13625110038', 'Issued headache medicine', 'Headache'),
+('', '2023-01-24', '136251100382', 'Issued headache medicine', 'Headache'),
+('', '2023-01-24', '109342101029', 'Issued cold medicine', 'Colds');
 
 -- --------------------------------------------------------
 
@@ -341,34 +345,158 @@ CREATE TABLE `findings` (
   `f_epilepsy` text NOT NULL,
   `f_kidney` text NOT NULL,
   `f_convulsion` text NOT NULL,
-  `f_fainting` text NOT NULL
+  `f_fainting` text NOT NULL,
+  `f_conditionfa` text NOT NULL,
+  `f_conditionfb` text NOT NULL,
+  `f_conditionfc` text NOT NULL,
+  `f_conditionfd` text NOT NULL,
+  `f_conditionfe` text NOT NULL,
+  `f_conditionff` text NOT NULL,
+  `f_conditionfg` text NOT NULL,
+  `f_conditionfh` text NOT NULL,
+  `f_conditionfi` text NOT NULL,
+  `f_conditionfj` text NOT NULL,
+  `f_conditionsa` text NOT NULL,
+  `f_conditionsb` text NOT NULL,
+  `f_conditionsc` text NOT NULL,
+  `f_conditionsd` text NOT NULL,
+  `f_conditionse` text NOT NULL,
+  `f_conditionsf` text NOT NULL,
+  `f_conditionsg` text NOT NULL,
+  `f_conditionsh` text NOT NULL,
+  `f_conditionsi` text NOT NULL,
+  `f_conditionsj` text NOT NULL,
+  `f_conditionsk` text NOT NULL,
+  `f_conditionsl` text NOT NULL,
+  `f_conditionsm` text NOT NULL,
+  `f_conditionsn` text NOT NULL,
+  `f_conditionso` text NOT NULL,
+  `f_conditionsp` text NOT NULL,
+  `f_conditionta` text NOT NULL,
+  `f_conditiontb` text NOT NULL,
+  `f_conditiontc` text NOT NULL,
+  `f_conditiontd` text NOT NULL,
+  `f_conditionte` text NOT NULL,
+  `f_conditiontf` text NOT NULL,
+  `f_conditiontg` text NOT NULL,
+  `f_conditionth` text NOT NULL,
+  `f_conditionti` text NOT NULL,
+  `f_conditiontj` text NOT NULL,
+  `f_conditiontk` text NOT NULL,
+  `f_conditiontl` text NOT NULL,
+  `f_conditiontm` text NOT NULL,
+  `f_conditiontn` text NOT NULL,
+  `f_conditionto` text NOT NULL,
+  `f_conditiontp` text NOT NULL,
+  `f_conditionla` text NOT NULL,
+  `f_conditionlb` text NOT NULL,
+  `f_conditionlc` text NOT NULL,
+  `f_conditionld` text NOT NULL,
+  `f_conditionle` text NOT NULL,
+  `f_conditionlf` text NOT NULL,
+  `f_conditionlg` text NOT NULL,
+  `f_conditionlh` text NOT NULL,
+  `f_conditionli` text NOT NULL,
+  `f_conditionlj` text NOT NULL,
+  `f_treatfa` text NOT NULL,
+  `f_treatfb` text NOT NULL,
+  `f_treatfc` text NOT NULL,
+  `f_treatfd` text NOT NULL,
+  `f_treatfe` text NOT NULL,
+  `f_treatff` text NOT NULL,
+  `f_treatfg` text NOT NULL,
+  `f_treatfh` text NOT NULL,
+  `f_treatfi` text NOT NULL,
+  `f_treatfj` text NOT NULL,
+  `f_treatfk` text NOT NULL,
+  `f_treatfl` text NOT NULL,
+  `f_treatfm` text NOT NULL,
+  `f_treatfn` text NOT NULL,
+  `f_treatfo` text NOT NULL,
+  `f_treatfp` text NOT NULL,
+  `f_treatsa` text NOT NULL,
+  `f_treatsb` text NOT NULL,
+  `f_treatsc` text NOT NULL,
+  `f_treatsd` text NOT NULL,
+  `f_treatse` text NOT NULL,
+  `f_treatsf` text NOT NULL,
+  `f_treatsg` text NOT NULL,
+  `f_treatsh` text NOT NULL,
+  `f_treatsi` text NOT NULL,
+  `f_treatsj` text NOT NULL,
+  `f_treatsk` text NOT NULL,
+  `f_treatsl` text NOT NULL,
+  `f_treatsm` text NOT NULL,
+  `f_treatsn` text NOT NULL,
+  `f_treatso` text NOT NULL,
+  `f_treatsp` text NOT NULL,
+  `f_mouthexam` text NOT NULL,
+  `f_seal` text NOT NULL,
+  `f_gum` text NOT NULL,
+  `f_perm` text NOT NULL,
+  `f_art` text NOT NULL,
+  `f_extra` text NOT NULL,
+  `f_prohy` text NOT NULL,
+  `f_refer` text NOT NULL,
+  `f_otheroral` text NOT NULL,
+  `f_oralphys` text NOT NULL,
+  `f_rmouthexam` text NOT NULL,
+  `f_rseal` text NOT NULL,
+  `f_rgum` text NOT NULL,
+  `f_rperm` text NOT NULL,
+  `f_rart` text NOT NULL,
+  `f_rextra` text NOT NULL,
+  `f_rprohy` text NOT NULL,
+  `f_rrefer` text NOT NULL,
+  `f_rotheroral` text NOT NULL,
+  `f_ging` text NOT NULL,
+  `f_period` text NOT NULL,
+  `f_malo` text NOT NULL,
+  `f_super` text NOT NULL,
+  `f_ulcer` text NOT NULL,
+  `f_calcu` text NOT NULL,
+  `f_cleft` text NOT NULL,
+  `f_root` text NOT NULL,
+  `f_flu` text NOT NULL,
+  `f_specify` text NOT NULL,
+  `f_decay` int(11) NOT NULL,
+  `f_missing` int(11) NOT NULL,
+  `f_filled` int(11) NOT NULL,
+  `f_total` int(11) NOT NULL,
+  `f_sound` int(11) NOT NULL,
+  `f_oraldate` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `findings`
 --
 
-INSERT INTO `findings` (`f_id`, `pr_findings_id`, `f_chiefcomplaint`, `f_historypresentillness`, `f_status`, `f_bp`, `f_rr`, `f_cr`, `f_temp`, `f_wt`, `f_pr`, `f_physicalexam`, `f_diagnosis`, `f_medication`, `f_nameofphysician`, `f_date`, `f_pulse`, `f_mouth`, `f_lungs`, `f_spine`, `f_remarks`, `f_others`, `f_abdo`, `f_allergy`, `f_asthma`, `f_anemia`, `f_bleeding`, `f_hailment`, `f_diabetes`, `f_epilepsy`, `f_kidney`, `f_convulsion`, `f_fainting`) VALUES
-(57, '192321424000', 'a/b/c', 'Grade9-Findings', '', '110/90', '13/min', 'Normal', '36.0', '45', '157', 'a/b', 'a/b', 'a', 'Justin.Ortiz', '2022-11-07', '60/min', 'a/b', 'a/b', 'a/b/c', 'Treated', '', 'a/b', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO'),
-(58, '192325977777', '', 'G8 - Findings', '', '23', '13/min', 'Below-Normal', '36', '213', '157', '', '', '', 'Justin.Ortiz', '2022-11-07', '2123', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-(59, '091220309555', '', 'G7 - Findings', '', '110/90', '13/min', 'Normal', '37', '60', '157', '', '', '', 'Justin.Ortiz', '2022-11-07', '60/min', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-(60, '192321424000', 'a/b/c', 'Grade8-Findings', '', '110/90', '13/min', 'Normal', '36', '45', '157', 'a/b', 'a/b', 'a/b', 'Justin.Ortiz', '2022-11-08', '60/min', 'a/b', 'a/b', 'a/b/c', 'Needs_Supervision', '', 'a/b', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO'),
-(61, '192321424000', '', 'Grade10-Findings', '', '110/90', '13/min', 'Normal', '36', '45', '157', '', '', '', 'Justin.Ortiz', '2022-11-08', '60/min', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-(62, '192321429999', 'a/b/c', 'Grade8-Findings', '', 'rfw', '1223', 'Normal', '23', '45', '325', 'a/b', 'a/b', 'a/b', 'Juztin.Ortiz', '2022-11-08', '2123', 'a/b', 'a/b', 'a/b/c', 'Advised/Counseled', 'fghj', 'a/b', 'NO', 'NO', 'YES', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO'),
-(63, '192321433332', 'a/b/c', 'Grade7-Findings', '', '110/90', '13/min', 'Normal', '36', '45', '157', 'a/b', 'a/b', 'a', 'Juztin.Ortiz', '2022-11-08', '60/min', 'a/b', 'a/b', 'a/b/c', 'Needs_follow_up', '', 'a/b', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO'),
-(64, '192321433332', '', 'Grade8-Findings', '', '23', '1223', 'Normal', '23', '45', '159', '', '', '', 'Juztin.Ortiz', '2022-11-08', '60/min', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-(66, '190000000000', 'a', 'Grade7-Findings', '', '110/90', '13/min', 'Normal', '36', '45', '157', 'a/b', 'a', 'a', 'Juztin.Ortiz', '2022-11-09', '60/min', 'a', 'a', 'a', 'Advised/Counseled', 'aaa', 'a', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO'),
-(67, '192321429988', 'a', 'Grade7-Findings', '', '110/90', '13/min', 'Below-Normal', '36.4', '2234', '325', '', 'a', 'a', 'Juztin.Ortiz', '2022-11-09', '60/min', 'a', 'a', 'a', 'Corrected', 'a', 'a', '', '', '', '', '', '', '', '', '', ''),
-(68, '190000000000', 'a', 'Grade8-Findings', '', '110/90', '13/min', 'Below-Normal', '37', '60', '1232', 'a/b', 'a', 'a', 'Juztin.Ortiz', '2022-11-09', '2123', 'a', 'a', 'a', 'Advised/Counseled', 'aaa', 'a', '', '', '', '', '', '', '', '', '', ''),
-(69, '111111111111', 'a/b/c', 'Grade8-Findings', '', '155', '1223', 'Normal', '36', '45', '157', 'a/b', 'a/b', 'a/b', 'Kimberly.Bustarde', '2022-11-10', '60/min', 'a/b', 'a/b', 'a/b/c', 'Parents_Notified', '', 'a/b', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO'),
-(70, '111111111111', 'a/b/c', 'Grade7-Findings', '', '155', '1223', 'Normal', '36', '45', '157', 'a/b', 'fsfs', 'a/b', 'Alona.Mosquito-Leabres', '2022-11-10', '60/min', 'a/b', 'a/b', 'a/b/c', 'Needs_close_supervision', '', 'a/b', 'NO', 'YES', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO'),
-(71, '192323233444', 'a', 'Grade11-Findings', '', '110/90', '13/min', 'Above-Normal', '37', '60', '159', 'a/b', 'a', 'a', 'Juztin.Ortiz', '2022-11-10', '60/min', 'a', 'a', 'a', 'Needs_close_supervision', 'aaa', 'a', 'YES', 'YES', 'YES', 'YES', 'YES', 'YES', 'YES', 'YES', 'YES', 'YES'),
-(72, '192321429999', '', 'Grade7-Findings', '', '110/90', '13/min', 'Normal', '36', '213', '157', '', '', '', 'Juztin.Ortiz', '2022-11-10', '2123', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-(73, '111111111111', 'a', 'Grade9-Findings', '', '110/90', '13/min', 'Normal', '36', '45', '157', 'a/b', 'a', 'a', 'Juztin.Ortiz', '2022-11-29', '60/min', 'a', 'a', 'a', 'Advised/Counseled', 'aaaa', 'a', '', '', '', '', '', '', '', '', '', ''),
-(74, '192000000009', 'a', 'Grade7-Findings', '', '110/90', '13/min', 'Normal', '36', '45', '157', 'a/b', 'a', 'a', 'Juztin.Ortiz', '2022-11-29', '60/min', 'a', 'a', 'a', 'Corrected', 'aaaa', 'a', '', '', '', '', '', '', '', '', '', ''),
-(75, '192442233889', 'a/b/c', 'Grade7-Findings', '', '110/90', '13/min', 'Normal', '36', '45', '157', 'a/b', 'a/b', 'a/b', 'Juztin.Ortiz', '2022-12-02', '60/min', 'a/b', 'a/b', 'a/b/c', 'Needs_close_supervision', 'N/A', 'a/b', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO'),
-(76, '192442233889', '', 'Grade8-Findings', '', '110/90', '13/min', 'Normal', '36', '45', '157', '', '', '', 'Juztin.Ortiz', '2022-12-02', '60/min', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-(77, '192442233889', 'a', 'Grade9-Findings', '', '155', '13/min', 'Normal', '36.4', '12', '1232', 'a/b', 'a', 'a', 'Juztin.Ortiz', '2022-12-02', '60/min', 'a', 'a', 'a', 'Treated', 'N/A', 'a', 'YES', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO');
+INSERT INTO `findings` (`f_id`, `pr_findings_id`, `f_chiefcomplaint`, `f_historypresentillness`, `f_status`, `f_bp`, `f_rr`, `f_cr`, `f_temp`, `f_wt`, `f_pr`, `f_physicalexam`, `f_diagnosis`, `f_medication`, `f_nameofphysician`, `f_date`, `f_pulse`, `f_mouth`, `f_lungs`, `f_spine`, `f_remarks`, `f_others`, `f_abdo`, `f_allergy`, `f_asthma`, `f_anemia`, `f_bleeding`, `f_hailment`, `f_diabetes`, `f_epilepsy`, `f_kidney`, `f_convulsion`, `f_fainting`, `f_conditionfa`, `f_conditionfb`, `f_conditionfc`, `f_conditionfd`, `f_conditionfe`, `f_conditionff`, `f_conditionfg`, `f_conditionfh`, `f_conditionfi`, `f_conditionfj`, `f_conditionsa`, `f_conditionsb`, `f_conditionsc`, `f_conditionsd`, `f_conditionse`, `f_conditionsf`, `f_conditionsg`, `f_conditionsh`, `f_conditionsi`, `f_conditionsj`, `f_conditionsk`, `f_conditionsl`, `f_conditionsm`, `f_conditionsn`, `f_conditionso`, `f_conditionsp`, `f_conditionta`, `f_conditiontb`, `f_conditiontc`, `f_conditiontd`, `f_conditionte`, `f_conditiontf`, `f_conditiontg`, `f_conditionth`, `f_conditionti`, `f_conditiontj`, `f_conditiontk`, `f_conditiontl`, `f_conditiontm`, `f_conditiontn`, `f_conditionto`, `f_conditiontp`, `f_conditionla`, `f_conditionlb`, `f_conditionlc`, `f_conditionld`, `f_conditionle`, `f_conditionlf`, `f_conditionlg`, `f_conditionlh`, `f_conditionli`, `f_conditionlj`, `f_treatfa`, `f_treatfb`, `f_treatfc`, `f_treatfd`, `f_treatfe`, `f_treatff`, `f_treatfg`, `f_treatfh`, `f_treatfi`, `f_treatfj`, `f_treatfk`, `f_treatfl`, `f_treatfm`, `f_treatfn`, `f_treatfo`, `f_treatfp`, `f_treatsa`, `f_treatsb`, `f_treatsc`, `f_treatsd`, `f_treatse`, `f_treatsf`, `f_treatsg`, `f_treatsh`, `f_treatsi`, `f_treatsj`, `f_treatsk`, `f_treatsl`, `f_treatsm`, `f_treatsn`, `f_treatso`, `f_treatsp`, `f_mouthexam`, `f_seal`, `f_gum`, `f_perm`, `f_art`, `f_extra`, `f_prohy`, `f_refer`, `f_otheroral`, `f_oralphys`, `f_rmouthexam`, `f_rseal`, `f_rgum`, `f_rperm`, `f_rart`, `f_rextra`, `f_rprohy`, `f_rrefer`, `f_rotheroral`, `f_ging`, `f_period`, `f_malo`, `f_super`, `f_ulcer`, `f_calcu`, `f_cleft`, `f_root`, `f_flu`, `f_specify`, `f_decay`, `f_missing`, `f_filled`, `f_total`, `f_sound`, `f_oraldate`) VALUES
+(57, '192321424000', 'a/b/c', 'Grade9-Findings', '', '110/90', '13/min', 'Normal', '36.0', '45', '157', 'a/b', 'a/b', 'a', 'Justin.Ortiz', '2022-11-07', '60/min', 'a/b', 'a/b', 'a/b/c', 'Treated', '', 'a/b', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, '0000-00-00'),
+(58, '192325977777', '', 'G8 - Findings', '', '23', '13/min', 'Below-Normal', '36', '213', '157', '', '', '', 'Justin.Ortiz', '2022-11-07', '2123', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, '0000-00-00'),
+(59, '091220309555', '', 'G7 - Findings', '', '110/90', '13/min', 'Normal', '37', '60', '157', '', '', '', 'Justin.Ortiz', '2022-11-07', '60/min', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, '0000-00-00'),
+(60, '192321424000', 'a/b/c', 'Grade8-Findings', '', '110/90', '13/min', 'Normal', '36', '45', '157', 'a/b', 'a/b', 'a/b', 'Justin.Ortiz', '2022-11-08', '60/min', 'a/b', 'a/b', 'a/b/c', 'Needs_Supervision', '', 'a/b', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, '0000-00-00'),
+(61, '192321424000', '', 'Grade10-Findings', '', '110/90', '13/min', 'Normal', '36', '45', '157', '', '', '', 'Justin.Ortiz', '2022-11-08', '60/min', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, '0000-00-00'),
+(62, '192321429999', 'a/b/c', 'Grade8-Findings', '', 'rfw', '1223', 'Normal', '23', '45', '325', 'a/b', 'a/b', 'a/b', 'Juztin.Ortiz', '2022-11-08', '2123', 'a/b', 'a/b', 'a/b/c', 'Advised/Counseled', 'fghj', 'a/b', 'NO', 'NO', 'YES', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, '0000-00-00'),
+(63, '192321433332', 'a/b/c', 'Grade7-Findings', '', '110/90', '13/min', 'Normal', '36', '45', '157', 'a/b', 'a/b', 'a', 'Juztin.Ortiz', '2022-11-08', '60/min', 'a/b', 'a/b', 'a/b/c', 'Needs_follow_up', '', 'a/b', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, '0000-00-00'),
+(64, '192321433332', '', 'Grade8-Findings', '', '23', '1223', 'Normal', '23', '45', '159', '', '', '', 'Juztin.Ortiz', '2022-11-08', '60/min', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, '0000-00-00'),
+(66, '190000000000', 'a', 'Grade7-Findings', '', '110/90', '13/min', 'Normal', '36', '45', '157', 'a/b', 'a', 'a', 'Juztin.Ortiz', '2022-11-09', '60/min', 'a', 'a', 'a', 'Advised/Counseled', 'aaa', 'a', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, '0000-00-00'),
+(67, '192321429988', 'a', 'Grade7-Findings', '', '110/90', '13/min', 'Below-Normal', '36.4', '2234', '325', '', 'a', 'a', 'Juztin.Ortiz', '2022-11-09', '60/min', 'a', 'a', 'a', 'Corrected', 'a', 'a', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, '0000-00-00'),
+(68, '190000000000', 'a', 'Grade8-Findings', '', '110/90', '13/min', 'Below-Normal', '37', '60', '1232', 'a/b', 'a', 'a', 'Juztin.Ortiz', '2022-11-09', '2123', 'a', 'a', 'a', 'Advised/Counseled', 'aaa', 'a', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, '0000-00-00'),
+(69, '111111111111', 'a/b/c', 'Grade8-Findings', '', '155', '1223', 'Normal', '36', '45', '157', 'a/b', 'a/b', 'a/b', 'Basilio.Cabasug', '2022-11-10', '60/min', 'a/b', 'a/b', 'a/b/c', 'Parents_Notified', '', 'a/b', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, '2023-01-25'),
+(70, '111111111111', 'a/b/c', 'Grade7-Findings', '', '155', '1223', 'Normal', '36', '45', '157', 'a/b', 'a', 'a/b', 'Basilio.Cabasug', '2022-11-10', '60/min', 'a/b', 'a/b', 'a/b/c', 'Needs_close_supervision', '', 'a/b', 'NO', 'YES', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'CMR', 'F', '', 'F', '', 'Ag F', '', 'Gn', '', 'F', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'M', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'M', '', '', '', '', '', '', 'F', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Xt', '', '', '', '', '', '', '', '', 'Alona.Mosquito-Leabres', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'None', 2, 0, 0, 0, 0, '0000-00-00'),
+(71, '192323233444', 'a', 'Grade11-Findings', '', '110/90', '13/min', 'Above-Normal', '37', '60', '159', 'a/b', 'a', 'a', 'Juztin.Ortiz', '2022-11-10', '60/min', 'a', 'a', 'a', 'Needs_close_supervision', 'aaa', 'a', 'YES', 'YES', 'YES', 'YES', 'YES', 'YES', 'YES', 'YES', 'YES', 'YES', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, '0000-00-00'),
+(72, '192321429999', '', 'Grade7-Findings', '', '110/90', '13/min', 'Normal', '36', '213', '157', '', '', '', 'Juztin.Ortiz', '2022-11-10', '2123', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, '0000-00-00'),
+(73, '111111111111', 'a', 'Grade9-Findings', '', '110/90', '13/min', 'Normal', '36', '45', '157', 'a/b', 'a', 'a', 'Juztin.Ortiz', '2022-11-29', '60/min', 'a', 'a', 'a', 'Advised/Counseled', 'aaaa', 'a', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Alona.Mosquito-Leabres', '', '', '', '', '', '', '', '', '', 'Gn', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'None', 2, 2, 1, 1, 22, '2023-01-25'),
+(74, '192000000009', 'a', 'Grade7-Findings', '', '110/90', '13/min', 'Normal', '36', '45', '157', 'a/b', 'a', 'a', 'Juztin.Ortiz', '2022-11-29', '60/min', 'a', 'a', 'a', 'Corrected', 'aaaa', 'a', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, '0000-00-00'),
+(75, '192442233889', 'a/b/c', 'Grade7-Findings', '', '110/90', '13/min', 'Normal', '36', '45', '157', 'a/b', 'a/b', 'a/b', 'Juztin.Ortiz', '2022-12-02', '60/min', 'a/b', 'a/b', 'a/b/c', 'Needs_close_supervision', 'N/A', 'a/b', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, '0000-00-00'),
+(76, '192442233889', '', 'Grade8-Findings', '', '110/90', '13/min', 'Normal', '36', '45', '157', '', '', '', 'Juztin.Ortiz', '2022-12-02', '60/min', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, '0000-00-00'),
+(77, '192442233889', 'a', 'Grade9-Findings', '', '155', '13/min', 'Normal', '36.4', '12', '1232', 'a/b', 'a', 'a', 'Juztin.Ortiz', '2022-12-02', '60/min', 'a', 'a', 'a', 'Treated', 'N/A', 'a', 'YES', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, '0000-00-00'),
+(78, '136825120367', 'a/b/c', 'Grade7-Findings', '', '110/90', '13/min', 'Normal', '36', '42', '155', 'a/b', 'a/b', 'a/b', 'Basilio.Cabasug', '2022-12-13', '60/min', 'a/b', 'a/b', 'a', 'Parents_Notified', 'N/A', 'a/b', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, '0000-00-00'),
+(79, '136825120367', 'a/b/c', 'Grade8-Findings', '', '110/90', '13/min', 'Normal', '37', '45', '159', 'a/b', 'a/b', 'a/b', 'Basilio.Cabasug', '2022-12-13', '60/min', 'a/b', 'a/b', 'a', 'Parents_Notified', 'N/A', 'a', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, '0000-00-00'),
+(80, '136251100382', 'a', 'Grade7-Findings', '', '110/90', '13/min', 'Normal', '36', '45', '157', 'a/b', 'a', 'a', 'Juztin.Ortiz', '2023-01-24', '60/min', 'a', 'a', 'a', 'Corrected', 'N/A', 'a', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, '0000-00-00'),
+(81, '109342101029', '', 'Grade7-Findings', '', '110/90', '13/min', 'Normal', '36', '45', '325', '', '', '', 'Basilio.Cabasug', '2023-01-24', '60/min', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, '0000-00-00'),
+(82, '109342101029', 'a', 'Grade12-Findings', '', '110/90', '13/min', 'Normal', '37', '42', '159', 'a/b', 'a', 'a', 'Juztin.Ortiz', '2023-01-25', '60/min', 'a', 'a', 'a', 'Advised/Counseled', 'N/A', 'a', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', '', '', '', 'M', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Gm', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'F', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Heavy shade', '', '', 'Sy F', '', 'Xt', '', 'JC', '', 'Alona.Mosquito-Leabres', '', '', '', '', '', '', '', '', '', 'Gn', '', '', '', '', '', '', '', '', '', 4, 1, 0, 6, 22, '2023-01-25');
 
 -- --------------------------------------------------------
 
@@ -470,6 +598,7 @@ CREATE TABLE `log_findings` (
 --
 
 INSERT INTO `log_findings` (`lo_id`, `lo_user_id`, `lo_fname`, `lo_mname`, `lo_lname`, `lo_gender`, `lo_age`, `lo_complaint`, `lo_historypresentillness`, `lo_bp`, `lo_rr`, `lo_cr`, `lo_temp`, `lo_wt`, `lo_pr`, `lo_physicalexam`, `lo_diagnosis`, `lo_medication`, `lo_pulse`, `lo_mouth`, `lo_lungs`, `lo_spine`, `lo_abdo`, `lo_remarks`, `lo_others`, `lo_allergy`, `lo_asthma`, `lo_anemia`, `lo_bleeding`, `lo_hailment`, `lo_diabetes`, `lo_epilepsy`, `lo_kidney`, `lo_convulsion`, `lo_fainting`, `lo_physician_id`, `lo_date`, `log_time`) VALUES
+(1, '59', '', '', '', '', 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, '2023-01-17', '2023-01-17 08:21:21'),
 (17, '53', 'Jenna', 'Castro', 'Hassan', '', 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 1, '0000-00-00', '2019-05-02 16:15:27'),
 (18, '53', 'Jenna', 'Castro', 'Hassan', '', 0, '', '*Under Observation', '', '', '', '', '', '', 'dsaad', 'dsaad', 'asd', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 1, '0000-00-00', '2019-05-02 16:15:33'),
 (20, '53', 'Jenna', 'Castro', 'Hassan', '', 0, '', '*Under Observation', '', '', '', '', '', '', 'a', 'a', 'a', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 1, '0000-00-00', '2019-05-03 04:54:32');
@@ -553,11 +682,11 @@ CREATE TABLE `oldfindings` (
 
 INSERT INTO `oldfindings` (`of_id`, `of_user_id`, `of_fname`, `of_mname`, `of_lname`, `of_gender`, `of_age`, `of_complaint`, `of_historypresentillness`, `of_bp`, `of_rr`, `of_cr`, `of_temp`, `of_wt`, `of_pr`, `of_physicalexam`, `of_diagnosis`, `of_medication`, `of_pulse`, `of_mouth`, `of_lungs`, `of_abdo`, `of_spine`, `of_remarks`, `of_others`, `of_allergy`, `of_asthma`, `of_anemia`, `of_bleeding`, `of_hailment`, `of_diabetes`, `of_epilepsy`, `of_kidney`, `of_convulsion`, `of_findings`, `of_physician_id`, `of_date`, `log_time`, `of_fainting`) VALUES
 (4, 1, 'Jenna', 'Castro', 'Hassan', 'Female', 26, '', 'Headache', '', '', '', '', '', '', '', 'vomiting', 'ibuprofen ', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 53, '2019-05-02', '2019-05-02 08:04:09', ''),
-(15, 1, 'Kimberly', 'Declines', 'Bustarde', 'Female', 21, 'a/b/c', 'Grade8-Findings', 'rfw', '1223', 'Normal', '23', '45', '325', 'a/b', 'a/b', 'a/b', '2123', 'a/b', 'a/b', 'a/b', 'a/b/c', 'Advised/Counseled', 'fghj', 'NO', 'NO', 'YES', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', '', 59, '2022-11-10', '2022-11-10 15:24:31', 'NO'),
-(17, 1, 'Clarence', 'Tanaliga', 'Tampilic', 'Female', 21, 'a/b/c', 'Grade8-Findings', '155', '1223', 'Normal', '36', '45', '157', 'a/b', 'a/b', 'a/b', '60/min', 'a/b', 'a/b', 'a/b', 'a/b/c', 'Parents_Notified', '', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', '', 59, '2022-11-23', '2022-11-23 11:48:35', 'NO'),
-(18, 1, 'Clarence', 'Tanaliga', 'Tampilic', 'Female', 23, 'a', 'Grade11-Findings', '110/90', '13/min', 'Above-Normal', '37', '60', '159', 'a/b', 'a', 'a', '60/min', 'a', 'a', 'a', 'a', 'Needs_close_supervision', 'aaa', 'YES', 'YES', 'YES', 'YES', 'YES', 'YES', 'YES', 'YES', 'YES', '', 59, '2022-11-29', '2022-11-29 15:03:16', 'YES'),
-(20, 1, 'France', 'wdsafa', 'Ariola', 'Male', 23, 'a', 'Grade7-Findings', '110/90', '13/min', 'Normal', '36', '45', '157', 'a/b', 'a', 'a', '60/min', 'a', 'a', 'a', 'a', 'Corrected', 'aaaa', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', '', 59, '2022-11-29', '2022-11-29 15:10:42', 'NO'),
-(24, 1, 'Alaiza', 'Tanaliga', 'Tampilic', 'Female', 25, 'a/b/c', 'Grade7-Findings', '110/90', '13/min', 'Normal', '36', '45', '157', 'a/b', 'a/b', 'a/b', '60/min', 'a/b', 'a/b', 'a/b', 'a/b/c', 'Needs_close_supervision', 'N/A', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', '', 60, '2022-12-02', '2022-12-02 03:24:02', 'NO');
+(24, 1, 'Alaiza', 'Tanaliga', 'Tampilic', 'Female', 25, 'a/b/c', 'Grade7-Findings', '110/90', '13/min', 'Normal', '36', '45', '157', 'a/b', 'a/b', 'a/b', '60/min', 'a/b', 'a/b', 'a/b', 'a/b/c', 'Needs_close_supervision', 'N/A', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', '', 60, '2022-12-02', '2022-12-02 03:24:02', 'NO'),
+(28, 1, 'Clarence', 'Tanaliga', 'Tampilic', 'Female', 21, 'a/b/c', 'Grade7-Findings', '155', '1223', 'Normal', '36', '45', '157', 'a/b', 'a', 'a/b', '60/min', 'a/b', 'a/b', 'a/b', 'a/b/c', 'Needs_close_supervision', 'N/A', 'NO', 'YES', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', '', 59, '2023-01-24', '2023-01-24 17:03:56', 'NO'),
+(30, 1, 'Clarence', 'Tanaliga', 'Tampilic', 'Female', 21, 'a', 'Grade9-Findings', '110/90', '13/min', 'Normal', '36', '45', '157', 'a/b', 'a', 'a', '60/min', 'a', 'a', 'a', 'a', 'Advised/Counseled', 'aaaa', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', '', 59, '2023-01-25', '2023-01-25 08:25:30', 'NO'),
+(31, 1, 'Clarence', 'Tanaliga', 'Tampilic', 'Female', 21, 'a', 'Grade9-Findings', '110/90', '13/min', 'Normal', '36', '45', '157', 'a/b', 'a', 'a', '60/min', 'a', 'a', 'a', 'a', 'Advised/Counseled', 'aaaa', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', '', 59, '2023-01-25', '2023-01-25 08:42:07', 'NO'),
+(32, 1, 'Clarence', 'Tanaliga', 'Tampilic', 'Female', 21, 'a', 'Grade9-Findings', '110/90', '13/min', 'Normal', '36', '45', '157', 'a/b', 'a', 'a', '60/min', 'a', 'a', 'a', 'a', 'Advised/Counseled', 'aaaa', 'YES', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', '', 61, '2023-01-25', '2023-01-25 08:45:43', 'NO');
 
 -- --------------------------------------------------------
 
@@ -592,14 +721,33 @@ CREATE TABLE `patient_record` (
 --
 
 INSERT INTO `patient_record` (`pr_id`, `pr_user_id`, `pr_date`, `pr_lname`, `pr_fname`, `pr_mname`, `pr_addrs`, `pr_age`, `pr_bdate`, `pr_bplace`, `pr_vaccinestat`, `pr_divi`, `pr_civilstat`, `pr_gen`, `pr_number`, `pr_religion`, `pr_occup`, `month`, `year`) VALUES
-('111111111111', 1, '2022-11-07', 'Tampilic', 'Clarence', 'Tanaliga', '3117-A Reposo St. Brgy. 589', 21, '2001-10-11', 'Lubang, Occidental Mindoro', 'FullyVaccinated', 'Manila-City', 'RegionIV–MIMAROPA', 'Female', '09472599976', 'Albert Tampilic', 'Technology University of the Philippines', 'Nov', '2022'),
-('190000000000', 1, '2022-11-09', 'Tampilic', 'Clarence', 'Tanaliga', '3117-A Reposo St. Brgy. 589', 23, '2022-11-09', 'Lubang, Occidental Mindoro', 'FullyVaccinated', 'Makati-City', 'NCR', 'Female', '09472599976', 'Albert Tampilic', 'Technology University of the Philippines', 'Nov', '2022'),
-('192000000009', 1, '2022-11-29', 'Ariola', 'France Emiele', 'wdsafa', 'Tandang Sora, Quezon City', 23, '2022-11-08', 'Malolos City, Bulacan', 'Partially', 'Taguig-City', 'NCR', 'Male', '09157236485', 'Anna Bustarde', 'setw', 'Nov', '2022'),
-('192321400000', 2, '2022-11-29', 'Ariola', 'France Emiele', 'wdsafa', 'Tandang Sora, Quezon City', 25, '2022-11-26', 'Baguio City', 'FullyVaccinated', 'Manila-City', 'NCR', 'Male', '09543333333', 'Mr. Ariola', 'Technology University of the Philippines', 'Nov', '2022'),
-('192321429999', 1, '2022-11-07', 'Bustarde', 'Kimberly', 'Declines', '44 Galguerra Compound Encarnation St., Valenzuela City', 21, '2001-05-16', 'Malolos City, Bulacan', 'Fully_Vaccinated_w/_Booster', 'Manila-City', 'NCR', 'Female', '09685443580', 'Anna Bustarde', 'Technology University of the Philippines', 'Nov', '2022'),
-('192321433332', 1, '2022-11-08', 'Tampilic', 'Clarence', 'Tanaliga', '3117-A Reposo St. Brgy. 589', 22, '2001-10-11', 'Lubang, Occidental Mindoro', 'FullyVaccinated', 'Manila-City', 'NCR', 'Female', '09472599976', 'Albert Tampilic', 'Technology University of the Philippines', 'Nov', '2022'),
-('192323233444', 1, '2022-11-08', 'Tampilic', 'Clarence', 'Tanaliga', '3117-A Reposo St. Brgy. 589', 23, '2022-11-08', 'Valenzuela', 'Partially', 'SanJuan-City', 'NCR', 'Female', '09472599976', 'wewewewe', 'Technology University of the Philippines', 'Nov', '2022'),
-('192442233889', 1, '2022-12-02', 'Tampilic', 'Alaiza', 'Tanaliga', '090 G. Del Pilar St., Brgy. Ninikat ng Pag-Asa, Lubang, Occ. Mindoro', 25, '2022-12-16', 'Lubang, Occidental Mindoro', 'FullyVaccinated', 'Quezon-City', 'NCR', 'Female', '09122030955', 'Albert Tampilic', 'Technology University of the Philippines', 'Dec', '2022');
+('109342101029', 9, '2022-11-29', 'Nabor', 'Julian', 'Romano', '#3086-B Gumamela Ext. Gen T. De Leon Valenzuela City ', 17, '2005-07-24', 'Angeles City', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Female', '09994838209', 'Elma Nabor', 'Valenzuela National Highschool', 'NOV', '2022'),
+('111111111111', 27, '2022-11-07', 'Tampilic', 'Clarence', 'Tanaliga', '3117-A Reposo St. Brgy. 589', 21, '2001-10-11', 'Lubang, Occidental Mindoro', 'FullyVaccinated', 'Manila-City', 'RegionIV–MIMAROPA', 'Female', '09472599976', 'Albert Tampilic', 'Technology University of the Philippines', 'Nov', '2022'),
+('136251100382', 1, '2022-12-05', 'Canay', 'LJ Mae', 'Ermino', '#2 Galguerra comp. Encarnacion st. Marulas Valenzuela City', 16, '2006-01-08', 'Valenzuela', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Female', '09982335490', 'Joseph M. Canay', 'Valenzuela National Highschool', 'DEC', '2022'),
+('136513020409', 1, '2022-12-05', 'Conde', 'Mark Adrian', 'Bagasina', '#3 Cassanova Dr, Brgy. Culiat. Quezon City. ', 20, '2002-08-02', 'Quezon City', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Male', '09231369726', 'Marlon Conde', 'Valenzuela National Highschool', 'DEC', '2022'),
+('136513100130', 6, '2022-11-29', 'Conde', 'Jhon Patrick', 'Bagasina', '3078 Gumamela Abalos Bukid Ext.Gen t De leon Valenzuela City', 18, '2004-02-23', 'Valenzuela City', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Male', '09101795969', 'Marlon Conde', 'Valenzuela National Highschool', 'NOV', '2022'),
+('136588160164', 15, '2022-12-05', 'Fernando', 'Lia Julienne', 'Pablo', '1665 C. compound brgy 18 valenzuela city', 4, '2018-08-18', 'Manila', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Female', '09951961877', 'Maicah Fernando', 'Valenzuela National Highschool', 'DEC', '2022'),
+('136806100063', 7, '2022-11-29', 'Esteban', 'Ruth ', 'Dona', ' Valenzuela City', 17, '2005-05-23', 'Valenzuela Medical Center', 'Fully_Vaccinated_w/_Booster', 'Valenzuela-City', 'NCR', 'Female', '09339630511', 'Rodora Esteban', 'Valenzuela National Highschool', 'NOV', '2022'),
+('136824100042', 16, '2022-12-05', 'Colis', 'Arden', 'Guardiana ', '12M Herrera St, Marulas Valenzuela City ', 17, '2005-08-02', 'Manila', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Male', '09331169813', 'Ma. Lourdes G Colis', 'Valenzuela National Highschool', 'DEC', '2022'),
+('136825060065', 4, '2022-11-29', 'Bustarde', 'Kimberly Anne', 'Declines', '44 Galguerra Compound, Encarnacion St. Brgy. Marulas, Valenzuela City', 21, '2001-05-16', 'Malolos, Bulacan', 'Fully_Vaccinated_w/_Booster', 'Valenzuela-City', 'NCR', 'Female', '09182721882', 'Valentino Bustarde', 'Valenzuela National Highschool', 'NOV', '2022'),
+('136825090186', 11, '2022-11-30', 'Infiesto', 'Christian Loyd', 'Gaoiran', '33 Sandiego St. Marulas Valenzuela City', 19, '2003-11-23', 'Davao Del Norte City', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Male', '09216645892', 'Carl Infiesto', 'Valenzuela National Highschool', 'NOV', '2022'),
+('136825100224', 18, '2022-12-05', 'Mance', 'Bianca', 'Baltazar ', '207 f.bautista st marulas Valenzuela city', 17, '2005-04-04', 'Valenzuela ', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Female', '09636420857', 'Ma. Angelina Baltazar ', 'Valenzuela National Highschool', 'DEC', '2022'),
+('136825110006', 25, '2022-12-05', 'Aldana', 'Kurt', 'Sicat', '29 dama denotche marulas valenzuela city', 17, '2005-11-25', 'Marulas valenzuela ', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Male', '09319073974', 'Joan Sicat', 'Valenzuela National Highschool', 'DEC', '2022'),
+('136825120367', 1, '2022-11-29', 'Bustarde', 'Hainabelle', 'Declines', '44 jacinto extn galguerra compound marulas val city', 16, '2006-05-18', 'Bulacan', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Female', '09182721882', 'Anna Bustarde', 'Valenzuela National Highschool', 'NOV', '2022'),
+('136825194542', 2, '2022-11-29', 'Ignacio ', 'Sofia Denise ', 'Esquilona ', 'Riverside st, malabon city', 16, '2006-05-01', 'Valenzuela ', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Female', '09981904881', 'Salve & Ronald Ignacio ', 'Valenzuela National Highschool', 'NOV', '2022'),
+('136825358412', 13, '2022-12-05', 'Roca', 'Khyle Raven', 'Bustarde', '45 Galguerra Compound, Encarnacion St. Brgy. Marulas, Valenzuela City', 13, '2010-09-02', 'Valenzuela City', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Male', '09176303480', 'Jess Roca', 'Valenzuela National Highschool', 'DEC', '2022'),
+('136825782407', 12, '2022-12-05', 'Buan', 'Hazelle Vei', 'Renegado', '41 Galguerra Compound, Encarnacion Street Brgy. Marulas, Valenzuela City', 19, '2001-10-18', 'Caloocan City', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Female', '09361752322', 'Luz Renegado', 'Valenzuela National Highschool', 'DEC', '2022'),
+('136826100059', 19, '2022-12-05', 'Dupo', 'Cliford Duane', 'B.', '#21 C Reyes Compound, Marulas, Valenzuela City', 20, '2002-11-26', 'Valenzuela City', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Male', '09162267892', 'Grace B. Dupo', 'Valenzuela National Highschool', 'DEC', '2022'),
+('136826100099', 17, '2022-12-05', 'Loyola', 'Kench Justin ', 'Azada', '104 capricorn st marulas valenzuela city', 17, '2005-04-01', 'Manila', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Male', '09665489195', 'Josie Loyola', 'Valenzuela National Highschool', 'DEC', '2022'),
+('136826110101', 21, '2022-12-05', 'Caderao', 'Lesly ', 'M', '81 Capricorn st.batimana cmpd marulas Valenzuela city ', 18, '2004-01-01', 'Valenzuela ', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Female', '09372754918', 'Teresita Monsing', 'Valenzuela National Highschool', 'DEC', '2022'),
+('136826120251', 8, '2022-11-29', 'Bonacua', 'Nahjela Feona', 'Catador', '69t.concepcion st.marulas, Valenzuela City', 17, '2005-09-19', 'Tondo, Manila', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Female', '09323715251', 'Hazel C. Salvador', 'Valenzuela National Highschool', 'NOV', '2022'),
+('136826293479', 14, '2022-12-05', 'Dangat', 'Bea Erika', 'De Vera', '31 Galguerra Compound, Encarnacion st. Brgy. Marulas, Valenzuela City', 18, '2001-08-18', 'Valenzuela City', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Female', '09751245212', 'Willie Dangat', 'Valenzuela National Highschool', 'DEC', '2022'),
+('136827100077', 20, '2022-12-05', 'David', 'Cheace Eunice', 'Tan', '17 Tampoy 2 Marulas Valenzuela City', 17, '2005-06-12', 'Valenzuela City', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Female', '09751038496', 'Cheryl David', 'Valenzuela National Highschool', 'DEC', '2022'),
+('136827110024', 26, '2022-12-05', 'bonguit', 'janah', 'mendoza', '2 fatima ave pag asa subdivision marulas valenzuela city', 16, '2006-06-01', 'our lady of fatima medical center', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Female', '09952165045', 'Maria Tita Bonguit', 'Valenzuela National Highschool', 'DEC', '2022'),
+('227002100042', 5, '2022-11-29', 'Bonacua', 'King Prots', 'Atchico', '3078 Gumamela Ext. Gen t deleon Valenzuela City', 17, '2022-08-01', 'Valenzuela City', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Male', '09104526370', 'Virginia Bonacua', 'Valenzuela National Highschool', 'NOV', '2022'),
+('403547150015', 22, '2022-12-05', 'Javier', 'Hanika Angela', 'Ortiz', 'Little tagaytay marulas valenzuela', 16, '2006-07-18', 'Provincial Hospital', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Female', '09650513354', 'Princess Ortiz', 'Valenzuela National Highschool', 'DEC', '2022'),
+('407203150113', 3, '2022-11-29', 'Roca', 'Jesse Jandrick', 'Bustarde', '#45 Galguerra compund, Encarnacion St., Marulas, Valenzuela City', 13, '2009-04-11', 'Fatima University Medical Center, Valenzuela City', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Male', '09176303480', 'Rosalie B. Roca', 'Valenzuela National Highschool', 'NOV', '2022'),
+('407203150299', 10, '2022-11-29', 'Lee', 'Francheska Jairha ', 'Catador', '24 Encarnacion Street Marulas Valenzuela City', 15, '2006-12-07', 'Valenzuela city', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Female', '09981904881', 'Joey Lee', 'Valenzuela National Highschool', 'NOV', '2022');
 
 -- --------------------------------------------------------
 
@@ -670,7 +818,9 @@ CREATE TABLE `standardusers` (
 --
 
 INSERT INTO `standardusers` (`su_id`, `su_userid`, `su_user`, `su_pass`, `su_fname`, `su_position`, `date_created`) VALUES
-(59, 1, 'Kim.Bustarde', '$2y$12$O5ww2fPTPfdmh1ntaKiH7.w9dcIyztOFVjTFYuFe0640Qo5Zq9MRm', 'Kimberly Bustarde', 'Doctor', '2022-12-02 03:13:43');
+(59, 1, 'Kim.Bustarde', '$2y$12$O5ww2fPTPfdmh1ntaKiH7.w9dcIyztOFVjTFYuFe0640Qo5Zq9MRm', 'Kimberly Bustarde', 'Doctor', '2022-12-02 03:13:43'),
+(61, 1, 'Emiele.Ariola', '$2y$12$u30fj4DXHF4pUDvU9OxFqOvNaI5BtXJjvzluvPgM5qEYdP2RpCv9S', 'France Emiele Ariola', 'Doctor', '2023-01-25 07:22:44'),
+(62, 1, 'Mika.Rominez', '$2y$12$2TEB7XonpVGDU/PdWKuxVuMncmaGVieA4T83L5v3fAA/tk8TB3Sfu', 'Mikaela Joy Rominez', 'Doctor', '2023-01-25 07:23:18');
 
 -- --------------------------------------------------------
 
@@ -935,7 +1085,7 @@ ALTER TABLE `fieldsphysician`
 -- AUTO_INCREMENT for table `findings`
 --
 ALTER TABLE `findings`
-  MODIFY `f_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
+  MODIFY `f_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
 
 --
 -- AUTO_INCREMENT for table `gender`
@@ -965,7 +1115,7 @@ ALTER TABLE `oldadmission`
 -- AUTO_INCREMENT for table `oldfindings`
 --
 ALTER TABLE `oldfindings`
-  MODIFY `of_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `of_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `physicians`
@@ -983,7 +1133,7 @@ ALTER TABLE `remarks`
 -- AUTO_INCREMENT for table `standardusers`
 --
 ALTER TABLE `standardusers`
-  MODIFY `su_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+  MODIFY `su_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
 
 --
 -- AUTO_INCREMENT for table `status`
