@@ -26,9 +26,7 @@
                   <thead>
                     <tr>
                       
-                      <th class="text-center">Last Name</th>
-                      <th class="text-center">First Name</th>
-                      <th class='text-center'>Middle Name</th>
+                      <th class="text-center">Student's Name</th>
                       <th class="text-center">Findings</th>
                       <th class="text-center">Gender</th>
                       <th class="text-center">Age</th>
@@ -42,9 +40,7 @@
                       <?php foreach($oldrecords as $patient): ?>
                    <tr>
 
-                <?php echo "<td class='text-center'>". $patient->of_lname ."</td>" ?>
-                <?php echo "<td class='text-center'>". $patient->of_fname ."</td>" ?>
-                <?php echo "<td class='text-center'>". $patient->of_mname ."</td>" ?>
+                <?php echo "<td class='text-center'>". $patient->of_lname. ",    " .$patient->of_fname. "    " .$patient->of_mname .$patient->of_suffix ."</td>" ?>
                 <?php echo "<td class='text-center'>". $patient->of_historypresentillness ."</td>" ?>
                 <?php echo "<td class='text-center'>". $patient->of_gender ."</td>" ?>
                 <?php echo "<td class='text-center'>". $patient->of_age ."</td>" ?>

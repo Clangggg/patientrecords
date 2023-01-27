@@ -21,7 +21,8 @@
                      
                         <?php echo $get_admission_view->pr_lname; ?>&nbsp&nbsp
                         <?php echo $get_admission_view->pr_fname; ?>&nbsp&nbsp
-                        <?php echo $get_admission_view->pr_mname; ?>
+                        <?php echo $get_admission_view->pr_mname; ?>&nbsp&nbsp
+                        <?php echo $get_data->pr_suffix ?>
                   
                       </div>
                     </div>

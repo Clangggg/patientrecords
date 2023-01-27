@@ -461,12 +461,12 @@
         <div class="card shadow mb-4">
             <!-- Card Header - Dropdown -->
             <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                <h6 class="m-0 font-weight-bold text-primary"> Oral Health Examination </h6>
+                <h6 class="m-0 font-weight-bold text-primary"> Medical History </h6>
 
             </div>
             <!-- Card Body -->
             <div class="card-body">
-                <p style="font-size:15px; font-weight:600; margin-bottom:27px;"> Medical History </p>
+
                 <div style="margin-left:20%;" class="row">
                     <div class="col-sm-3">
                         <div style="margin-bottom:17px;">

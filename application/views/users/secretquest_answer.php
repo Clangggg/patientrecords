@@ -3,13 +3,13 @@
 
 <div class="col-sm-10">
 
-<?php if($this->session->flashdata('forgotpass_success')): ?>
+<!-- <?php if($this->session->flashdata('forgotpass_success')): ?>
 
 <?php echo "<div style='margin-left: 72px;' class='alert alert-success alert-dismissible text-center'>
      <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
      ".$this->session->flashdata('forgotpass_success') ."<h6><i class='con fa fa-check'></i></h6></div>" ?>
 
-<?php endif; ?>
+<?php endif; ?> -->
 
 
 <?php if($this->session->flashdata('secretans_failed')): ?>

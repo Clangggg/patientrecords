@@ -29,6 +29,7 @@ $this->form_validation->set_rules('lrn', 'LRN', 'trim|required|numeric|min_lengt
 $this->form_validation->set_rules('lname', 'Lastname', 'trim|required');
 $this->form_validation->set_rules('fname', 'Firstname', 'trim|required');
 $this->form_validation->set_rules('middlen', 'Middlename', 'trim|required');
+$this->form_validation->set_rules('suffix', 'Suffix', 'trim|required');
 $this->form_validation->set_rules('address', 'Address', 'required');
 $this->form_validation->set_rules('occup', 'Occupation', 'required');
 $this->form_validation->set_rules('age', 'Age', 'trim|required|numeric|min_length[2]|max_length[2]');
@@ -70,6 +71,7 @@ $year = date("Y", strtotime("+8 HOURS"));
    'pr_lname' => $this->input->post('lname'),
    'pr_fname' => $this->input->post('fname'),
    'pr_mname' => $this->input->post('middlen'),
+   'pr_suffix' => $this->input->post('suffix'),
    'pr_addrs' => $this->input->post('address'),
    'pr_age' => $this->input->post('age'),
    'pr_gen' => $this->input->post('gen'),
@@ -134,6 +136,7 @@ $this->form_validation->set_rules('lrn', 'LRN', 'required|numeric|min_length[12]
 $this->form_validation->set_rules('lname', 'Lastname', 'required');
 $this->form_validation->set_rules('fname', 'Firstname', 'required');
 $this->form_validation->set_rules('middlen', 'Middlename', 'required');
+$this->form_validation->set_rules('suffix', 'Suffix', 'required');
 $this->form_validation->set_rules('address', 'Address', 'required');
 $this->form_validation->set_rules('birthplace', 'Birthplace', 'required');
 $this->form_validation->set_rules('occup', 'Occupation', 'required');
@@ -170,6 +173,7 @@ $this->load->view('layouts/central_template', $data);
    'pr_lname' => $this->input->post('lname'),
    'pr_fname' => $this->input->post('fname'),
    'pr_mname' => $this->input->post('middlen'),
+   'pr_suffix' => $this->input->post('suffix'),
    'pr_addrs' => $this->input->post('address'),
    'pr_age' => $this->input->post('age'),
    'pr_gen' => $this->input->post('gen'),
@@ -352,15 +356,15 @@ public function add_findings($pr_id){
 
  
 $this->form_validation->set_rules('a_history', 'History of Present Illness', 'required');
-$this->form_validation->set_rules('a_bp', 'Blood Pressure');
-$this->form_validation->set_rules('a_rr', 'Respiratory Rate');
-$this->form_validation->set_rules('a_pulse', 'Pulserate');
-$this->form_validation->set_rules('a_cr', 'Capillary Refill');
-$this->form_validation->set_rules('a_temp', 'Temperature');
-$this->form_validation->set_rules('a_wt', 'Weight');
-$this->form_validation->set_rules('a_pr', 'Pulse Rate');
-$this->form_validation->set_rules('a_physician', 'Attending Physician');
-$this->form_validation->set_rules('a_oralphys', 'Oral Physician');
+$this->form_validation->set_rules('a_bp', 'Blood Pressure', 'required');
+$this->form_validation->set_rules('a_rr', 'Respiratory Rate', 'required');
+$this->form_validation->set_rules('a_pulse', 'Pulserate', 'required');
+$this->form_validation->set_rules('a_cr', 'Capillary Refill', 'required');
+$this->form_validation->set_rules('a_temp', 'Temperature', 'required');
+$this->form_validation->set_rules('a_wt', 'Weight', 'required');
+$this->form_validation->set_rules('a_pr', 'Pulse Rate', 'required');
+$this->form_validation->set_rules('a_physician', 'Attending Physician', 'required');
+$this->form_validation->set_rules('a_oralphys', 'Oral Physician', 'required');
 
 
 
@@ -442,16 +446,16 @@ $data['get_findings_data'] = $this->Record_model->get_patient_findings_id($pr_id
 public function edit_findings($findings_id){
 
 
-$this->form_validation->set_rules('e_chief_complaint', 'Chief Complaint');
+$this->form_validation->set_rules('e_chief_complaint', 'Chief Complaint', 'required');
 $this->form_validation->set_rules('e_historyillness', 'History of Present Illness', 'required');
-$this->form_validation->set_rules('e_bp', 'Blood Pressure');
-$this->form_validation->set_rules('e_rr', 'Respiratory Rate');
-$this->form_validation->set_rules('e_pulse', 'Pulserate');
-$this->form_validation->set_rules('e_cr', 'Capillary Refill');
-$this->form_validation->set_rules('e_temp', 'Temperature');
-$this->form_validation->set_rules('e_wt', 'Weight');
-$this->form_validation->set_rules('e_pr', 'Pulse Rate');
-$this->form_validation->set_rules('e_physicalexam', 'Physical Examination');
+$this->form_validation->set_rules('e_bp', 'Blood Pressure', 'required');
+$this->form_validation->set_rules('e_rr', 'Respiratory Rate', 'required');
+$this->form_validation->set_rules('e_pulse', 'Pulserate', 'required');
+$this->form_validation->set_rules('e_cr', 'Capillary Refill', 'required');
+$this->form_validation->set_rules('e_temp', 'Temperature', 'required');
+$this->form_validation->set_rules('e_wt', 'Weight', 'required');
+$this->form_validation->set_rules('e_pr', 'Pulse Rate', 'required');
+$this->form_validation->set_rules('e_physicalexam', 'Physical Examination', 'required');
 $this->form_validation->set_rules('e_diagnosis', 'Diagnosis', 'required');
 $this->form_validation->set_rules('e_medical_treatment', 'Medication/Treatment', 'required');
 $this->form_validation->set_rules('e_physician', 'Attending Physician', 'required');
@@ -702,8 +706,8 @@ public function admit_form($pr_id){
 
  
 $this->form_validation->set_rules('a_wards', 'Wards', 'trim|required',array('required'=>'Please select ward'));
-$this->form_validation->set_rules('a_chargeaccount', 'Charge Account to');
-$this->form_validation->set_rules('a_relationtopatient', 'Relation to Patient');
+$this->form_validation->set_rules('a_chargeaccount', 'Charge Account to', 'required');
+$this->form_validation->set_rules('a_relationtopatient', 'Relation to Patient', 'required');
 
 
 

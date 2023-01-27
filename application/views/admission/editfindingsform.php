@@ -758,8 +758,8 @@
 
      <div class="frame-12-NT9"
          style="align-items: center; display: flex;  height: 3.9rem; font-size: 1rem; width: 100%; ">
-         <p style="font-size:13px; color:blue; font-weight:700; margin-left:5.6%; margin-bottom:none;">
-             CONDITION </p>
+         <p style="font-size:13px; color:blue; font-weight:700; margin-left:5.1%; margin-bottom:none;">
+         TREATMENT<br>NEEDS </p>
          <div class="frame-1-hVR" style="align-items: center; border: solid 0.1rem #000000; box-sizing: border-box; color: #000000;
                          display: flex; font-size: 0.8rem;  font-weight: 600; height: 60%; justify-content: center;  width: 2.6rem; 
                          margin-left:2%" id="2:47"><input class="form-control"
@@ -875,8 +875,8 @@
 
      <div class="frame-12-NT9"
          style="align-items: center; display: flex;  height: 3.9rem; font-size: 1rem; width: 100%; ">
-         <p style="font-size:13px; color:blue; font-weight:700; margin-left:5.4%; margin-bottom:none;">
-             TREATMENT<br>NEEDS</p>
+         <p style="font-size:13px; color:blue; font-weight:700; margin-left:5.9%; margin-bottom:none;">
+             CONDITION</p>
          <div class="frame-1-hVR" style="align-items: center; border: solid 0.1rem #000000; box-sizing: border-box; color: #000000;
                          display: flex; font-size: 0.8rem;  font-weight: 600; height: 60%; justify-content: center;  width: 2.6rem; 
                          margin-left:1.6%" id="2:47"><input class="form-control"

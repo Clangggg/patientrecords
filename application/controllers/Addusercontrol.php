@@ -304,6 +304,7 @@ $this->load->view('layouts/central_template', $data);
   
  $fname = $this->input->post('a_fname');
  $lname = $this->input->post('a_lname');
+ $suffix = $this->input->post('a_suffix');
 
 $data = array(
  

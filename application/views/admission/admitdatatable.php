@@ -58,7 +58,7 @@
                    <tr>
 
                 <?php echo "<td class='text-center'>". $patient->pr_id ."</td>" ?>
-                <?php echo "<td class='text-center'>". $patient->pr_lname. ",    " .$patient->pr_fname. "    " .$patient->pr_mname ."</td>" ?>
+                <?php echo "<td class='text-center'>". $patient->pr_lname. ",    " .$patient->pr_fname. "    " .$patient->pr_mname .", " .$patient->pr_suffix ."</td>" ?>
                 <?php echo "<td class='text-center'>". $patient->pr_religion ."</td>" ?>
                 <?php echo "<td class='text-center'>". $patient->pr_number ."</td>" ?>
                 

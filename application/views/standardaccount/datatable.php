@@ -24,9 +24,7 @@
                   <thead>
                     <tr>
                       
-                      <th>Last Name</th>
-                      <th>First Name</th>
-                      <th>Middle Name</th>
+                      <th>Student's Name</th>
                       <th class="text-center">Examination Details</th>
                       <th>Gender</th>
                       <th>Age</th>
@@ -40,9 +38,7 @@
                       <?php foreach($get_doctor_patient as $patient): ?>
                    <tr>
 
-                <?php echo "<td class='text-center'>". $patient->a_lname ."</td>" ?>
-                <?php echo "<td class='text-center'>". $patient->a_fname ."</td>" ?>
-                <?php echo "<td class='text-center'>". $patient->a_mname ."</td>" ?>
+                <?php echo "<td class='text-center'>". $patient->a_lname. ",    " .$patient->a_fname. "    " .$patient->a_mname .", " .$patient->a_suffix ."</td>" ?>
                 <?php echo "<td class='text-center'>". $patient->a_historypresentillness ."</td>" ?>
                 <?php echo "<td class='text-center'>". $patient->a_gender ."</td>" ?>
                 <?php echo "<td class='text-center'>". $patient->a_age ."</td>" ?>

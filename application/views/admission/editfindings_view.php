@@ -17,7 +17,8 @@
                             &nbsp&nbsp&nbsp&nbsp&nbsp
                             <?php echo $get_findings_view->pr_lname ?>,&nbsp&nbsp
                             <?php echo $get_findings_view->pr_fname ?>&nbsp&nbsp
-                            <?php echo $get_findings_view->pr_mname ?>
+                            <?php echo $get_findings_view->pr_mname ?>&nbsp&nbsp
+                            <?php echo $get_findings_view->pr_suffix ?>
 
                         </div>
                     </div>

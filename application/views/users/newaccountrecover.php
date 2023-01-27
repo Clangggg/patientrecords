@@ -27,6 +27,7 @@
                     <option value="What was your childhood nickname?"<?php echo set_select('secquestion','What was your childhood nickname?', (!empty($data) && $data == "What was your childhood nickname?" ? TRUE : FALSE )); ?>>What was your childhood nickname?</option>
                     <option value="In what city or town was your first job?"<?php echo set_select('secquestion','In what city or town was your first job?', (!empty($data) && $data == "In what city or town was your first job?" ? TRUE : FALSE )); ?>>In what city or town was your first job? </option>
                      <option value="What was your dream job as a child? "<?php echo set_select('secquestion','What was your dream job as a child? ', (!empty($data) && $data == "What was your dream job as a child? " ? TRUE : FALSE )); ?>>What was your dream job as a child? </option>
+                     <option value="What is the name of the father? "<?php echo set_select('secquestion','What is the name of your father? ', (!empty($data) && $data == "What is the name of your father? " ? TRUE : FALSE )); ?>>What is the name of your father? </option>
                   </select>
                   <div class="text-danger text-center"><?php echo form_error('secquestion'); ?></div>
                 </div>

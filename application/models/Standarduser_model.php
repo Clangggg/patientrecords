@@ -62,6 +62,7 @@ public function get_patient($user_id) { // Join tables
      add_patientfindings.a_fname,
      add_patientfindings.a_mname, 
      add_patientfindings.a_lname,
+     add_patientfindings.a_suffix,
      add_patientfindings.a_gender, 
      add_patientfindings.a_age,
      add_patientfindings.a_complaint, 
@@ -100,6 +101,7 @@ public function get_old_findings($user_id) { // Join tables
      oldfindings.of_fname,
      oldfindings.of_mname, 
      oldfindings.of_lname,
+     oldfindings.of_suffix,
      oldfindings.of_gender, 
      oldfindings.of_age,
      oldfindings.of_complaint, 
@@ -155,6 +157,7 @@ public function get_old_admission($user_id){
      oldadmission.oad_fname,
      oldadmission.oad_mname, 
      oldadmission.oad_lname,
+     oldadmission.oad_suffix,
      oldadmission.oad_gender, 
      oldadmission.oad_age,
      oldadmission.oad_date,
@@ -207,6 +210,7 @@ public function get_patient_admitted($user_id) { // Join tables
      add_patientadmission.a_fname,
      add_patientadmission.a_mname, 
      add_patientadmission.a_lname,
+     add_patientadmission.a_suffix,
      add_patientadmission.a_gender, 
      add_patientadmission.a_age,
      add_patientadmission.a_date,
@@ -314,13 +318,14 @@ return $datainsert;
 
 
 
-public function updatefindings($data, $finding_id, $userid,  $fname, $mname, $lname){
+public function updatefindings($data, $finding_id, $userid,  $fname, $mname, $lname, $suffix){
 
  $datalog = array(
    'lo_user_id' => $userid,
    'lo_fname' =>  $fname,
    'lo_mname' => $mname,
    'lo_lname' => $lname,
+   'lo_suffix' => $suffix,
    'lo_physician_id' => $this->input->post('u_admin'),
    'lo_historypresentillness' => $this->input->post('u_history'),
    'lo_physicalexam' => $this->input->post('u_physical'),
@@ -341,7 +346,7 @@ $update = $this->db->update('add_patientfindings', $data);
 }
 
 
-public function update_admission($data, $admission_id,  $userid, $fname, $mname, $lname){
+public function update_admission($data, $admission_id,  $userid, $fname, $mname, $lname, $suffix){
 
  
  $datalog = array(
@@ -350,6 +355,7 @@ public function update_admission($data, $admission_id,  $userid, $fname, $mname,
   'lo_fname' => $fname,
   'lo_mname' => $mname,
   'lo_lname' => $lname,
+  'lo_suffix' => $suffix,
   'lo_physician_id' => $this->input->post('u_admin'),
 
   );
@@ -385,7 +391,7 @@ if($query->num_rows() > 0){
 
 
 
-public function update_vital_sign($data, $finding_id, $userid, $fname,  $mname, $lname){
+public function update_vital_sign($data, $finding_id, $userid, $fname,  $mname, $lname, $suffix){
 
 $datalog = array(
    
@@ -393,6 +399,7 @@ $datalog = array(
   'lo_fname' => $fname,
   'lo_mname' => $mname,
   'lo_lname' => $lname,
+  'lo_suffix' => $suffix,
   'lo_physician_id' => $this->input->post('u_admin'),
   'lo_bp' => $this->input->post('u_bp'),
   'lo_rr' =>  $this->input->post('u_rr'),
@@ -464,7 +471,15 @@ $q =  $this->db->get('add_patientadmission');
 
 }
 
+public function get_suffix_a($admission_id){
 
+  $this->db->where('a_id', $admission_id);
+  
+  $q =  $this->db->get('add_patientadmission');
+   
+   return $q->row()->a_suffix;
+  
+  }
 
 
 
@@ -504,6 +519,7 @@ $q =  $this->db->get('add_patientfindings');
 
 
 
+
 public function get_fname_f($finding_id){
 
 $this->db->where('a_id', $finding_id);
@@ -539,7 +555,16 @@ $q =  $this->db->get('add_patientfindings');
 }
 
 
+public function get_suffix($finding_id){
 
+  $this->db->where('a_id', $finding_id);
+  
+  $q =  $this->db->get('add_patientfindings');
+   
+   return $q->row()->a_suffix;
+  
+  }
+  
 
 
 

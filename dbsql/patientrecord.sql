@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 25, 2023 at 09:48 AM
+-- Generation Time: Jan 27, 2023 at 06:19 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.1
 
@@ -159,7 +159,8 @@ INSERT INTO `admission_record` (`ad_id`, `ad_date`, `pr_admission_id`, `ad_relat
 ('', '2022-12-13', '136825120367', 'Issued headache medicine', 'Headache'),
 ('', '2023-01-24', '13625110038', 'Issued headache medicine', 'Headache'),
 ('', '2023-01-24', '136251100382', 'Issued headache medicine', 'Headache'),
-('', '2023-01-24', '109342101029', 'Issued cold medicine', 'Colds');
+('', '2023-01-24', '109342101029', 'Issued cold medicine', 'Colds'),
+('', '2023-01-27', '328371287319', 'Issued cold medicine', 'Rashes');
 
 -- --------------------------------------------------------
 
@@ -496,7 +497,9 @@ INSERT INTO `findings` (`f_id`, `pr_findings_id`, `f_chiefcomplaint`, `f_history
 (79, '136825120367', 'a/b/c', 'Grade8-Findings', '', '110/90', '13/min', 'Normal', '37', '45', '159', 'a/b', 'a/b', 'a/b', 'Basilio.Cabasug', '2022-12-13', '60/min', 'a/b', 'a/b', 'a', 'Parents_Notified', 'N/A', 'a', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, '0000-00-00'),
 (80, '136251100382', 'a', 'Grade7-Findings', '', '110/90', '13/min', 'Normal', '36', '45', '157', 'a/b', 'a', 'a', 'Juztin.Ortiz', '2023-01-24', '60/min', 'a', 'a', 'a', 'Corrected', 'N/A', 'a', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, '0000-00-00'),
 (81, '109342101029', '', 'Grade7-Findings', '', '110/90', '13/min', 'Normal', '36', '45', '325', '', '', '', 'Basilio.Cabasug', '2023-01-24', '60/min', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, '0000-00-00'),
-(82, '109342101029', 'a', 'Grade12-Findings', '', '110/90', '13/min', 'Normal', '37', '42', '159', 'a/b', 'a', 'a', 'Juztin.Ortiz', '2023-01-25', '60/min', 'a', 'a', 'a', 'Advised/Counseled', 'N/A', 'a', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', '', '', '', 'M', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Gm', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'F', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Heavy shade', '', '', 'Sy F', '', 'Xt', '', 'JC', '', 'Alona.Mosquito-Leabres', '', '', '', '', '', '', '', '', '', 'Gn', '', '', '', '', '', '', '', '', '', 4, 1, 0, 6, 22, '2023-01-25');
+(82, '109342101029', 'a', 'Grade12-Findings', '', '110/90', '13/min', 'Normal', '37', '42', '159', 'a/b', 'a', 'a', 'Juztin.Ortiz', '2023-01-25', '60/min', 'a', 'a', 'a', 'Advised/Counseled', 'N/A', 'a', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', '', '', '', 'M', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Gm', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'F', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Heavy shade', '', '', 'Sy F', '', 'Xt', '', 'JC', '', 'Alona.Mosquito-Leabres', '', '', '', '', '', '', '', '', '', 'Gn', '', '', '', '', '', '', '', '', '', 4, 1, 0, 6, 22, '2023-01-25'),
+(83, '328371287319', '', 'Grade7-Findings', '', '110/90', '13/min', 'Normal', '36.4', '60', '155', '', '', '', 'Alona.Mosquito-Leabres', '2023-01-27', '60/min', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, '0000-00-00'),
+(84, '111111111111', 'a', 'Grade10-Findings', '', '110/90', '13/min', 'Normal', '37', '45', '155', 'a/b', 'a', 'a', 'Juztin.Ortiz', '2023-01-27', '60/min', 'a', 'a', 'a', 'Needs_follow_up', 'N/A', 'a', 'YES', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'x', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'x', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'xt', '', '', '', '', '', '', 'none', 'Alona.Mosquito-Leabres', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, '2023-01-27');
 
 -- --------------------------------------------------------
 
@@ -640,6 +643,7 @@ CREATE TABLE `oldfindings` (
   `of_fname` varchar(255) NOT NULL,
   `of_mname` varchar(255) NOT NULL,
   `of_lname` varchar(255) NOT NULL,
+  `of_suffix` varchar(12) NOT NULL,
   `of_gender` varchar(255) NOT NULL,
   `of_age` int(11) NOT NULL,
   `of_complaint` text NOT NULL,
@@ -680,13 +684,13 @@ CREATE TABLE `oldfindings` (
 -- Dumping data for table `oldfindings`
 --
 
-INSERT INTO `oldfindings` (`of_id`, `of_user_id`, `of_fname`, `of_mname`, `of_lname`, `of_gender`, `of_age`, `of_complaint`, `of_historypresentillness`, `of_bp`, `of_rr`, `of_cr`, `of_temp`, `of_wt`, `of_pr`, `of_physicalexam`, `of_diagnosis`, `of_medication`, `of_pulse`, `of_mouth`, `of_lungs`, `of_abdo`, `of_spine`, `of_remarks`, `of_others`, `of_allergy`, `of_asthma`, `of_anemia`, `of_bleeding`, `of_hailment`, `of_diabetes`, `of_epilepsy`, `of_kidney`, `of_convulsion`, `of_findings`, `of_physician_id`, `of_date`, `log_time`, `of_fainting`) VALUES
-(4, 1, 'Jenna', 'Castro', 'Hassan', 'Female', 26, '', 'Headache', '', '', '', '', '', '', '', 'vomiting', 'ibuprofen ', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 53, '2019-05-02', '2019-05-02 08:04:09', ''),
-(24, 1, 'Alaiza', 'Tanaliga', 'Tampilic', 'Female', 25, 'a/b/c', 'Grade7-Findings', '110/90', '13/min', 'Normal', '36', '45', '157', 'a/b', 'a/b', 'a/b', '60/min', 'a/b', 'a/b', 'a/b', 'a/b/c', 'Needs_close_supervision', 'N/A', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', '', 60, '2022-12-02', '2022-12-02 03:24:02', 'NO'),
-(28, 1, 'Clarence', 'Tanaliga', 'Tampilic', 'Female', 21, 'a/b/c', 'Grade7-Findings', '155', '1223', 'Normal', '36', '45', '157', 'a/b', 'a', 'a/b', '60/min', 'a/b', 'a/b', 'a/b', 'a/b/c', 'Needs_close_supervision', 'N/A', 'NO', 'YES', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', '', 59, '2023-01-24', '2023-01-24 17:03:56', 'NO'),
-(30, 1, 'Clarence', 'Tanaliga', 'Tampilic', 'Female', 21, 'a', 'Grade9-Findings', '110/90', '13/min', 'Normal', '36', '45', '157', 'a/b', 'a', 'a', '60/min', 'a', 'a', 'a', 'a', 'Advised/Counseled', 'aaaa', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', '', 59, '2023-01-25', '2023-01-25 08:25:30', 'NO'),
-(31, 1, 'Clarence', 'Tanaliga', 'Tampilic', 'Female', 21, 'a', 'Grade9-Findings', '110/90', '13/min', 'Normal', '36', '45', '157', 'a/b', 'a', 'a', '60/min', 'a', 'a', 'a', 'a', 'Advised/Counseled', 'aaaa', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', '', 59, '2023-01-25', '2023-01-25 08:42:07', 'NO'),
-(32, 1, 'Clarence', 'Tanaliga', 'Tampilic', 'Female', 21, 'a', 'Grade9-Findings', '110/90', '13/min', 'Normal', '36', '45', '157', 'a/b', 'a', 'a', '60/min', 'a', 'a', 'a', 'a', 'Advised/Counseled', 'aaaa', 'YES', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', '', 61, '2023-01-25', '2023-01-25 08:45:43', 'NO');
+INSERT INTO `oldfindings` (`of_id`, `of_user_id`, `of_fname`, `of_mname`, `of_lname`, `of_suffix`, `of_gender`, `of_age`, `of_complaint`, `of_historypresentillness`, `of_bp`, `of_rr`, `of_cr`, `of_temp`, `of_wt`, `of_pr`, `of_physicalexam`, `of_diagnosis`, `of_medication`, `of_pulse`, `of_mouth`, `of_lungs`, `of_abdo`, `of_spine`, `of_remarks`, `of_others`, `of_allergy`, `of_asthma`, `of_anemia`, `of_bleeding`, `of_hailment`, `of_diabetes`, `of_epilepsy`, `of_kidney`, `of_convulsion`, `of_findings`, `of_physician_id`, `of_date`, `log_time`, `of_fainting`) VALUES
+(4, 1, 'Jenna', 'Castro', 'Hassan', '', 'Female', 26, '', 'Headache', '', '', '', '', '', '', '', 'vomiting', 'ibuprofen ', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 53, '2019-05-02', '2019-05-02 08:04:09', ''),
+(24, 1, 'Alaiza', 'Tanaliga', 'Tampilic', '', 'Female', 25, 'a/b/c', 'Grade7-Findings', '110/90', '13/min', 'Normal', '36', '45', '157', 'a/b', 'a/b', 'a/b', '60/min', 'a/b', 'a/b', 'a/b', 'a/b/c', 'Needs_close_supervision', 'N/A', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', '', 60, '2022-12-02', '2022-12-02 03:24:02', 'NO'),
+(31, 1, 'Clarence', 'Tanaliga', 'Tampilic', '', 'Female', 21, 'a', 'Grade9-Findings', '110/90', '13/min', 'Normal', '36', '45', '157', 'a/b', 'a', 'a', '60/min', 'a', 'a', 'a', 'a', 'Advised/Counseled', 'aaaa', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', '', 59, '2023-01-25', '2023-01-25 08:42:07', 'NO'),
+(32, 1, 'Clarence', 'Tanaliga', 'Tampilic', '', 'Female', 21, 'a', 'Grade9-Findings', '110/90', '13/min', 'Normal', '36', '45', '157', 'a/b', 'a', 'a', '60/min', 'a', 'a', 'a', 'a', 'Advised/Counseled', 'aaaa', 'YES', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', 'NO', '', 61, '2023-01-25', '2023-01-25 08:45:43', 'NO'),
+(34, 1, 'Juan', 'Ramos', 'Dela Cruz', '', 'Male', 20, '', 'Grade7-Findings', '110/90', '13/min', 'Normal', '36.4', '60', '155', '', '', '', '60/min', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 59, '2023-01-27', '2023-01-27 03:43:10', ''),
+(35, 1, 'Juan', 'Ramos', 'Dela Cruz', '', 'Male', 20, '', 'Grade7-Findings', '110/90', '13/min', 'Normal', '36.4', '60', '155', '', '', '', '60/min', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 61, '2023-01-27', '2023-01-27 03:43:31', '');
 
 -- --------------------------------------------------------
 
@@ -701,6 +705,7 @@ CREATE TABLE `patient_record` (
   `pr_lname` varchar(255) NOT NULL,
   `pr_fname` varchar(255) NOT NULL,
   `pr_mname` varchar(255) NOT NULL,
+  `pr_suffix` varchar(12) NOT NULL,
   `pr_addrs` varchar(255) NOT NULL,
   `pr_age` int(11) NOT NULL,
   `pr_bdate` date NOT NULL,
@@ -720,34 +725,35 @@ CREATE TABLE `patient_record` (
 -- Dumping data for table `patient_record`
 --
 
-INSERT INTO `patient_record` (`pr_id`, `pr_user_id`, `pr_date`, `pr_lname`, `pr_fname`, `pr_mname`, `pr_addrs`, `pr_age`, `pr_bdate`, `pr_bplace`, `pr_vaccinestat`, `pr_divi`, `pr_civilstat`, `pr_gen`, `pr_number`, `pr_religion`, `pr_occup`, `month`, `year`) VALUES
-('109342101029', 9, '2022-11-29', 'Nabor', 'Julian', 'Romano', '#3086-B Gumamela Ext. Gen T. De Leon Valenzuela City ', 17, '2005-07-24', 'Angeles City', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Female', '09994838209', 'Elma Nabor', 'Valenzuela National Highschool', 'NOV', '2022'),
-('111111111111', 27, '2022-11-07', 'Tampilic', 'Clarence', 'Tanaliga', '3117-A Reposo St. Brgy. 589', 21, '2001-10-11', 'Lubang, Occidental Mindoro', 'FullyVaccinated', 'Manila-City', 'RegionIV–MIMAROPA', 'Female', '09472599976', 'Albert Tampilic', 'Technology University of the Philippines', 'Nov', '2022'),
-('136251100382', 1, '2022-12-05', 'Canay', 'LJ Mae', 'Ermino', '#2 Galguerra comp. Encarnacion st. Marulas Valenzuela City', 16, '2006-01-08', 'Valenzuela', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Female', '09982335490', 'Joseph M. Canay', 'Valenzuela National Highschool', 'DEC', '2022'),
-('136513020409', 1, '2022-12-05', 'Conde', 'Mark Adrian', 'Bagasina', '#3 Cassanova Dr, Brgy. Culiat. Quezon City. ', 20, '2002-08-02', 'Quezon City', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Male', '09231369726', 'Marlon Conde', 'Valenzuela National Highschool', 'DEC', '2022'),
-('136513100130', 6, '2022-11-29', 'Conde', 'Jhon Patrick', 'Bagasina', '3078 Gumamela Abalos Bukid Ext.Gen t De leon Valenzuela City', 18, '2004-02-23', 'Valenzuela City', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Male', '09101795969', 'Marlon Conde', 'Valenzuela National Highschool', 'NOV', '2022'),
-('136588160164', 15, '2022-12-05', 'Fernando', 'Lia Julienne', 'Pablo', '1665 C. compound brgy 18 valenzuela city', 4, '2018-08-18', 'Manila', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Female', '09951961877', 'Maicah Fernando', 'Valenzuela National Highschool', 'DEC', '2022'),
-('136806100063', 7, '2022-11-29', 'Esteban', 'Ruth ', 'Dona', ' Valenzuela City', 17, '2005-05-23', 'Valenzuela Medical Center', 'Fully_Vaccinated_w/_Booster', 'Valenzuela-City', 'NCR', 'Female', '09339630511', 'Rodora Esteban', 'Valenzuela National Highschool', 'NOV', '2022'),
-('136824100042', 16, '2022-12-05', 'Colis', 'Arden', 'Guardiana ', '12M Herrera St, Marulas Valenzuela City ', 17, '2005-08-02', 'Manila', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Male', '09331169813', 'Ma. Lourdes G Colis', 'Valenzuela National Highschool', 'DEC', '2022'),
-('136825060065', 4, '2022-11-29', 'Bustarde', 'Kimberly Anne', 'Declines', '44 Galguerra Compound, Encarnacion St. Brgy. Marulas, Valenzuela City', 21, '2001-05-16', 'Malolos, Bulacan', 'Fully_Vaccinated_w/_Booster', 'Valenzuela-City', 'NCR', 'Female', '09182721882', 'Valentino Bustarde', 'Valenzuela National Highschool', 'NOV', '2022'),
-('136825090186', 11, '2022-11-30', 'Infiesto', 'Christian Loyd', 'Gaoiran', '33 Sandiego St. Marulas Valenzuela City', 19, '2003-11-23', 'Davao Del Norte City', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Male', '09216645892', 'Carl Infiesto', 'Valenzuela National Highschool', 'NOV', '2022'),
-('136825100224', 18, '2022-12-05', 'Mance', 'Bianca', 'Baltazar ', '207 f.bautista st marulas Valenzuela city', 17, '2005-04-04', 'Valenzuela ', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Female', '09636420857', 'Ma. Angelina Baltazar ', 'Valenzuela National Highschool', 'DEC', '2022'),
-('136825110006', 25, '2022-12-05', 'Aldana', 'Kurt', 'Sicat', '29 dama denotche marulas valenzuela city', 17, '2005-11-25', 'Marulas valenzuela ', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Male', '09319073974', 'Joan Sicat', 'Valenzuela National Highschool', 'DEC', '2022'),
-('136825120367', 1, '2022-11-29', 'Bustarde', 'Hainabelle', 'Declines', '44 jacinto extn galguerra compound marulas val city', 16, '2006-05-18', 'Bulacan', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Female', '09182721882', 'Anna Bustarde', 'Valenzuela National Highschool', 'NOV', '2022'),
-('136825194542', 2, '2022-11-29', 'Ignacio ', 'Sofia Denise ', 'Esquilona ', 'Riverside st, malabon city', 16, '2006-05-01', 'Valenzuela ', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Female', '09981904881', 'Salve & Ronald Ignacio ', 'Valenzuela National Highschool', 'NOV', '2022'),
-('136825358412', 13, '2022-12-05', 'Roca', 'Khyle Raven', 'Bustarde', '45 Galguerra Compound, Encarnacion St. Brgy. Marulas, Valenzuela City', 13, '2010-09-02', 'Valenzuela City', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Male', '09176303480', 'Jess Roca', 'Valenzuela National Highschool', 'DEC', '2022'),
-('136825782407', 12, '2022-12-05', 'Buan', 'Hazelle Vei', 'Renegado', '41 Galguerra Compound, Encarnacion Street Brgy. Marulas, Valenzuela City', 19, '2001-10-18', 'Caloocan City', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Female', '09361752322', 'Luz Renegado', 'Valenzuela National Highschool', 'DEC', '2022'),
-('136826100059', 19, '2022-12-05', 'Dupo', 'Cliford Duane', 'B.', '#21 C Reyes Compound, Marulas, Valenzuela City', 20, '2002-11-26', 'Valenzuela City', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Male', '09162267892', 'Grace B. Dupo', 'Valenzuela National Highschool', 'DEC', '2022'),
-('136826100099', 17, '2022-12-05', 'Loyola', 'Kench Justin ', 'Azada', '104 capricorn st marulas valenzuela city', 17, '2005-04-01', 'Manila', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Male', '09665489195', 'Josie Loyola', 'Valenzuela National Highschool', 'DEC', '2022'),
-('136826110101', 21, '2022-12-05', 'Caderao', 'Lesly ', 'M', '81 Capricorn st.batimana cmpd marulas Valenzuela city ', 18, '2004-01-01', 'Valenzuela ', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Female', '09372754918', 'Teresita Monsing', 'Valenzuela National Highschool', 'DEC', '2022'),
-('136826120251', 8, '2022-11-29', 'Bonacua', 'Nahjela Feona', 'Catador', '69t.concepcion st.marulas, Valenzuela City', 17, '2005-09-19', 'Tondo, Manila', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Female', '09323715251', 'Hazel C. Salvador', 'Valenzuela National Highschool', 'NOV', '2022'),
-('136826293479', 14, '2022-12-05', 'Dangat', 'Bea Erika', 'De Vera', '31 Galguerra Compound, Encarnacion st. Brgy. Marulas, Valenzuela City', 18, '2001-08-18', 'Valenzuela City', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Female', '09751245212', 'Willie Dangat', 'Valenzuela National Highschool', 'DEC', '2022'),
-('136827100077', 20, '2022-12-05', 'David', 'Cheace Eunice', 'Tan', '17 Tampoy 2 Marulas Valenzuela City', 17, '2005-06-12', 'Valenzuela City', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Female', '09751038496', 'Cheryl David', 'Valenzuela National Highschool', 'DEC', '2022'),
-('136827110024', 26, '2022-12-05', 'bonguit', 'janah', 'mendoza', '2 fatima ave pag asa subdivision marulas valenzuela city', 16, '2006-06-01', 'our lady of fatima medical center', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Female', '09952165045', 'Maria Tita Bonguit', 'Valenzuela National Highschool', 'DEC', '2022'),
-('227002100042', 5, '2022-11-29', 'Bonacua', 'King Prots', 'Atchico', '3078 Gumamela Ext. Gen t deleon Valenzuela City', 17, '2022-08-01', 'Valenzuela City', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Male', '09104526370', 'Virginia Bonacua', 'Valenzuela National Highschool', 'NOV', '2022'),
-('403547150015', 22, '2022-12-05', 'Javier', 'Hanika Angela', 'Ortiz', 'Little tagaytay marulas valenzuela', 16, '2006-07-18', 'Provincial Hospital', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Female', '09650513354', 'Princess Ortiz', 'Valenzuela National Highschool', 'DEC', '2022'),
-('407203150113', 3, '2022-11-29', 'Roca', 'Jesse Jandrick', 'Bustarde', '#45 Galguerra compund, Encarnacion St., Marulas, Valenzuela City', 13, '2009-04-11', 'Fatima University Medical Center, Valenzuela City', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Male', '09176303480', 'Rosalie B. Roca', 'Valenzuela National Highschool', 'NOV', '2022'),
-('407203150299', 10, '2022-11-29', 'Lee', 'Francheska Jairha ', 'Catador', '24 Encarnacion Street Marulas Valenzuela City', 15, '2006-12-07', 'Valenzuela city', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Female', '09981904881', 'Joey Lee', 'Valenzuela National Highschool', 'NOV', '2022');
+INSERT INTO `patient_record` (`pr_id`, `pr_user_id`, `pr_date`, `pr_lname`, `pr_fname`, `pr_mname`, `pr_suffix`, `pr_addrs`, `pr_age`, `pr_bdate`, `pr_bplace`, `pr_vaccinestat`, `pr_divi`, `pr_civilstat`, `pr_gen`, `pr_number`, `pr_religion`, `pr_occup`, `month`, `year`) VALUES
+('109342101029', 9, '2022-11-29', 'Nabor', 'Julian', 'Romano', '', '#3086-B Gumamela Ext. Gen T. De Leon Valenzuela City ', 17, '2005-07-24', 'Angeles City', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Female', '09994838209', 'Elma Nabor', 'Valenzuela National Highschool', 'NOV', '2022'),
+('111111111111', 27, '2022-11-07', 'Tampilic', 'Clarence', 'Tanaliga', '', '3117-A Reposo St. Brgy. 589', 21, '2001-10-11', 'Lubang, Occidental Mindoro', 'FullyVaccinated', 'Manila-City', 'RegionIV–MIMAROPA', 'Female', '09472599976', 'Albert Tampilic', 'Technology University of the Philippines', 'Nov', '2022'),
+('136251100382', 1, '2022-12-05', 'Canay', 'LJ Mae', 'Ermino', '', '#2 Galguerra comp. Encarnacion st. Marulas Valenzuela City', 16, '2006-01-08', 'Valenzuela', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Female', '09982335490', 'Joseph M. Canay', 'Valenzuela National Highschool', 'DEC', '2022'),
+('136513020409', 1, '2022-12-05', 'Conde', 'Mark Adrian', 'Bagasina', '', '#3 Cassanova Dr, Brgy. Culiat. Quezon City. ', 20, '2002-08-02', 'Quezon City', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Male', '09231369726', 'Marlon Conde', 'Valenzuela National Highschool', 'DEC', '2022'),
+('136513100130', 6, '2022-11-29', 'Conde', 'Jhon Patrick', 'Bagasina', '', '3078 Gumamela Abalos Bukid Ext.Gen t De leon Valenzuela City', 18, '2004-02-23', 'Valenzuela City', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Male', '09101795969', 'Marlon Conde', 'Valenzuela National Highschool', 'NOV', '2022'),
+('136588160164', 15, '2022-12-05', 'Fernando', 'Lia Julienne', 'Pablo', '', '1665 C. compound brgy 18 valenzuela city', 4, '2018-08-18', 'Manila', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Female', '09951961877', 'Maicah Fernando', 'Valenzuela National Highschool', 'DEC', '2022'),
+('136806100063', 7, '2022-11-29', 'Esteban', 'Ruth ', 'Dona', '', ' Valenzuela City', 17, '2005-05-23', 'Valenzuela Medical Center', 'Fully_Vaccinated_w/_Booster', 'Valenzuela-City', 'NCR', 'Female', '09339630511', 'Rodora Esteban', 'Valenzuela National Highschool', 'NOV', '2022'),
+('136824100042', 16, '2022-12-05', 'Colis', 'Arden', 'Guardiana ', '', '12M Herrera St, Marulas Valenzuela City ', 17, '2005-08-02', 'Manila', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Male', '09331169813', 'Ma. Lourdes G Colis', 'Valenzuela National Highschool', 'DEC', '2022'),
+('136825060065', 4, '2022-11-29', 'Bustarde', 'Kimberly Anne', 'Declines', '', '44 Galguerra Compound, Encarnacion St. Brgy. Marulas, Valenzuela City', 21, '2001-05-16', 'Malolos, Bulacan', 'Fully_Vaccinated_w/_Booster', 'Valenzuela-City', 'NCR', 'Female', '09182721882', 'Valentino Bustarde', 'Valenzuela National Highschool', 'NOV', '2022'),
+('136825090186', 11, '2022-11-30', 'Infiesto', 'Christian Loyd', 'Gaoiran', '', '33 Sandiego St. Marulas Valenzuela City', 19, '2003-11-23', 'Davao Del Norte City', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Male', '09216645892', 'Carl Infiesto', 'Valenzuela National Highschool', 'NOV', '2022'),
+('136825100224', 18, '2022-12-05', 'Mance', 'Bianca', 'Baltazar ', '', '207 f.bautista st marulas Valenzuela city', 17, '2005-04-04', 'Valenzuela ', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Female', '09636420857', 'Ma. Angelina Baltazar ', 'Valenzuela National Highschool', 'DEC', '2022'),
+('136825110006', 25, '2022-12-05', 'Aldana', 'Kurt', 'Sicat', '', '29 dama denotche marulas valenzuela city', 17, '2005-11-25', 'Marulas valenzuela ', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Male', '09319073974', 'Joan Sicat', 'Valenzuela National Highschool', 'DEC', '2022'),
+('136825120367', 1, '2022-11-29', 'Bustarde', 'Hainabelle', 'Declines', '', '44 jacinto extn galguerra compound marulas val city', 16, '2006-05-18', 'Bulacan', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Female', '09182721882', 'Anna Bustarde', 'Valenzuela National Highschool', 'NOV', '2022'),
+('136825194542', 2, '2022-11-29', 'Ignacio ', 'Sofia Denise ', 'Esquilona ', '', 'Riverside st, malabon city', 16, '2006-05-01', 'Valenzuela ', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Female', '09981904881', 'Salve & Ronald Ignacio ', 'Valenzuela National Highschool', 'NOV', '2022'),
+('136825358412', 13, '2022-12-05', 'Roca', 'Khyle Raven', 'Bustarde', '', '45 Galguerra Compound, Encarnacion St. Brgy. Marulas, Valenzuela City', 13, '2010-09-02', 'Valenzuela City', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Male', '09176303480', 'Jess Roca', 'Valenzuela National Highschool', 'DEC', '2022'),
+('136825782407', 12, '2022-12-05', 'Buan', 'Hazelle Vei', 'Renegado', '', '41 Galguerra Compound, Encarnacion Street Brgy. Marulas, Valenzuela City', 19, '2001-10-18', 'Caloocan City', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Female', '09361752322', 'Luz Renegado', 'Valenzuela National Highschool', 'DEC', '2022'),
+('136826100059', 19, '2022-12-05', 'Dupo', 'Cliford Duane', 'B.', '', '#21 C Reyes Compound, Marulas, Valenzuela City', 20, '2002-11-26', 'Valenzuela City', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Male', '09162267892', 'Grace B. Dupo', 'Valenzuela National Highschool', 'DEC', '2022'),
+('136826100099', 17, '2022-12-05', 'Loyola', 'Kench Justin ', 'Azada', '', '104 capricorn st marulas valenzuela city', 17, '2005-04-01', 'Manila', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Male', '09665489195', 'Josie Loyola', 'Valenzuela National Highschool', 'DEC', '2022'),
+('136826110101', 21, '2022-12-05', 'Caderao', 'Lesly ', 'M', '', '81 Capricorn st.batimana cmpd marulas Valenzuela city ', 18, '2004-01-01', 'Valenzuela ', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Female', '09372754918', 'Teresita Monsing', 'Valenzuela National Highschool', 'DEC', '2022'),
+('136826120251', 8, '2022-11-29', 'Bonacua', 'Nahjela Feona', 'Catador', '', '69t.concepcion st.marulas, Valenzuela City', 17, '2005-09-19', 'Tondo, Manila', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Female', '09323715251', 'Hazel C. Salvador', 'Valenzuela National Highschool', 'NOV', '2022'),
+('136826293479', 14, '2022-12-05', 'Dangat', 'Bea Erika', 'De Vera', '', '31 Galguerra Compound, Encarnacion st. Brgy. Marulas, Valenzuela City', 18, '2001-08-18', 'Valenzuela City', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Female', '09751245212', 'Willie Dangat', 'Valenzuela National Highschool', 'DEC', '2022'),
+('136827100077', 20, '2022-12-05', 'David', 'Cheace Eunice', 'Tan', '', '17 Tampoy 2 Marulas Valenzuela City', 17, '2005-06-12', 'Valenzuela City', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Female', '09751038496', 'Cheryl David', 'Valenzuela National Highschool', 'DEC', '2022'),
+('136827110024', 26, '2022-12-05', 'bonguit', 'janah', 'mendoza', '', '2 fatima ave pag asa subdivision marulas valenzuela city', 16, '2006-06-01', 'our lady of fatima medical center', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Female', '09952165045', 'Maria Tita Bonguit', 'Valenzuela National Highschool', 'DEC', '2022'),
+('227002100042', 5, '2022-11-29', 'Bonacua', 'King Prots', 'Atchico', '', '3078 Gumamela Ext. Gen t deleon Valenzuela City', 17, '2022-08-01', 'Valenzuela City', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Male', '09104526370', 'Virginia Bonacua', 'Valenzuela National Highschool', 'NOV', '2022'),
+('328371287319', 1, '2023-01-27', 'Dela Cruz', 'Juan', 'Ramos', 'Sr.', '44 Galguerra Compound Encarnation St., Valenzuela City', 20, '2023-01-27', 'Baguio City', 'FullyVaccinated', 'Manila-City', 'NCR', 'Male', '09125323217', 'Mr. Dela Cruz', 'Technology University of the Philippines', 'Jan', '2023'),
+('403547150015', 22, '2022-12-05', 'Javier', 'Hanika Angela', 'Ortiz', '', 'Little tagaytay marulas valenzuela', 16, '2006-07-18', 'Provincial Hospital', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Female', '09650513354', 'Princess Ortiz', 'Valenzuela National Highschool', 'DEC', '2022'),
+('407203150113', 3, '2022-11-29', 'Roca', 'Jesse Jandrick', 'Bustarde', '', '#45 Galguerra compund, Encarnacion St., Marulas, Valenzuela City', 13, '2009-04-11', 'Fatima University Medical Center, Valenzuela City', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Male', '09176303480', 'Rosalie B. Roca', 'Valenzuela National Highschool', 'NOV', '2022'),
+('407203150299', 10, '2022-11-29', 'Lee', 'Francheska Jairha ', 'Catador', '', '24 Encarnacion Street Marulas Valenzuela City', 15, '2006-12-07', 'Valenzuela city', 'FullyVaccinated', 'Valenzuela-City', 'NCR', 'Female', '09981904881', 'Joey Lee', 'Valenzuela National Highschool', 'NOV', '2022');
 
 -- --------------------------------------------------------
 
@@ -862,9 +868,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`u_id`, `u_fname`, `u_user`, `u_pass`, `u_secretquestion`, `u_secretanswer`, `date_registered`) VALUES
-(1, 'Jomer', 'admin', '$2y$10$2VQOY6mwW.qVEyjWjUy2deYaK5oj6qmx.1JEGqA5p5WBLDDo7seHa', 'What was your childhood nickname?', '0043f605eeeae08811074cc2f26c5126d21b24da', '2019-03-12 13:35:12'),
-(3, 'admin', 'admin1', '$2y$10$sPNp25r0Y9yPae4neC3TK.RdIliPu0lu6rnZmP3EQAgNiiDeD56TO', 'What was your childhood nickname?', 'a58f327705b16842a432710949f4fc0cee0071da', '2019-05-09 02:22:24'),
-(5, 'admin', 'admin12', '$2y$10$sPNp25r0Y9yPae4neC3TK.RdIliPu0lu6rnZmP3EQAgNiiDeD56TO', '', '', '2019-05-09 03:19:30');
+(1, 'Justin', 'admin', '$2y$10$ARoSHf7TAHqpYOaRE9U2Te0N.UVcRfKEsPCHuZ6CFf3tJP2xyYJly', 'What was your childhood nickname?', '0043f605eeeae08811074cc2f26c5126d21b24da', '2019-03-12 13:35:12'),
+(2, 'clang', 'clang', '$2y$10$ARoSHf7TAHqpYOaRE9U2Te0N.UVcRfKEsPCHuZ6CFf3tJP2xyYJly', 'What is the name of your father?', 'Albert', '2023-01-27 05:17:24');
 
 -- --------------------------------------------------------
 
@@ -1085,7 +1090,7 @@ ALTER TABLE `fieldsphysician`
 -- AUTO_INCREMENT for table `findings`
 --
 ALTER TABLE `findings`
-  MODIFY `f_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
+  MODIFY `f_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=85;
 
 --
 -- AUTO_INCREMENT for table `gender`
@@ -1115,7 +1120,7 @@ ALTER TABLE `oldadmission`
 -- AUTO_INCREMENT for table `oldfindings`
 --
 ALTER TABLE `oldfindings`
-  MODIFY `of_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `of_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT for table `physicians`
@@ -1145,7 +1150,7 @@ ALTER TABLE `status`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `u_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `u_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `vaccinestat`

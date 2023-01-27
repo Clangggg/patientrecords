@@ -36,6 +36,7 @@
                     <option>What was your childhood nickname? </option>
                     <option>In what city or town was your first job? </option>
                     <option>What was your dream job as a child? </option>
+                    <option>What is the name of your father?</option>
                   </select>
                   <div class="text-danger text-center"><?php echo form_error('secquestion'); ?></div>
                 </div>
