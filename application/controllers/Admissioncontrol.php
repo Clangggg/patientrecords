@@ -363,8 +363,8 @@ $this->form_validation->set_rules('a_cr', 'Capillary Refill', 'required');
 $this->form_validation->set_rules('a_temp', 'Temperature', 'required');
 $this->form_validation->set_rules('a_wt', 'Weight', 'required');
 $this->form_validation->set_rules('a_pr', 'Pulse Rate', 'required');
-$this->form_validation->set_rules('a_physician', 'Attending Physician', 'required');
-$this->form_validation->set_rules('a_oralphys', 'Oral Physician', 'required');
+// $this->form_validation->set_rules('a_physician', 'Attending Physician');
+// $this->form_validation->set_rules('a_oralphys', 'Oral Physician');
 
 
 

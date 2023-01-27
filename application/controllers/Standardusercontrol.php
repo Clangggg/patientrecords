@@ -434,6 +434,7 @@ $data['get_findings_view'] = $this->Record_model->get_data_findings($findings_id
 $data['get_cr'] = $this->Record_model->get_cr();
 $data['get_remarks'] = $this->Record_model->get_remarks();
 $data['get_details'] = $this->Record_model->get_details();
+$data['get_status'] = $this->Record_model->get_status();
 $data['title'] = 'Add to Teacher';
 $data['topbar'] = 'navbar-default';
 $data['form'] = 'admission/addfindingsdataform';
