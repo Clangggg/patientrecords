@@ -706,8 +706,8 @@ public function admit_form($pr_id){
 
  
 $this->form_validation->set_rules('a_wards', 'Wards', 'trim|required',array('required'=>'Please select ward'));
-$this->form_validation->set_rules('a_chargeaccount', 'Charge Account to', 'required');
-$this->form_validation->set_rules('a_relationtopatient', 'Relation to Patient', 'required');
+$this->form_validation->set_rules('a_chargeaccount', 'Charge Account to');
+$this->form_validation->set_rules('a_relationtopatient', 'Relation to Patient');
 
 
 
