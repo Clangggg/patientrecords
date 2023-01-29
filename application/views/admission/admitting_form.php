@@ -10,18 +10,13 @@
                  </div>
                  <div class="h6 mb-1  text-gray-800">
 
-                     <select name="a_wards" class="form-control">
-                         <option value="">Select</option>
-                         <?php if(count($get_ward)): ?>
-                         <?php foreach($get_ward as $ward): ?>
-                         <option value=<?php echo $ward->w_name; ?><?php echo set_select('a_wards', $ward->w_name); ?>>
-                             <?php echo $ward->w_name; ?></option>
-                         <?php endforeach; ?>
-                         <?php endif; ?>
-                     </select>
+                 <input class="form-control <?= (form_error('a_wards') == "" ? '':'is-invalid') ?>"
+                         type="text" name="a_wards" placeholder="Reason of visit"
+                         value="<?php echo set_value('a_wards') ?>">
                      <div class="text-danger text-center"><?php echo form_error('a_wards'); ?>
 
                      </div>
+                    
                  </div>
              </div>
          </div>
