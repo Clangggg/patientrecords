@@ -29,7 +29,7 @@ $this->form_validation->set_rules('lrn', 'LRN', 'trim|required|numeric|min_lengt
 $this->form_validation->set_rules('lname', 'Lastname', 'trim|required');
 $this->form_validation->set_rules('fname', 'Firstname', 'trim|required');
 $this->form_validation->set_rules('middlen', 'Middlename', 'trim|required');
-$this->form_validation->set_rules('suffix', 'Suffix', 'trim|required');
+$this->form_validation->set_rules('suffix', 'Suffix');
 $this->form_validation->set_rules('address', 'Address', 'required');
 $this->form_validation->set_rules('occup', 'Occupation', 'required');
 $this->form_validation->set_rules('age', 'Age', 'trim|required|numeric|min_length[2]|max_length[2]');
@@ -136,7 +136,7 @@ $this->form_validation->set_rules('lrn', 'LRN', 'required|numeric|min_length[12]
 $this->form_validation->set_rules('lname', 'Lastname', 'required');
 $this->form_validation->set_rules('fname', 'Firstname', 'required');
 $this->form_validation->set_rules('middlen', 'Middlename', 'required');
-$this->form_validation->set_rules('suffix', 'Suffix', 'required');
+$this->form_validation->set_rules('suffix', 'Suffix');
 $this->form_validation->set_rules('address', 'Address', 'required');
 $this->form_validation->set_rules('birthplace', 'Birthplace', 'required');
 $this->form_validation->set_rules('occup', 'Occupation', 'required');
