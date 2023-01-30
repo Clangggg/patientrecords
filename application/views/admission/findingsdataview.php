@@ -947,11 +947,11 @@
                     (Check the references below) </p>
                 <div class="frame-12-NT9"
                     style="align-items: center; display: flex;  height: 3.9rem; font-size: 1rem; width: 100%; ">
-                    <p style="font-size:11px; color:blue; font-weight:700; margin-left:24.3%; margin-bottom:none;">
+                    <p style="font-size:11px; color:blue; font-weight:700; margin-left:24.9%; margin-bottom:none;">
                         CONDITION </p>
                     <div class="frame-1-hVR" style="align-items: center; border: solid 0.1rem #000000; box-sizing: border-box; color: #000000;
                          display: flex; font-size: 0.8rem;  font-weight: 600; height: 55%; justify-content: center;  width: 2.3rem; 
-                         margin-left:3%" id="2:47">
+                         margin-left:2.8%" id="2:47">
                         <?php if($get_findings_view->f_conditionfa): ?>
                         <?php echo $get_findings_view->f_conditionfa; ?>
                         <?php else: ?>
@@ -1023,7 +1023,7 @@
                     </div>
                     <div class="frame-9-ZT5" style=" align-items: center; border: solid 0.1rem #000000; box-sizing: border-box; color: #000000;
                          display: flex; font-size: 0.8rem; font-weight: 600; height: 55%; justify-content: center;
-                        width: 2.3rem;" id="2:63">
+                        width: 2.1rem;" id="2:63">
                         <?php if($get_findings_view->f_conditionfi): ?>
                         <?php echo $get_findings_view->f_conditionfi; ?>
                         <?php else: ?>
@@ -1032,7 +1032,7 @@
                     </div>
                     <div class="frame-10-ejR" style="align-items: center;  border: solid 0.1rem #000000;  box-sizing: border-box; color: #000000;
                          display: flex; font-size: 0.8rem; font-weight: 600; height: 55%; justify-content: center;
-                         width: 2.3rem;" id="2:65">
+                         width: 2.2rem;" id="2:65">
                         <?php if($get_findings_view->f_conditionfj): ?>
                         <?php echo $get_findings_view->f_conditionfj; ?>
                         <?php else: ?>
@@ -1041,7 +1041,7 @@
                     </div>
                 </div>
 
-                <img width="49%" height="50%" style="margin-left:23.2%; margin-top:none;"
+                <img width="49.8%" height="50%" style="margin-left:24%; margin-top:none;"
                     src="<?php echo base_url(); ?>img/one.png">
 
                 <div class="frame-12-NT9"
@@ -1344,7 +1344,7 @@
                 </div>
 
 
-                <img width="56.1%" height="58%" style="margin-left:21.1%; margin-top:none;"
+                <img width="58%" height="58%" style="margin-left:21.3%; margin-top:none;"
                     src="<?php echo base_url(); ?>img/two.png">
 
                 <div class="frame-12-NT9"
@@ -1488,7 +1488,7 @@
                     </div>
                     <div class="frame-10-ejR" style="align-items: center;  border: solid 0.1rem #000000;  box-sizing: border-box; color: #000000;
                          display: flex; font-size: 0.8rem; font-weight: 600; height: 55%; justify-content: center;
-                         width: 2.5rem;" id="2:65">
+                         width: 2.2rem;" id="2:65">
                         <?php if($get_findings_view->f_conditiontp): ?>
                         <?php echo $get_findings_view->f_conditiontp; ?>
                         <?php else: ?>
@@ -1637,7 +1637,7 @@
                     </div>
                     <div class="frame-10-ejR" style="align-items: center;  border: solid 0.1rem #000000;  box-sizing: border-box; color: #000000;
                          display: flex; font-size: 0.8rem; font-weight: 600; height: 55%; justify-content: center;
-                         width: 2.5rem;" id="2:65">
+                         width: 2.1rem;" id="2:65">
                         <?php if($get_findings_view->f_treatsp): ?>
                         <?php echo $get_findings_view->f_treatsp; ?>
                         <?php else: ?>
@@ -1646,12 +1646,12 @@
                     </div>
                 </div>
 
-                <img width="50.4%" height="52.7%" style="margin-left:25.1%; margin-top:none;"
+                <img width="52.7%" height="52.7%" style="margin-left:25%; margin-top:none;"
                     src="<?php echo base_url(); ?>img/three.png">
 
                 <div class="frame-12-NT9"
                     style="align-items: center; display: flex;  height: 3.9rem; font-size: 1rem; width: 100%; ">
-                    <p style="font-size:11px; color:blue; font-weight:700; margin-left:25.1%; margin-bottom:none;">
+                    <p style="font-size:11px; color:blue; font-weight:700; margin-left:25.2%; margin-bottom:none;">
                         CONDITION </p>
                     <div class="frame-1-hVR" style="align-items: center; border: solid 0.1rem #000000; box-sizing: border-box; color: #000000;
                          display: flex; font-size: 0.8rem;  font-weight: 600; height: 55%; justify-content: center;  width: 2.3rem; 
