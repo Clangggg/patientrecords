@@ -126,18 +126,18 @@ public function add_multiple_findings(){
 
 
 $this->form_validation->set_rules('a_casenumber', 'Student LRN', 'trim|required|numeric|min_length[12]|max_length[12]');
-$this->form_validation->set_rules('a_chief_complaint', 'Chief Complaint', 'required');
-$this->form_validation->set_rules('a_historyillness', 'History of Present Illness', 'required');
+$this->form_validation->set_rules('a_chief_complaint', 'Eye/Ear/Nose', 'required');
+$this->form_validation->set_rules('a_historyillness', 'Examination Details', 'required');
 $this->form_validation->set_rules('a_bp', 'Blood Pressure', 'required');
 $this->form_validation->set_rules('a_rr', 'Respiratory Rate', 'required');
-$this->form_validation->set_rules('a_pulse', 'Pulserate', 'required');
-$this->form_validation->set_rules('a_cr', 'Capillary Refill', 'required');
+$this->form_validation->set_rules('a_pulse', 'Pulse Rate', 'required');
+$this->form_validation->set_rules('a_cr', 'Nutritional Status', 'required');
 $this->form_validation->set_rules('a_temp', 'Temperature', 'required');
 $this->form_validation->set_rules('a_wt', 'Weight', 'required');
-$this->form_validation->set_rules('a_pr', 'Pulse Rate', 'required');
-$this->form_validation->set_rules('a_physicalexam', 'Physical Examination', 'required');
-$this->form_validation->set_rules('a_diagnosis', 'Diagnosis', 'required');
-$this->form_validation->set_rules('a_medical_treatment', 'Medication/Treatment', 'required');
+$this->form_validation->set_rules('a_pr', 'Height', 'required');
+$this->form_validation->set_rules('a_physicalexam', 'Visual Acuity', 'required');
+$this->form_validation->set_rules('a_diagnosis', 'Hearing', 'required');
+$this->form_validation->set_rules('a_medical_treatment', 'Skin/Scalp', 'required');
 $this->form_validation->set_rules('a_mouth', 'Mouth', 'required');
 $this->form_validation->set_rules('a_lungs', 'Lungs', 'required');
 $this->form_validation->set_rules('a_abdo', 'Abdomen', 'required');
@@ -504,10 +504,10 @@ public function admissionviewform(){
 
 public function add_multiple_admission(){
 
-$this->form_validation->set_rules('a_caseno','Patient Case Number', 'required|numeric|min_length[12]|max_length[12]');
+$this->form_validation->set_rules('a_caseno','Student LRN No.', 'required|numeric|min_length[12]|max_length[12]');
 $this->form_validation->set_rules('a_date','Date', 'required');
-$this->form_validation->set_rules('a_relationtopatient', 'Relation to Patient', 'required');
-$this->form_validation->set_rules('a_wards', 'Wards', 'required');
+$this->form_validation->set_rules('a_relationtopatient', 'Intervention', 'required');
+$this->form_validation->set_rules('a_wards', 'Condition', 'required');
 
 
 if($this->form_validation->run() == FALSE){

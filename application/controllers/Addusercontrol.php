@@ -153,7 +153,7 @@ public function add_user(){
 
 $this->form_validation->set_rules('a_user', 'Username', 'trim|required|is_unique[standardusers.su_user]', array('is_unique'=>'Username already exist!'));
 $this->form_validation->set_rules('a_pass', 'Password', 'trim|required|min_length[9]');
-$this->form_validation->set_rules('a_fname', 'Firstname', 'trim|required');
+$this->form_validation->set_rules('a_fname', 'Fullname', 'trim|required');
 $this->form_validation->set_rules('a_position', 'Position', 'trim|required', array('required'=>'Please select position'));
 
 if($this->form_validation->run() == FALSE){
@@ -198,7 +198,7 @@ public function edit_user($user_id){
 
 $this->form_validation->set_rules('e_user', 'Username', 'trim|required');
 $this->form_validation->set_rules('e_pass', 'Password', 'trim|required|min_length[9]');
-$this->form_validation->set_rules('e_fname', 'Firstname', 'trim|required');
+$this->form_validation->set_rules('e_fname', 'Fullname', 'trim|required');
 $this->form_validation->set_rules('e_position', 'Position', 'trim|required', array('required'=>'Please select position'));
 
 if($this->form_validation->run() == FALSE){

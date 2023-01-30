@@ -395,24 +395,24 @@ $this->form_validation->set_rules('e_patientmname','Middlename', 'required|trim'
 $this->form_validation->set_rules('e_patientlname','Lastname', 'required');
 $this->form_validation->set_rules('e_gender','Gender', 'required|trim');
 $this->form_validation->set_rules('e_age','Age', 'required|trim');
-$this->form_validation->set_rules('e_chief_complaint','Chief Complaint', 'required');
-$this->form_validation->set_rules('e_historyillness','History of Illness', 'required');
+$this->form_validation->set_rules('e_chief_complaint','Eye/Ear/Nose', 'required');
+$this->form_validation->set_rules('e_historyillness','Examination Details', 'required');
 $this->form_validation->set_rules('e_bp','Blood Pressure', 'required');
 $this->form_validation->set_rules('e_rr','Respiratory Rate', 'required');
-$this->form_validation->set_rules('e_pulse','Pulserate', 'required');
-$this->form_validation->set_rules('e_physicalexam','Physical Examination', 'required');
+$this->form_validation->set_rules('e_pulse','Pulse Rate', 'required');
+$this->form_validation->set_rules('e_physicalexam','Visual Acuity', 'required');
 $this->form_validation->set_rules('e_mouth','Mouth', 'required');
 $this->form_validation->set_rules('e_lungs','Lungs', 'required');
 $this->form_validation->set_rules('e_abdo','Abdomen', 'required');
 $this->form_validation->set_rules('e_spine','Spine', 'required');
 $this->form_validation->set_rules('e_remarks','Remarks', 'required');
-$this->form_validation->set_rules('e_others','Others', 'required');
-$this->form_validation->set_rules('e_cr','Capillary Refill', 'required');
+$this->form_validation->set_rules('e_others','Others');
+$this->form_validation->set_rules('e_cr','Nutritional Status', 'required');
 $this->form_validation->set_rules('e_temp','Temperature', 'required');
 $this->form_validation->set_rules('e_wt','Weight', 'required');
-$this->form_validation->set_rules('e_pr','Pulse Rate', 'required');
-$this->form_validation->set_rules('e_diagnosis','Diagnosis', 'required');
-$this->form_validation->set_rules('e_medical_treatment','Medication / Treatment', 'required');
+$this->form_validation->set_rules('e_pr','Height', 'required');
+$this->form_validation->set_rules('e_diagnosis','Hearing', 'required');
+$this->form_validation->set_rules('e_medical_treatment','Skin/Scalp', 'required');
 $this->form_validation->set_rules('e_allergy','Allergy', 'required');
 $this->form_validation->set_rules('e_asthma','Asthma', 'required');
 $this->form_validation->set_rules('e_anemia','Anemia', 'required');
@@ -423,7 +423,7 @@ $this->form_validation->set_rules('e_epilepsy','Epilepsy', 'required');
 $this->form_validation->set_rules('e_kidney','Kidney disease', 'required');
 $this->form_validation->set_rules('e_convulsion','Convulsion', 'required');
 $this->form_validation->set_rules('e_fainting','Fainting', 'required');
-$this->form_validation->set_rules('e_physician','Username','required', array('required' => 'Please select the username of the doctor!'));
+$this->form_validation->set_rules('e_physician','Username','required', array('required' => 'Please select the teacher!'));
 
 if($this->form_validation->run() == FALSE){
 

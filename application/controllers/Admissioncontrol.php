@@ -31,15 +31,15 @@ $this->form_validation->set_rules('fname', 'Firstname', 'trim|required');
 $this->form_validation->set_rules('middlen', 'Middlename', 'trim|required');
 $this->form_validation->set_rules('suffix', 'Suffix');
 $this->form_validation->set_rules('address', 'Address', 'required');
-$this->form_validation->set_rules('occup', 'Occupation', 'required');
+$this->form_validation->set_rules('occup', 'School', 'required');
 $this->form_validation->set_rules('age', 'Age', 'trim|required|numeric|min_length[2]|max_length[2]');
 $this->form_validation->set_rules('gen', 'Gender', 'trim|required',array('required'=>'Please select gender'));
 $this->form_validation->set_rules('birthplace', 'Birthplace', 'required');
 $this->form_validation->set_rules('datebirth', 'Date of Birth', 'trim|required');
-$this->form_validation->set_rules('civilstat', 'Civil Status', 'required');
+$this->form_validation->set_rules('civilstat', 'Region', 'required');
 $this->form_validation->set_rules('divi', 'Division', 'trim|required');
 $this->form_validation->set_rules('vaccinestat', 'Vaccination Status', 'required');
-$this->form_validation->set_rules('religion', 'Religion', 'trim|required');
+$this->form_validation->set_rules('religion', 'Parent/Guardian', 'trim|required');
 $this->form_validation->set_rules('number', 'Mobile/Tel No.', 'trim|required');
 
 
@@ -139,14 +139,14 @@ $this->form_validation->set_rules('middlen', 'Middlename', 'required');
 $this->form_validation->set_rules('suffix', 'Suffix');
 $this->form_validation->set_rules('address', 'Address', 'required');
 $this->form_validation->set_rules('birthplace', 'Birthplace', 'required');
-$this->form_validation->set_rules('occup', 'Occupation', 'required');
+$this->form_validation->set_rules('occup', 'School', 'required');
 $this->form_validation->set_rules('age', 'Age', 'required|numeric|min_length[2]|max_length[2]');
 $this->form_validation->set_rules('gen', 'Gender', 'required',array('required'=>'Please select gender'));
 $this->form_validation->set_rules('datebirth', 'Date of Birth', 'required');
-$this->form_validation->set_rules('civilstat', 'Civil Status', 'required');
+$this->form_validation->set_rules('civilstat', 'Region', 'required');
 $this->form_validation->set_rules('divi', 'Division', 'required');
 $this->form_validation->set_rules('vaccinestat', 'Vaccination Status', 'required');
-$this->form_validation->set_rules('religion', 'Religion', 'required');
+$this->form_validation->set_rules('religion', 'Parent/Guardian', 'required');
 $this->form_validation->set_rules('number', 'Mobile/Tel No.', 'required');
 
 
@@ -233,15 +233,15 @@ public function edit_option_process($pr_id) {
 
 
 $this->form_validation->set_rules('e_address', 'Address', 'required');
-$this->form_validation->set_rules('e_occup', 'Occupation', 'required');
+$this->form_validation->set_rules('e_occup', 'School', 'required');
 $this->form_validation->set_rules('e_age', 'Age', 'trim|required|numeric|min_length[2]|max_length[2]');
 $this->form_validation->set_rules('e_gen', 'Gender', 'trim|required',array('required'=>'Please select gender'));
 $this->form_validation->set_rules('e_bplace', 'Birthplace', 'required');
 $this->form_validation->set_rules('e_bdate', 'Date of Birth', 'trim|required');
-$this->form_validation->set_rules('e_civilstat', 'Civil Status', 'required');
+$this->form_validation->set_rules('e_civilstat', 'Region', 'required');
 $this->form_validation->set_rules('e_divi', 'Division', 'trim|required');
 $this->form_validation->set_rules('e_vaccinestat', 'Vaccination Status', 'required');
-$this->form_validation->set_rules('e_religion', 'Religion', 'trim|required');
+$this->form_validation->set_rules('e_religion', 'Parent/Guardian', 'trim|required');
 $this->form_validation->set_rules('e_number', 'Mobile/Tel No.', 'trim|required|min_length[11]|max_length[11]');
 $this->form_validation->set_rules('e_date', 'Date Added', 'trim|required');
 
@@ -355,14 +355,14 @@ $this->load->view('layouts/central_template', $data);
 public function add_findings($pr_id){
 
  
-$this->form_validation->set_rules('a_history', 'History of Present Illness', 'required');
+$this->form_validation->set_rules('a_history', 'Examination Details', 'required',array('required'=>'Please select Year Level'));
 $this->form_validation->set_rules('a_bp', 'Blood Pressure', 'required');
 $this->form_validation->set_rules('a_rr', 'Respiratory Rate', 'required');
-$this->form_validation->set_rules('a_pulse', 'Pulserate', 'required');
-$this->form_validation->set_rules('a_cr', 'Capillary Refill', 'required');
+$this->form_validation->set_rules('a_pulse', 'Pulse Rate', 'required');
+$this->form_validation->set_rules('a_cr', 'Nutritional Status', 'required');
 $this->form_validation->set_rules('a_temp', 'Temperature', 'required');
 $this->form_validation->set_rules('a_wt', 'Weight', 'required');
-$this->form_validation->set_rules('a_pr', 'Pulse Rate', 'required');
+$this->form_validation->set_rules('a_pr', 'Height', 'required');
 // $this->form_validation->set_rules('a_physician', 'Attending Physician');
 // $this->form_validation->set_rules('a_oralphys', 'Oral Physician');
 
@@ -446,18 +446,18 @@ $data['get_findings_data'] = $this->Record_model->get_patient_findings_id($pr_id
 public function edit_findings($findings_id){
 
 
-$this->form_validation->set_rules('e_chief_complaint', 'Chief Complaint', 'required');
-$this->form_validation->set_rules('e_historyillness', 'History of Present Illness', 'required');
+$this->form_validation->set_rules('e_chief_complaint', 'Eye/Ear/Nose', 'required');
+$this->form_validation->set_rules('e_historyillness', 'Examination Details', 'required');
 $this->form_validation->set_rules('e_bp', 'Blood Pressure', 'required');
 $this->form_validation->set_rules('e_rr', 'Respiratory Rate', 'required');
-$this->form_validation->set_rules('e_pulse', 'Pulserate', 'required');
-$this->form_validation->set_rules('e_cr', 'Capillary Refill', 'required');
+$this->form_validation->set_rules('e_pulse', 'Pulse Rate', 'required');
+$this->form_validation->set_rules('e_cr', 'Nutritional Status', 'required');
 $this->form_validation->set_rules('e_temp', 'Temperature', 'required');
 $this->form_validation->set_rules('e_wt', 'Weight', 'required');
-$this->form_validation->set_rules('e_pr', 'Pulse Rate', 'required');
-$this->form_validation->set_rules('e_physicalexam', 'Physical Examination', 'required');
-$this->form_validation->set_rules('e_diagnosis', 'Diagnosis', 'required');
-$this->form_validation->set_rules('e_medical_treatment', 'Medication/Treatment', 'required');
+$this->form_validation->set_rules('e_pr', 'Height', 'required');
+$this->form_validation->set_rules('e_physicalexam', 'Visual Acuity', 'required');
+$this->form_validation->set_rules('e_diagnosis', 'Hearing', 'required');
+$this->form_validation->set_rules('e_medical_treatment', 'Skin/Scalp', 'required');
 $this->form_validation->set_rules('e_physician', 'Attending Physician', 'required');
 $this->form_validation->set_rules('e_allergy', 'Allergy', 'required');
 $this->form_validation->set_rules('e_anemia', 'Anemia', 'required');
@@ -705,9 +705,9 @@ public function findingsview($findings_id){
 public function admit_form($pr_id){
 
  
-$this->form_validation->set_rules('a_wards', 'Wards', 'trim|required',array('required'=>'Please select ward'));
+$this->form_validation->set_rules('a_wards', 'Condition');
 $this->form_validation->set_rules('a_chargeaccount', 'Charge Account to');
-$this->form_validation->set_rules('a_relationtopatient', 'Relation to Patient');
+$this->form_validation->set_rules('a_relationtopatient', 'Intervention');
 
 
 
@@ -770,10 +770,10 @@ if($this->form_validation->run() == FALSE){
 
 public function edit_admission($admission_id){
 
-$this->form_validation->set_rules('e_wardname', 'Wards');
+$this->form_validation->set_rules('e_wardname', 'Condition');
 
 $this->form_validation->set_rules('e_chargeofaccount', 'Charge Account to');
-$this->form_validation->set_rules('e_relationtopatient', 'Relation to Patient');
+$this->form_validation->set_rules('e_relationtopatient', 'Intervention');
 
 
 
