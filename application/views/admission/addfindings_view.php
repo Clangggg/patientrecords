@@ -193,8 +193,9 @@
 
                   <thead>
                     <tr>
-                      <th class="text-center">Details of Examination</th>
-                      <th class="text-center">Examination Date</th>
+                      <th class="text-center">Reason of visit</th>
+                      <th class="text-center">Intervention</th>
+                      <th class="text-center">Date of visit</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -203,8 +204,9 @@
                 
                     <tr>
 
-                <?php echo "<td class='text-center'><b><a style='color: green;' href='". base_url() ."admissioncontrol/admissionview/". $admission->admission_id ."'>". $admission->ad_wardname ."</b></td>" ?>
-                <?php echo "<td class='text-center'>". $admission->ad_date ."</td>" ?>     
+                       <?php echo "<td class='text-center'>". $admission->ad_wardname. "</td>" ?>
+                       <?php echo "<td class='text-center'>". $admission->ad_relationtopatient. "</td>" ?>
+                       <?php echo "<td class='text-center'>". $admission->ad_date ."</td>" ?>     
                 
                 
                     </tr>      
