@@ -157,8 +157,10 @@
   padding: 8px;
   width: 200px;
   font-weight: 700; margin-left:4%; ">
+
           <div class="date" style="margin-top: 12px;
-  font-size: 1.9em; color: white;"></div>
+  font-size: 1.6em; color: white; margin-left:5%;"></div>
+
           <div class="time" style="font-size: 2em;
   color: white; margin-left:25%;"></div>
           
