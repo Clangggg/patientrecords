@@ -67,16 +67,16 @@
             <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                 <h6 class="m-0 font-weight-bold text-primary">School Health Examination<h6>
                         <?php echo "<a style='margin-left: 390px; 
-                    data-toggle='tooltip' title='Back To Patient Record' text-decoration:none;' class='text-secondary' href='". base_url() ."admissioncontrol/patientdataview/". $get_findings_view->pr_id ."#findings'>" ?>
+                    data-toggle='tooltip' title='Back To Student Record' text-decoration:none;' class='text-secondary' href='". base_url() ."admissioncontrol/patientdataview/". $get_findings_view->pr_id ."#findings'>" ?>
                         <i class="fa 
                                     fa-arrow-left"></i></a>
                         <?php echo "<a 
                     data-toggle='tooltip' title='Edit' style='margin-left: 30px; text-decoration:none;' class='text-secondary' href='". base_url() ."admissioncontrol/edit_findings/". $get_findings_view->findings_id ."#findings'>" ?>
                         <i class="fa 
                                     fa-edit"></i></a>
-                        <?php echo "<a data-toggle='tooltip' title='Add Record to Teacher Account' style='margin-left: 30px; text-decoration:none;' class='text-secondary' href='". base_url() ."admissioncontrol/addfindingsdataview/". $get_findings_view->findings_id ."#findings'>" ?>
+                        <?php echo "<a data-toggle='tooltip' title='Send to Teacher' style='margin-left: 30px; text-decoration:none;' class='text-secondary' href='". base_url() ."admissioncontrol/addfindingsdataview/". $get_findings_view->findings_id ."#findings'>" ?>
                         <i class="fa 
-                                    fa-user-md"></i></a>
+                                    fa-users"></i></a>
                         <a data-toggle='tooltip' title='Print Summary' style='margin-left: 20px; margin-right: 21px;'
                             class="btn_print text-secondary"><i class="fa 
                                     fa-print"></i></a>
