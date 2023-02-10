@@ -391,8 +391,9 @@ public function add_to_doctor($findings_id) {
 
 
 $this->form_validation->set_rules('e_patientfname','Firstname','required');
-$this->form_validation->set_rules('e_patientmname','Middlename', 'required|trim');
+$this->form_validation->set_rules('e_patientmname','Middlename');
 $this->form_validation->set_rules('e_patientlname','Lastname', 'required');
+$this->form_validation->set_rules('e_suffix','Suffix');
 $this->form_validation->set_rules('e_gender','Gender', 'required|trim');
 $this->form_validation->set_rules('e_age','Age', 'required|trim');
 $this->form_validation->set_rules('e_chief_complaint','Eye/Ear/Nose', 'required');
@@ -458,6 +459,7 @@ $this->load->view('layouts/central_template', $data);
    'a_fname' => $this->input->post('e_patientfname'),
    'a_mname' => $this->input->post('e_patientmname'),
    'a_lname' => $this->input->post('e_patientlname'),
+   'a_suffix' => $this->input->post('e_suffix'),
    'a_gender' => $this->input->post('e_gender'),
    'a_age' => $this->input->post('e_age'),
    'a_complaint' => $this->input->post('e_chief_complaint'),
@@ -522,6 +524,7 @@ $data['get_details'] = $this->Record_model->get_details();
    'of_fname' => $this->input->post('e_patientfname'),
    'of_mname' => $this->input->post('e_patientmname'),
    'of_lname' => $this->input->post('e_patientlname'),
+   'of_suffix' => $this->input->post('e_suffix'),
    'of_gender' => $this->input->post('e_gender'),
    'of_age' => $this->input->post('e_age'),
    'of_complaint' => $this->input->post('e_chief_complaint'),
@@ -593,147 +596,147 @@ $data['get_details'] = $this->Record_model->get_details();
 
 
 
-public function add_admission_doctor($admission_id) {
+// public function add_admission_doctor($admission_id) {
 
 
-$this->form_validation->set_rules('e_patientfname','Firstname','required');
-$this->form_validation->set_rules('e_patientmname','Middlename', 'required');
-$this->form_validation->set_rules('e_patientlname','Lastname', 'required');
-$this->form_validation->set_rules('e_gender','Gender', 'required|trim');
-$this->form_validation->set_rules('e_age','Age', 'required|trim');
-$this->form_validation->set_rules('e_chief_complaint','Chief Complaint');
-$this->form_validation->set_rules('e_ward','Ward', 'required|trim');
-$this->form_validation->set_rules('e_physician','Username','required', array('required' => 'Please select the username of the doctor!'));
+// $this->form_validation->set_rules('e_patientfname','Firstname','required');
+// $this->form_validation->set_rules('e_patientmname','Middlename');
+// $this->form_validation->set_rules('e_patientlname','Lastname', 'required');
+// $this->form_validation->set_rules('e_gender','Gender', 'required|trim');
+// $this->form_validation->set_rules('e_age','Age', 'required|trim');
+// $this->form_validation->set_rules('e_chief_complaint','Chief Complaint');
+// $this->form_validation->set_rules('e_ward','Ward', 'required|trim');
+// $this->form_validation->set_rules('e_physician','Username','required', array('required' => 'Please select the username of the doctor!'));
 
-if($this->form_validation->run() == FALSE){
+// if($this->form_validation->run() == FALSE){
 
-$doctor = 'Doctor';
+// $doctor = 'Doctor';
 
-$data['get_user'] = $this->Record_model->get_users_account($doctor);
-$data['get_admission_view'] = $this->Record_model->get_data_admission($admission_id);
-$data['title'] = 'Add to Teacher';
-$data['get_cr'] = $this->Record_model->get_cr();
-$data['get_remarks'] = $this->Record_model->get_remarks();
-$data['get_details'] = $this->Record_model->get_details();
-$data['topbar'] = 'navbar-default';
-$data['form'] = 'admission/addadmissiondataform';
-$data['main_view'] = "admission/addadmissiondata";
+// $data['get_user'] = $this->Record_model->get_users_account($doctor);
+// $data['get_admission_view'] = $this->Record_model->get_data_admission($admission_id);
+// $data['title'] = 'Add to Teacher';
+// $data['get_cr'] = $this->Record_model->get_cr();
+// $data['get_remarks'] = $this->Record_model->get_remarks();
+// $data['get_details'] = $this->Record_model->get_details();
+// $data['topbar'] = 'navbar-default';
+// $data['form'] = 'admission/addadmissiondataform';
+// $data['main_view'] = "admission/addadmissiondata";
 
-$this->load->view('layouts/central_template', $data);
+// $this->load->view('layouts/central_template', $data);
 
 
- } else {
+//  } else {
  
 
-if($this->input->post('e_ward') == "*Under.Observation"){
+// if($this->input->post('e_ward') == "*Under.Observation"){
   
 
-    $date = date("Y-m-d");
+//     $date = date("Y-m-d");
 
-     $user_id = $this->session->userdata('u_id');
+//      $user_id = $this->session->userdata('u_id');
      
-      $data = array(
-   'a_user_id' => $user_id,
-   'a_fname' => $this->input->post('e_patientfname'),
-   'a_mname' => $this->input->post('e_patientmname'),
-   'a_lname' => $this->input->post('e_patientlname'),
-   'a_gender' => $this->input->post('e_gender'),
-   'a_age' => $this->input->post('e_age'),
-   'a_admittedby' => $this->input->post('e_admitted'),
-   'a_complaint' => $this->input->post('e_chief_complaint'),
-   'a_wardname' => $this->input->post('e_ward'),
-   'a_completediagnosis' => $this->input->post('e_diagnosis'),
-   'a_medication' => $this->input->post('e_medication'),
-   'a_dischargedate' => $this->input->post('e_discharge'),
-   'a_conditiontodischarge' => $this->input->post('e_condition'),
-   'a_physician_id' => $this->input->post('e_physician'),
-   'a_date' => $date 
+//       $data = array(
+//    'a_user_id' => $user_id,
+//    'a_fname' => $this->input->post('e_patientfname'),
+//    'a_mname' => $this->input->post('e_patientmname'),
+//    'a_lname' => $this->input->post('e_patientlname'),
+//    'a_gender' => $this->input->post('e_gender'),
+//    'a_age' => $this->input->post('e_age'),
+//    'a_admittedby' => $this->input->post('e_admitted'),
+//    'a_complaint' => $this->input->post('e_chief_complaint'),
+//    'a_wardname' => $this->input->post('e_ward'),
+//    'a_completediagnosis' => $this->input->post('e_diagnosis'),
+//    'a_medication' => $this->input->post('e_medication'),
+//    'a_dischargedate' => $this->input->post('e_discharge'),
+//    'a_conditiontodischarge' => $this->input->post('e_condition'),
+//    'a_physician_id' => $this->input->post('e_physician'),
+//    'a_date' => $date 
  
-   );
+//    );
 
-   if($this->Standarduser_model->add_admission_to_doctor($data)){
+//    if($this->Standarduser_model->add_admission_to_doctor($data)){
 
-$doctor = 'Doctor';
+// $doctor = 'Doctor';
 
-$data['get_user'] = $this->Record_model->get_users_account($doctor);
-$data['get_admission_view'] = $this->Record_model->get_data_admission($admission_id);
-$data['title'] = 'Add toTeacher';
-$data['get_cr'] = $this->Record_model->get_cr();
-$data['get_remarks'] = $this->Record_model->get_remarks();
-$data['get_details'] = $this->Record_model->get_details();
-$data['topbar'] = 'navbar-default';
-$data['form'] = 'admission/addadmissiondataform';
-$data['main_view'] = "admission/addadmissiondata";
+// $data['get_user'] = $this->Record_model->get_users_account($doctor);
+// $data['get_admission_view'] = $this->Record_model->get_data_admission($admission_id);
+// $data['title'] = 'Add toTeacher';
+// $data['get_cr'] = $this->Record_model->get_cr();
+// $data['get_remarks'] = $this->Record_model->get_remarks();
+// $data['get_details'] = $this->Record_model->get_details();
+// $data['topbar'] = 'navbar-default';
+// $data['form'] = 'admission/addadmissiondataform';
+// $data['main_view'] = "admission/addadmissiondata";
   
-      $this->session->set_flashdata('add_to_doctor_success', "Patient Admission is Added to Doctor's Account");
-      redirect('admissioncontrol/admissionview/'.$admission_id.'#admission', $data);
+//       $this->session->set_flashdata('add_to_doctor_success', "Patient Admission is Added to Doctor's Account");
+//       redirect('admissioncontrol/admissionview/'.$admission_id.'#admission', $data);
 
 
 
-   }
+//    }
 
 
 
-} else {
+// } else {
 
   
-     $date = date("Y-m-d");
+//      $date = date("Y-m-d");
 
-     $user_id = $this->session->userdata('u_id');
+//      $user_id = $this->session->userdata('u_id');
      
-      $data = array(
-   'oad_user_id' => $user_id,
-   'oad_fname' => $this->input->post('e_patientfname'),
-   'oad_mname' => $this->input->post('e_patientmname'),
-   'oad_lname' => $this->input->post('e_patientlname'),
-   'oad_gender' => $this->input->post('e_gender'),
-   'oad_age' => $this->input->post('e_age'),
-   'oad_admittedby' => $this->input->post('e_admitted'),
-   'oad_complaint' => $this->input->post('e_chief_complaint'),
-   'oad_wardname' => $this->input->post('e_ward'),
-   'oad_completediagnosis' => $this->input->post('e_diagnosis'),
-   'oad_medication' => $this->input->post('e_medication'),
-   'oad_dischargedate' => $this->input->post('e_discharge'),
-   'oad_conditiontodischarge' => $this->input->post('e_condition'),
-   'oad_physician_id' => $this->input->post('e_physician'),
-   'oad_date' => $date 
+//       $data = array(
+//    'oad_user_id' => $user_id,
+//    'oad_fname' => $this->input->post('e_patientfname'),
+//    'oad_mname' => $this->input->post('e_patientmname'),
+//    'oad_lname' => $this->input->post('e_patientlname'),
+//    'oad_gender' => $this->input->post('e_gender'),
+//    'oad_age' => $this->input->post('e_age'),
+//    'oad_admittedby' => $this->input->post('e_admitted'),
+//    'oad_complaint' => $this->input->post('e_chief_complaint'),
+//    'oad_wardname' => $this->input->post('e_ward'),
+//    'oad_completediagnosis' => $this->input->post('e_diagnosis'),
+//    'oad_medication' => $this->input->post('e_medication'),
+//    'oad_dischargedate' => $this->input->post('e_discharge'),
+//    'oad_conditiontodischarge' => $this->input->post('e_condition'),
+//    'oad_physician_id' => $this->input->post('e_physician'),
+//    'oad_date' => $date 
  
-   );
+//    );
 
-   if($this->Standarduser_model->add_old_admission($data)){
+//    if($this->Standarduser_model->add_old_admission($data)){
 
-$doctor = 'Doctor';
+// $doctor = 'Doctor';
 
-$data['get_user'] = $this->Record_model->get_users_account($doctor);
-$data['get_admission_view'] = $this->Record_model->get_data_admission($admission_id);
-$data['title'] = 'Add to Teacher';
-$data['get_cr'] = $this->Record_model->get_cr();
-$data['get_remarks'] = $this->Record_model->get_remarks();
-$data['get_details'] = $this->Record_model->get_details();
-$data['topbar'] = 'navbar-default';
-$data['form'] = 'admission/addadmissiondataform';
-$data['main_view'] = "admission/addadmissiondata";
+// $data['get_user'] = $this->Record_model->get_users_account($doctor);
+// $data['get_admission_view'] = $this->Record_model->get_data_admission($admission_id);
+// $data['title'] = 'Add to Teacher';
+// $data['get_cr'] = $this->Record_model->get_cr();
+// $data['get_remarks'] = $this->Record_model->get_remarks();
+// $data['get_details'] = $this->Record_model->get_details();
+// $data['topbar'] = 'navbar-default';
+// $data['form'] = 'admission/addadmissiondataform';
+// $data['main_view'] = "admission/addadmissiondata";
   
-      $this->session->set_flashdata('add_to_doctor_success', "Student Record is Added to Teacher's Account");
-      redirect('admissioncontrol/admissionview/'.$admission_id.'#admission', $data);
+//       $this->session->set_flashdata('add_to_doctor_success', "Student Record is Added to Teacher's Account");
+//       redirect('admissioncontrol/admissionview/'.$admission_id.'#admission', $data);
 
 
 
-   }
+//    }
 
 
 
 
 
-}
+// }
 
 
  
 
- }
+//  }
 
 
-}
+// }
 
 
 

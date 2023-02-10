@@ -37,6 +37,16 @@
                          value="<?php echo $get_findings_view->pr_lname; ?>">
                  </div>
                  <div class="text-danger text-center"><?php echo form_error('e_patientlname'); ?></div>
+
+                 <div class="row no-gutters">
+                     <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Suffix</div>
+                 </div>
+
+                 <div class="h5 mb-3 font-weight-bold text-gray-800">
+                     <input id="suffix" class="form-control" type="text" name="e_suffix"
+                         value="<?php echo $get_findings_view->pr_suffix; ?>">
+                 </div>
+                 <div class="text-danger text-center"><?php echo form_error('e_suffix'); ?></div>
              </div>
 
 
@@ -638,30 +648,30 @@
 
 
              <div style="margin-bottom:17px;">
-     <div class="row no-gutters">
-         <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Teacher's
-             Account</div>
-     </div>
-     <div class="h5 mb-1 font-weight-bold text-gray-800">
-         <select class="form-control" name="e_physician">
-             <option value="">Select</option>
-             <?php if(count($get_user)): ?>
-             <?php foreach($get_user as $useraccount): ?>
-             <option
-                 value=<?php echo $useraccount->su_id; ?><?php echo set_select('e_physician', $useraccount->su_fname); ?>>
-                 <?php echo  "Ma'am/Sir. ".$useraccount->su_fname; ?></option>
-             <?php endforeach; ?>
-             <?php endif; ?>
-         </select>
-     </div>
-     <div class="text-danger text-center"><?php echo form_error('e_physician'); ?></div>
- </div>
+                 <div class="row no-gutters">
+                     <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Teacher's
+                         Account</div>
+                 </div>
+                 <div class="h5 mb-1 font-weight-bold text-gray-800">
+                     <select class="form-control" name="e_physician">
+                         <option value="">Select</option>
+                         <?php if(count($get_user)): ?>
+                         <?php foreach($get_user as $useraccount): ?>
+                         <option
+                             value=<?php echo $useraccount->su_id; ?><?php echo set_select('e_physician', $useraccount->su_fname); ?>>
+                             <?php echo  "Ma'am/Sir. ".$useraccount->su_fname; ?></option>
+                         <?php endforeach; ?>
+                         <?php endif; ?>
+                     </select>
+                 </div>
+                 <div class="text-danger text-center"><?php echo form_error('e_physician'); ?></div>
+             </div>
          </div>
 
-         
+
      </div><!-- End of Row -->
 
-     
+
 
      <!-- <div class="col-sm-12">
          <h5 class="text-center text-secondary" style="font-size:16px;"><b>Oral Health Examination</b></h5>
@@ -858,7 +868,7 @@
              </p>
          </div>
      </div>-->
- </div> 
+ </div>
  </div>
  </div>
 

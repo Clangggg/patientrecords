@@ -40,7 +40,7 @@
                       <?php foreach($oldrecords as $patient): ?>
                    <tr>
 
-                <?php echo "<td class='text-center'>". $patient->of_lname. ",    " .$patient->of_fname. "    " .$patient->of_mname .$patient->of_suffix ."</td>" ?>
+                <?php echo "<td class='text-center'>". $patient->of_lname. ",    " .$patient->of_fname. "    " .$patient->of_mname. "    ".$patient->of_suffix ."</td>" ?>
                 <?php echo "<td class='text-center'>". $patient->of_historypresentillness ."</td>" ?>
                 <?php echo "<td class='text-center'>". $patient->of_gender ."</td>" ?>
                 <?php echo "<td class='text-center'>". $patient->of_age ."</td>" ?>

@@ -595,20 +595,24 @@
                 <div style="font-size:17px; margin-top:4%; margin-left:5%; margin-bottom:5%; ">
                     <table style="border: 1px solid; border-color: #E0E0E0; border-collapse: collapse; width:95%;  ">
                         <tr>
-                            <th style="width:40%; text-align:center; padding: 8px; font-weight:700; border: 1px solid; border-color: #E0E0E0;">
+                            <th
+                                style="width:40%; text-align:center; padding: 8px; font-weight:700; border: 1px solid; border-color: #E0E0E0;">
                                 Health Conditions
                             </th>
 
-                            <th style="width:40%; text-align:center; padding: 8px; font-weight:700; border: 1px solid; border-color: #E0E0E0;">
+                            <th
+                                style="width:40%; text-align:center; padding: 8px; font-weight:700; border: 1px solid; border-color: #E0E0E0;">
                                 Indication
                             </th>
                         </tr>
                         <tr>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 Allergy
                             </td>
 
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 <?php if($get_findings_view->f_allergy): ?>
                                 <?php echo $get_findings_view->f_allergy; ?>
                                 <?php else: ?>
@@ -618,10 +622,12 @@
 
                         </tr>
                         <tr>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 Asthma
                             </td>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 <?php if($get_findings_view-> f_asthma): ?>
                                 <?php echo $get_findings_view-> f_asthma; ?>
                                 <?php else: ?>
@@ -631,10 +637,12 @@
 
                         </tr>
                         <tr>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 Anemia
                             </td>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 <?php if($get_findings_view->f_anemia): ?>
                                 <?php echo $get_findings_view->f_anemia; ?>
                                 <?php else: ?>
@@ -643,10 +651,12 @@
                             </td>
                         </tr>
                         <tr>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 Bleeding Problem
                             </td>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 <?php if($get_findings_view->f_bleeding): ?>
                                 <?php echo $get_findings_view->f_bleeding; ?>
                                 <?php else: ?>
@@ -655,10 +665,12 @@
                             </td>
                         </tr>
                         <tr>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 Heart Ailment
                             </td>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 <?php if($get_findings_view->f_hailment): ?>
                                 <?php echo $get_findings_view->f_hailment; ?>
                                 <?php else: ?>
@@ -667,10 +679,12 @@
                             </td>
                         </tr>
                         <tr>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 Diabetes
                             </td>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 <?php if($get_findings_view->f_diabetes): ?>
                                 <?php echo $get_findings_view->f_diabetes; ?>
                                 <?php else: ?>
@@ -679,10 +693,12 @@
                             </td>
                         </tr>
                         <tr>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 Epilepsy
                             </td>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 <?php if($get_findings_view->f_epilepsy): ?>
                                 <?php echo $get_findings_view->f_epilepsy; ?>
                                 <?php else: ?>
@@ -691,10 +707,12 @@
                             </td>
                         </tr>
                         <tr>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 Kidney Disease
                             </td>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 <?php if($get_findings_view->f_kidney): ?>
                                 <?php echo $get_findings_view->f_kidney; ?>
                                 <?php else: ?>
@@ -703,10 +721,12 @@
                             </td>
                         </tr>
                         <tr>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 Convulsion
                             </td>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 <?php if($get_findings_view->f_convulsion): ?>
                                 <?php echo $get_findings_view->f_convulsion; ?>
                                 <?php else: ?>
@@ -715,10 +735,12 @@
                             </td>
                         </tr>
                         <tr>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 Fainting
                             </td>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 <?php if($get_findings_view->f_fainting): ?>
                                 <?php echo $get_findings_view->f_fainting; ?>
                                 <?php else: ?>
@@ -1545,48 +1567,58 @@
                     (Check the references below) </p>
 
                 <div style="font-size:17px; margin-top:4%; margin-left:5%; margin-bottom:5%; ">
-                    <table style="border: 1px solid #C5C5C5; border-collapse: collapse; width:95%; border-color: #E0E0E0; ">
+                    <table
+                        style="border: 1px solid #C5C5C5; border-collapse: collapse; width:95%; border-color: #E0E0E0; ">
                         <tr>
-                            <th style="width:40%; text-align:center; padding: 8px; font-weight:700; border: 1px solid; border-color: #E0E0E0;">
+                            <th
+                                style="width:40%; text-align:center; padding: 8px; font-weight:700; border: 1px solid; border-color: #E0E0E0;">
 
                             </th>
 
-                            <th style="width:40%; text-align:center; padding: 8px; font-weight:700; border: 1px solid; border-color: #E0E0E0;">
+                            <th
+                                style="width:40%; text-align:center; padding: 8px; font-weight:700; border: 1px solid; border-color: #E0E0E0;">
                                 Dental Procedures
                             </th>
-                            <th style="width:40%; text-align:center; padding: 8px; font-weight:700; border: 1px solid; border-color: #E0E0E0;">
+                            <th
+                                style="width:40%; text-align:center; padding: 8px; font-weight:700; border: 1px solid; border-color: #E0E0E0;">
                                 Remarks
                             </th>
                         </tr>
                         <tr>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 DATE
                             </td>
 
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 <?php if($get_findings_view->f_oraldate): ?>
                                 <?php echo $get_findings_view->f_oraldate; ?>
                                 <?php else: ?>
                                 <p>N/A</p>
                                 <?php endif; ?>
                             </td>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 ---
                             </td>
 
                         </tr>
                         <tr>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 Examination
                             </td>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 <?php if($get_findings_view-> f_mouthexam): ?>
                                 <?php echo $get_findings_view-> f_mouthexam; ?>
                                 <?php else: ?>
                                 <p>N/A</p>
                                 <?php endif; ?>
                             </td>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 <?php if($get_findings_view-> f_rmouthexam): ?>
                                 <?php echo $get_findings_view-> f_rmouthexam; ?>
                                 <?php else: ?>
@@ -1596,17 +1628,20 @@
 
                         </tr>
                         <tr>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 Sealant (G.I.)
                             </td>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 <?php if($get_findings_view->f_seal): ?>
                                 <?php echo $get_findings_view->f_seal; ?>
                                 <?php else: ?>
                                 <p>N/A</p>
                                 <?php endif; ?>
                             </td>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 <?php if($get_findings_view->f_rseal): ?>
                                 <?php echo $get_findings_view->f_rseal; ?>
                                 <?php else: ?>
@@ -1615,17 +1650,20 @@
                             </td>
                         </tr>
                         <tr>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 Gum Treatment
                             </td>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid;border-color: #E0E0E0;" >
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid;border-color: #E0E0E0;">
                                 <?php if($get_findings_view->f_gum): ?>
                                 <?php echo $get_findings_view->f_gum; ?>
                                 <?php else: ?>
                                 <p>N/A</p>
                                 <?php endif; ?>
                             </td>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 <?php if($get_findings_view->f_rgum): ?>
                                 <?php echo $get_findings_view->f_rgum; ?>
                                 <?php else: ?>
@@ -1634,17 +1672,20 @@
                             </td>
                         </tr>
                         <tr>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 Permanent filling
                             </td>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 <?php if($get_findings_view->f_perm): ?>
                                 <?php echo $get_findings_view->f_perm; ?>
                                 <?php else: ?>
                                 <p>N/A</p>
                                 <?php endif; ?>
                             </td>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 <?php if($get_findings_view->f_rperm): ?>
                                 <?php echo $get_findings_view->f_rperm; ?>
                                 <?php else: ?>
@@ -1653,17 +1694,20 @@
                             </td>
                         </tr>
                         <tr>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 ART
                             </td>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 <?php if($get_findings_view->f_art): ?>
                                 <?php echo $get_findings_view->f_art; ?>
                                 <?php else: ?>
                                 <p>N/A</p>
                                 <?php endif; ?>
                             </td>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 <?php if($get_findings_view->f_rart): ?>
                                 <?php echo $get_findings_view->f_rart; ?>
                                 <?php else: ?>
@@ -1672,17 +1716,20 @@
                             </td>
                         </tr>
                         <tr>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 Extraction
                             </td>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 <?php if($get_findings_view->f_extra): ?>
                                 <?php echo $get_findings_view->f_extra; ?>
                                 <?php else: ?>
                                 <p>N/A</p>
                                 <?php endif; ?>
                             </td>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 <?php if($get_findings_view->f_rextra): ?>
                                 <?php echo $get_findings_view->f_rextra; ?>
                                 <?php else: ?>
@@ -1691,17 +1738,20 @@
                             </td>
                         </tr>
                         <tr>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 Oral prohylaxis
                             </td>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 <?php if($get_findings_view->f_prohy): ?>
                                 <?php echo $get_findings_view->f_prohy; ?>
                                 <?php else: ?>
                                 <p>N/A</p>
                                 <?php endif; ?>
                             </td>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 <?php if($get_findings_view->f_rprohy): ?>
                                 <?php echo $get_findings_view->f_rprohy; ?>
                                 <?php else: ?>
@@ -1710,17 +1760,20 @@
                             </td>
                         </tr>
                         <tr>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 Referral
                             </td>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 <?php if($get_findings_view->f_refer): ?>
                                 <?php echo $get_findings_view->f_refer; ?>
                                 <?php else: ?>
                                 <p>N/A</p>
                                 <?php endif; ?>
                             </td>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 <?php if($get_findings_view->f_rrefer): ?>
                                 <?php echo $get_findings_view->f_rrefer; ?>
                                 <?php else: ?>
@@ -1729,17 +1782,20 @@
                             </td>
                         </tr>
                         <tr>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 Other oral treatment
                             </td>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 <?php if($get_findings_view->f_otheroral): ?>
                                 <?php echo $get_findings_view->f_otheroral; ?>
                                 <?php else: ?>
                                 <p>N/A</p>
                                 <?php endif; ?>
                             </td>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 <?php if($get_findings_view->f_rotheroral): ?>
                                 <?php echo $get_findings_view->f_rotheroral; ?>
                                 <?php else: ?>
@@ -1748,10 +1804,12 @@
                             </td>
                         </tr>
                         <tr>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 Examined by
                             </td>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 <?php if($get_findings_view->f_oralphys): ?>
                                 <?php echo $get_findings_view->f_oralphys; ?>
                                 <?php else: ?>
@@ -1768,22 +1826,27 @@
                 <p style="font-size:13px; color:black; font-weight:700; margin-left:3%;">
                     (Check the references below) </p>
                 <div style="font-size:17px; margin-top:4%; margin-left:5%; margin-bottom:5%; ">
-                    <table style="border: 1px solid #C5C5C5; border-collapse: collapse; width:95%; border-color: #E0E0E0; ">
+                    <table
+                        style="border: 1px solid #C5C5C5; border-collapse: collapse; width:95%; border-color: #E0E0E0; ">
                         <tr>
-                            <th style="width:40%; text-align:center; padding: 8px; font-weight:700; border: 1px solid; border-color: #E0E0E0;">
+                            <th
+                                style="width:40%; text-align:center; padding: 8px; font-weight:700; border: 1px solid; border-color: #E0E0E0;">
 
                             </th>
 
-                            <th style="width:40%; text-align:center; padding: 8px; font-weight:700; border: 1px solid; border-color: #E0E0E0;">
+                            <th
+                                style="width:40%; text-align:center; padding: 8px; font-weight:700; border: 1px solid; border-color: #E0E0E0;">
                                 Oral Health Condition
                             </th>
                         </tr>
                         <tr>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 Gingivitis
                             </td>
 
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 <?php if($get_findings_view->f_ging): ?>
                                 <?php echo $get_findings_view->f_ging; ?>
                                 <?php else: ?>
@@ -1793,10 +1856,12 @@
 
                         </tr>
                         <tr>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 Periodontal disease
                             </td>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 <?php if($get_findings_view-> f_period): ?>
                                 <?php echo $get_findings_view-> f_period; ?>
                                 <?php else: ?>
@@ -1806,10 +1871,12 @@
 
                         </tr>
                         <tr>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 Malocclusion
                             </td>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 <?php if($get_findings_view->f_malo): ?>
                                 <?php echo $get_findings_view->f_malo; ?>
                                 <?php else: ?>
@@ -1818,10 +1885,12 @@
                             </td>
                         </tr>
                         <tr>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 Supernumerary teeth
                             </td>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 <?php if($get_findings_view->f_super): ?>
                                 <?php echo $get_findings_view->f_super; ?>
                                 <?php else: ?>
@@ -1830,10 +1899,12 @@
                             </td>
                         </tr>
                         <tr>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 Decubital ulcer
                             </td>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 <?php if($get_findings_view->f_ulcer): ?>
                                 <?php echo $get_findings_view->f_ulcer; ?>
                                 <?php else: ?>
@@ -1842,10 +1913,12 @@
                             </td>
                         </tr>
                         <tr>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 Calculus
                             </td>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 <?php if($get_findings_view->f_calcu): ?>
                                 <?php echo $get_findings_view->f_calcu; ?>
                                 <?php else: ?>
@@ -1854,10 +1927,12 @@
                             </td>
                         </tr>
                         <tr>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 Cleft lip/palate
                             </td>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 <?php if($get_findings_view->f_cleft): ?>
                                 <?php echo $get_findings_view->f_cleft; ?>
                                 <?php else: ?>
@@ -1866,10 +1941,12 @@
                             </td>
                         </tr>
                         <tr>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 Root fragment
                             </td>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 <?php if($get_findings_view->f_root): ?>
                                 <?php echo $get_findings_view->f_root; ?>
                                 <?php else: ?>
@@ -1878,10 +1955,12 @@
                             </td>
                         </tr>
                         <tr>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 Fluorosis
                             </td>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 <?php if($get_findings_view->f_flu): ?>
                                 <?php echo $get_findings_view->f_flu; ?>
                                 <?php else: ?>
@@ -1890,10 +1969,12 @@
                             </td>
                         </tr>
                         <tr>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 Other, specify
                             </td>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 <?php if($get_findings_view->f_specify): ?>
                                 <?php echo $get_findings_view->f_specify; ?>
                                 <?php else: ?>
@@ -1908,22 +1989,27 @@
 
                 <h6 class="mt-2 ml-5 font-weight-bold">PERMANENT TEETH</h6>
                 <div style="font-size:17px; margin-top:4%; margin-left:5%; margin-bottom:5%; ">
-                    <table style="border: 1px solid #C5C5C5; border-collapse: collapse; width:95%; border-color: #E0E0E0; ">
+                    <table
+                        style="border: 1px solid #C5C5C5; border-collapse: collapse; width:95%; border-color: #E0E0E0; ">
                         <tr>
-                            <th style="width:40%; text-align:center; padding: 8px; font-weight:700; border: 1px solid; border-color: #E0E0E0;">
+                            <th
+                                style="width:40%; text-align:center; padding: 8px; font-weight:700; border: 1px solid; border-color: #E0E0E0;">
                                 Index: D.M.F.T.
                             </th>
 
-                            <th style="width:40%; text-align:center; padding: 8px; font-weight:700; border: 1px solid; border-color: #E0E0E0;">
+                            <th
+                                style="width:40%; text-align:center; padding: 8px; font-weight:700; border: 1px solid; border-color: #E0E0E0;">
                                 DMFT Index
                             </th>
                         </tr>
                         <tr>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 No. T/Decayed
                             </td>
 
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 <?php if($get_findings_view->f_decay): ?>
                                 <?php echo $get_findings_view->f_decay; ?>
                                 <?php else: ?>
@@ -1933,10 +2019,12 @@
 
                         </tr>
                         <tr>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 No. T/Missing
                             </td>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 <?php if($get_findings_view-> f_missing): ?>
                                 <?php echo $get_findings_view-> f_missing; ?>
                                 <?php else: ?>
@@ -1946,10 +2034,12 @@
 
                         </tr>
                         <tr>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 No. T/Filled
                             </td>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 <?php if($get_findings_view->f_filled): ?>
                                 <?php echo $get_findings_view->f_filled; ?>
                                 <?php else: ?>
@@ -1958,10 +2048,12 @@
                             </td>
                         </tr>
                         <tr>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 Total D.M.F.T.
                             </td>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 <?php if($get_findings_view->f_total): ?>
                                 <?php echo $get_findings_view->f_total; ?>
                                 <?php else: ?>
@@ -1970,10 +2062,12 @@
                             </td>
                         </tr>
                         <tr>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 Total Sound teeth
                             </td>
-                            <td style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
+                            <td
+                                style="width:40%; text-align:center; padding: 8px; border: 1px solid; border-color: #E0E0E0;">
                                 <?php if($get_findings_view->f_sound): ?>
                                 <?php echo $get_findings_view->f_sound; ?>
                                 <?php else: ?>
@@ -2032,46 +2126,46 @@
                         </p>
                     </div>
                 </div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
                 <!-- begin summary -->
 
 
@@ -2083,7 +2177,7 @@
 
                 <div id="printablearea">
                     <!-- Printable Area -->
-                    <div class="head" style="text-align:center; font-size:15px; color:black;">
+                    <div class="head" style="text-align:center; font-size:15px; color:black; margin-bottom:4%;">
                         <h style="margin-bottom: none; font-weight:200;">REPUBLIC OF THE PHILIPPINES <br>DEPARTMENT OF
                             EDUCATION <br></h>
                         <h style="margin-top: none; font-weight:600;">HEALTH AND NUTRITION CENTER <br>DIVISION OF
@@ -2099,7 +2193,7 @@
                         <h style="margin-top: none; font-size:13.5px; font-weight:200;">Secondary Students</h>
                     </div>
 
-                    <div style="font-size:15px; margin-top:4%; ">
+                    <div style="font-size:15px; margin-top:6%; ">
                         <table>
                             <tr>
                                 <th style="width:40%; text-align:left; padding: 5px; font-weight:400;">
@@ -2201,6 +2295,8 @@
                     <br>
                     <hr>
                     <br>
+                    <br>
+
                     <h style="font-weight:600;">
                         <?php if($get_findings_view->f_historypresentillness): ?>
                         <?php echo $get_findings_view->f_historypresentillness; ?> -- SUMMARY REPORT
@@ -2208,8 +2304,8 @@
                         <p>N/A</p> ?>
                         <?php endif; ?>
                     </h>
-
-                    <div style="font-size:15px; margin-top:3%; margin-bottom: 3%; ">
+                    <br> <br>
+                    <div style="font-size:15px; margin-top:3%; margin-bottom: 5%; ">
                         <table style="border: 1px solid; border-collapse: collapse; width:100%;">
                             <tr>
                                 <th
@@ -2285,10 +2381,25 @@
                                     <?php endif; ?>
                                 </td>
                             </tr>
+                            <tr>
+                                <td style="width:40%; text-align:center; padding: 5px; border: 1px solid;">
+                                    Others, specify
+                                </td>
+                                <td style="width:40%; text-align:center; padding: 5px; border: 1px solid;">
+                                    <?php if($get_findings_view->f_others): ?>
+                                    <?php echo $get_findings_view->f_others; ?>
+                                    <?php else: ?>
+                                    <p>N/A</p>
+                                    <?php endif; ?>
+                                </td>
+                            </tr>
                         </table>
                     </div>
-                    <div style=" text-align:right;">
-                        <h style="font-weight:600;"> Attending Physician:
+
+                    <p style=" margin-left:55%; font-size:17px;">Examined By:</p><br><br>
+                    <hr style="width:40%; margin-left:70%; weight:600;">
+                    <div style=" text-align:right; ">
+                        <h style="font-weight:600; font-size:17px;">
                             <?php if($get_findings_view->f_nameofphysician): ?>
                             <?php echo "Dr. ".$get_findings_view->f_nameofphysician; ?>
                             <?php else: ?>
@@ -2296,7 +2407,10 @@
                             <?php endif; ?>
                         </h>
                     </div>
-                    <div style="font-size:15px; margin-top:4%; ">
+                    <p style=" text-align:right; font-size:10px;">SIGNATURE OVER PRINTED NAME</p>
+                    <br>
+
+                    <div style="font-size:15px; margin-top:4%; margin-bottom:8%;">
                         <table style="border: 1px solid; border-collapse: collapse; width:100%;">
                             <tr>
                                 <th
@@ -2434,7 +2548,26 @@
                             </tr>
                         </table>
                     </div>
-                    <div style="font-size:15px; margin-top:8%; ">
+                    <br>
+                    <br>
+                    <div class="head" style="text-align:center; font-size:15px; color:black; margin-bottom:3%;">
+                        <h style="margin-bottom: none; font-weight:200;">REPUBLIC OF THE PHILIPPINES <br>DEPARTMENT OF
+                            EDUCATION <br></h>
+                        <h style="margin-top: none; font-weight:600;">HEALTH AND NUTRITION CENTER <br>DIVISION OF
+                            VALENZUELA
+                            CITY</h>
+                    </div>
+
+                    <div class="ss" style="text-align:center;  color:black;">
+                        <h style="margin-bottom: none; font-size:19px; font-weight:600;"><br>SCHOOL ORAL HEALTH
+                            EXAMINATION
+                            CARD
+                            <br>
+                        </h>
+                        <h style="margin-top: none; font-size:13.5px; font-weight:200;">Secondary Students</h>
+                    </div>
+
+                    <div style="font-size:15px; margin-top:5%; ">
                         <table style="border: 1px solid; border-collapse: collapse; width:100%;">
                             <tr>
                                 <th
@@ -2650,8 +2783,11 @@
                             </tr>
                         </table>
                     </div>
-                    <div style=" text-align:right;">
-                        <h style="font-weight:600; text-align:right;"> Attending Physician:
+                    <br>
+                    <p style=" margin-left:55%; font-size:17px;">Examined By:</p><br><br>
+                    <hr style="width:40%; margin-left:70%; weight:600;">
+                    <div style=" text-align:right; font-size: 17px;">
+                        <h style="font-weight:600;">
                             <?php if($get_findings_view->f_oralphys): ?>
                             <?php echo "Dr. ".$get_findings_view->f_oralphys; ?>
                             <?php else: ?>
@@ -2659,6 +2795,36 @@
                             <?php endif; ?>
                         </h>
                     </div>
+                    <p style="font-size:10px; text-align:right; ">SIGNATURE OVER PRINTED NAME</p>
+
+                    <hr style="width:30%; margin-right:80%; weight:600; ">
+                    <div style=" text-align:left; font-size: 17px;">
+                        <h style="font-weight:600;">
+                            <?php if($get_findings_view->pr_fname): ?>
+                            <?php echo $get_findings_view->pr_fname;  ?> &nbsp;
+                            <?php else: ?>
+                            <p>N/A</p> ?>
+                            <?php endif; ?>
+                            <?php if($get_findings_view->pr_mname): ?>
+                            <?php echo $get_findings_view->pr_mname; ?> &nbsp;
+                            <?php else: ?>
+
+                            <?php endif; ?>
+                            <?php if($get_findings_view->pr_lname): ?>
+                            <?php echo $get_findings_view->pr_lname;  ?> &nbsp;
+                            <?php else: ?>
+
+                            <?php endif; ?>
+
+                            <?php if($get_findings_view->pr_suffix): ?>
+                            <?php echo $get_findings_view->pr_suffix; ?>
+                            <?php else: ?>
+
+                            <?php endif; ?>
+                        </h>
+                    </div>
+                    <p style="font-size:10px; text-align:left; ">SIGNATURE OVER PRINTED NAME</p>
+                    <p style="font-size:10px; margin-left:7%; ">STUDENT</p>
                 </div>
             </div>
         </div>
